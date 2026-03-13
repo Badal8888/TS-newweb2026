@@ -4,7 +4,34 @@ import Image from "next/image";
 import TechStackMarquee from "@/components/TechStackMarquee";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-
+import {
+  FaSearch,
+  FaClipboardList,
+  FaCode,
+  FaBug,
+  FaRocket,
+} from "react-icons/fa";
+import {
+  FaLaptopCode,
+  FaMobileAlt,
+  FaBullhorn,
+  FaServer,
+} from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaDocker,
+  FaAws,
+  FaPhp,
+  FaPython,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiLaravel,
+  SiMysql,
+  SiFlutter,
+  SiDotnet,
+} from "react-icons/si";
 export default function HomeClient() {
   const headlines = [
     "Transforming Ideas into Scalable SaaS & Digital Solutions",
@@ -134,8 +161,78 @@ export default function HomeClient() {
           </p>
         </div>
       </section>
-      <TechStackMarquee />
+      <section className="mb-24 overflow-hidden">
+        <h2 className="text-4xl font-bold mb-12 text-center">
+          Our Technology Stack
+        </h2>
 
+        <div className="relative">
+          {/* fade edges */}
+          <div className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-[#020617] to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-[#020617] to-transparent z-10"></div>
+
+          <div className="flex gap-10 animate-marquee whitespace-nowrap py-4">
+            {[...Array(2)].map((_, i) => (
+              <>
+                <div className="tech-card">
+                  <FaReact className="text-[#61DBFB] tech-icon" />
+                  <p>React</p>
+                </div>
+
+                <div className="tech-card">
+                  <SiNextdotjs className="text-white tech-icon" />
+                  <p>Next.js</p>
+                </div>
+
+                <div className="tech-card">
+                  <SiLaravel className="text-[#FF2D20] tech-icon" />
+                  <p>Laravel</p>
+                </div>
+
+                <div className="tech-card">
+                  <FaNodeJs className="text-[#3C873A] tech-icon" />
+                  <p>Node.js</p>
+                </div>
+
+                <div className="tech-card">
+                  <SiMysql className="text-[#00758F] tech-icon" />
+                  <p>MySQL</p>
+                </div>
+
+                <div className="tech-card">
+                  <FaAws className="text-[#FF9900] tech-icon" />
+                  <p>AWS</p>
+                </div>
+
+                <div className="tech-card">
+                  <FaPhp className="text-[#777BB4] tech-icon" />
+                  <p>PHP</p>
+                </div>
+
+                <div className="tech-card">
+                  <FaPython className="text-[#3776AB] tech-icon" />
+                  <p>Python</p>
+                </div>
+
+                <div className="tech-card">
+                  <SiFlutter className="text-[#02569B] tech-icon" />
+                  <p>Flutter</p>
+                </div>
+
+                <div className="tech-card h-14">
+                  <SiDotnet className="text-[#512BD4] tech-icon" />
+                  <p>.NET</p>
+                </div>
+
+                <div className="tech-card">
+                  <FaDocker className="text-[#2496ED] tech-icon" />
+                  <p>Docker</p>
+                </div>
+              </>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* SERVICES */}
       <section className="py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-6">

@@ -1,3 +1,4 @@
+import TechStackCards from "@/components/TechStackMarquee";
 import {
   FaSearch,
   FaClipboardList,
@@ -314,83 +315,8 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="mb-24">
-          <h2 className="text-3xl font-bold mb-12">Our Technology Stack</h2>
+        <TechStackCards />
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {/* React */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition text-center">
-              <FaReact className="text-[#61DBFB] text-5xl mx-auto mb-3" />
-              <p className="text-gray-300">React</p>
-            </div>
-
-            {/* Next.js */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-white hover:shadow-lg transition text-center">
-              <SiNextdotjs className="text-white text-5xl mx-auto mb-3" />
-              <p className="text-gray-300">Next.js</p>
-            </div>
-
-            {/* Laravel */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-red-500 hover:shadow-lg hover:shadow-red-500/20 transition text-center">
-              <SiLaravel className="text-[#FF2D20] text-5xl mx-auto mb-3" />
-              <p className="text-gray-300">Laravel</p>
-            </div>
-
-            {/* Node.js */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-green-500 hover:shadow-lg hover:shadow-green-500/20 transition text-center">
-              <FaNodeJs className="text-[#3C873A] text-5xl mx-auto mb-3" />
-              <p className="text-gray-300">Node.js</p>
-            </div>
-
-            {/* MySQL */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20 transition text-center">
-              <SiMysql className="text-[#00758F] text-5xl mx-auto mb-3" />
-              <p className="text-gray-300">MySQL</p>
-            </div>
-
-            {/* AWS */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-400/20 transition text-center">
-              <FaAws className="text-[#FF9900] text-5xl mx-auto mb-3" />
-              <p className="text-gray-300">AWS</p>
-            </div>
-
-            {/* PHP */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-purple-400 transition text-center">
-              <FaPhp className="text-[#777BB4] text-5xl mx-auto mb-3" />
-              PHP
-            </div>
-
-            {/* Python */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-yellow-400 transition text-center">
-              <FaPython className="text-[#3776AB] text-5xl mx-auto mb-3" />
-              Python
-            </div>
-
-            {/* Flutter */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-blue-400 transition text-center">
-              <SiFlutter className="text-[#02569B] text-5xl mx-auto mb-3" />
-              Flutter
-            </div>
-
-            {/* .NET */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-purple-500 transition text-center">
-              <SiDotnet className="text-[#512BD4] text-5xl mx-auto mb-3" />
-              .NET
-            </div>
-
-            {/* Hostinger */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-purple-600 transition text-center">
-              <img src="/icons/hostinger.svg" className="h-12 mx-auto mb-3" />
-              Hostinger
-            </div>
-            {/* Docker */}
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition text-center">
-              <FaDocker className="text-[#2496ED] text-5xl mx-auto mb-3" />
-              <p className="text-gray-300">Docker</p>
-            </div>
-            {/* Filament */}
-          </div>
-        </section>
         <section className="mb-24">
           <h2 className="text-3xl font-bold mb-10">Industries We Serve</h2>
 
