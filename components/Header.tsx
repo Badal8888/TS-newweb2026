@@ -131,6 +131,9 @@ export default function Header() {
           <Link href="/blog" className={navLink("/blog")}>
             Blog
           </Link>
+          <Link href="/portfolio" className={navLink("/portfolio")}>
+            Portfolio
+          </Link>
 
           <Link href="/contact" className={navLink("/contact")}>
             Contact
