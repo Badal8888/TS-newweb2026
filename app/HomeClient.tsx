@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import TechStackMarquee from "@/components/TechStackMarquee";
 import { motion, AnimatePresence } from "framer-motion";
@@ -114,13 +114,25 @@ export default function HomeClient() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            <button className="bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-700 transition">
-              Get Free Consultation
-            </button>
+            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+              {/* Contact Page */}
+              <Link
+                href="/contact"
+                className="bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-700 transition text-white text-center"
+              >
+                Get Free Consultation
+              </Link>
 
-            <button className="border border-gray-400 px-6 py-3 rounded-xl hover:border-blue-400 transition">
-              View Portfolio
-            </button>
+              {/* Portfolio External Link */}
+              <a
+                href="https://portfolio.techstrota.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gray-400 px-6 py-3 rounded-xl hover:border-blue-400 transition text-center"
+              >
+                View Portfolio
+              </a>
+            </div>
           </motion.div>
 
           {/* Video */}
@@ -414,9 +426,12 @@ export default function HomeClient() {
             platforms.
           </p>
 
-          <button className="mt-8 bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
+          <Link
+            href="/contact"
+            className="inline-block mt-8 bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
+          >
             Contact Us Today
-          </button>
+          </Link>
         </div>
       </section>
     </main>

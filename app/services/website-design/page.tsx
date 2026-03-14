@@ -1,38 +1,70 @@
-export const metadata = {
-  title: "Website Design Services | TechStrota",
-  description:
-    "Professional website design services by TechStrota. We build modern, responsive and SEO optimized websites for businesses.",
-};
+"use client";
 
-export default function WebsiteDesign() {
+import { motion } from "framer-motion";
+
+export default function HeroSection() {
   return (
-    <main className="py-24 bg-[#020617] text-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <h1 className="text-5xl font-bold mb-8">Website Design Services</h1>
+    <section className="py-5 px-6 bg-[#020b1f] flex justify-center">
+      <div className="w-full max-w-6xl">
+        {/* Video Container */}
+        <div className="relative rounded-2xl overflow-hidden border border-blue-600/60 shadow-2xl">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-auto object-cover"
+          >
+            <source src="/services/social_media.mp4" type="video/mp4" />
+          </video>
 
-        <p className="text-gray-400 mb-10">
-          TechStrota provides modern website design services that help
-          businesses establish a strong online presence with responsive and
-          user-friendly interfaces.
-        </p>
+          {/* Desktop Overlay Text */}
+          <div className="hidden md:flex absolute inset-0 bg-black/40 items-center justify-center text-center px-6">
+            <div className="max-w-3xl">
+              <motion.h1
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-5xl font-bold text-white mb-4"
+              >
+                Social Media Marketing Services
+              </motion.h1>
 
-        <h2 className="text-3xl font-bold mb-6">What We Offer</h2>
+              <motion.p
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="text-gray-200 text-lg"
+              >
+                Grow your brand with powerful social media strategies on
+                Facebook, Instagram, LinkedIn and Twitter.
+              </motion.p>
+            </div>
+          </div>
+        </div>
 
-        <ul className="text-gray-400 space-y-3 list-disc ml-6">
-          <li>Responsive website design</li>
-          <li>SEO optimized structure</li>
-          <li>Fast loading pages</li>
-          <li>Modern UI/UX design</li>
-          <li>Custom business websites</li>
-        </ul>
+        {/* Mobile Text Below Video */}
+        <div className="md:hidden text-center mt-6 px-4">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-2xl font-bold text-white mb-3"
+          >
+            Social Media Marketing Services
+          </motion.h1>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6">Technologies We Use</h2>
-
-        <p className="text-gray-400">
-          We build websites using modern technologies like React, Next.js,
-          Laravel and cloud hosting platforms.
-        </p>
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="text-gray-300 text-sm"
+          >
+            Grow your brand with powerful social media strategies on Facebook,
+            Instagram, LinkedIn and Twitter.
+          </motion.p>
+        </div>
       </div>
-    </main>
+    </section>
   );
 }

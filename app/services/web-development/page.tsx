@@ -1,32 +1,70 @@
-export const metadata = {
-  title: "Web Development Company in India | TechStrota",
-  description:
-    "TechStrota is a professional web development company offering React, Next.js and custom website development services.",
-  keywords: [
-    "web development company",
-    "React development company",
-    "Next.js development company",
-    "custom website development",
-  ],
-};
+"use client";
 
-export default function WebDevelopment() {
+import { motion } from "framer-motion";
+
+export default function HeroSection() {
   return (
-    <main className="py-24">
-      <div className="max-w-5xl mx-auto px-6">
-        <h1 className="text-5xl font-bold mb-8">Web Development Company</h1>
+    <section className="py-5 px-6 bg-[#020b1f] flex justify-center">
+      <div className="w-full max-w-6xl">
+        {/* Video Container */}
+        <div className="relative rounded-2xl overflow-hidden border border-blue-600/60 shadow-2xl">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-auto object-cover"
+          >
+            <source src="/services/social_media.mp4" type="video/mp4" />
+          </video>
 
-        <p className="text-gray-400 mb-6">
-          TechStrota builds fast, secure and SEO-friendly websites using modern
-          technologies like React, Next.js and Node.js.
-        </p>
+          {/* Desktop Overlay Text */}
+          <div className="hidden md:flex absolute inset-0 bg-black/40 items-center justify-center text-center px-6">
+            <div className="max-w-3xl">
+              <motion.h1
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-5xl font-bold text-white mb-4"
+              >
+                Social Media Marketing Services
+              </motion.h1>
 
-        <p className="text-gray-400">
-          Our web development services help startups and businesses create
-          powerful digital platforms with modern UI/UX and scalable
-          architecture.
-        </p>
+              <motion.p
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="text-gray-200 text-lg"
+              >
+                Grow your brand with powerful social media strategies on
+                Facebook, Instagram, LinkedIn and Twitter.
+              </motion.p>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Text Below Video */}
+        <div className="md:hidden text-center mt-6 px-4">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-2xl font-bold text-white mb-3"
+          >
+            Social Media Marketing Services
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="text-gray-300 text-sm"
+          >
+            Grow your brand with powerful social media strategies on Facebook,
+            Instagram, LinkedIn and Twitter.
+          </motion.p>
+        </div>
       </div>
-    </main>
+    </section>
   );
 }
