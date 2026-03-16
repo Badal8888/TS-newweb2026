@@ -11,11 +11,11 @@ export default function HeroSection() {
           <video
             autoPlay
             loop
-            muted
             playsInline
+            controls
             className="w-full h-auto object-cover"
           >
-            <source src="/services/social_media.mp4" type="video/mp4" />
+            <source src="/services/dedicated_dev.mp4" type="video/mp4" />
           </video>
 
           {/* Desktop Overlay Text */}
@@ -27,7 +27,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8 }}
                 className="text-5xl font-bold text-white mb-4"
               >
-                Social Media Marketing Services
+                Dedicated Developers for Your Projects
               </motion.h1>
 
               <motion.p
@@ -36,8 +36,10 @@ export default function HeroSection() {
                 transition={{ duration: 1, delay: 0.3 }}
                 className="text-gray-200 text-lg"
               >
-                Grow your brand with powerful social media strategies on
-                Facebook, Instagram, LinkedIn and Twitter.
+                Hire dedicated developers to accelerate your project development
+                with expertise in web, mobile, and software solutions. Our
+                dedicated developers work exclusively on your projects, ensuring
+                seamless integration and high-quality deliverables.
               </motion.p>
             </div>
           </div>

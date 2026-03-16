@@ -11,11 +11,11 @@ export default function HeroSection() {
           <video
             autoPlay
             loop
-            muted
             playsInline
+            controls
             className="w-full h-auto object-cover"
           >
-            <source src="/services/social_media.mp4" type="video/mp4" />
+            <source src="/services/web_development.mp4" type="video/mp4" />
           </video>
 
           {/* Desktop Overlay Text */}
@@ -27,7 +27,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8 }}
                 className="text-5xl font-bold text-white mb-4"
               >
-                Social Media Marketing Services
+                Web Development Services
               </motion.h1>
 
               <motion.p
@@ -36,8 +36,15 @@ export default function HeroSection() {
                 transition={{ duration: 1, delay: 0.3 }}
                 className="text-gray-200 text-lg"
               >
-                Grow your brand with powerful social media strategies on
-                Facebook, Instagram, LinkedIn and Twitter.
+                Our web development services create stunning, responsive
+                websites that captivate your audience and drive business growth.
+                We specialize in crafting custom web solutions that combine
+                cutting-edge design with robust functionality. From e-commerce
+                platforms to dynamic web applications, we deliver seamless
+                digital experiences that elevate your online presence. Let us
+                help you build a website that not only looks great but also
+                performs exceptionally, ensuring your brand stands out in the
+                competitive digital landscape.
               </motion.p>
             </div>
           </div>

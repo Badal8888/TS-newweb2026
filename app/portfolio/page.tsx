@@ -76,7 +76,7 @@ export default function PortfolioPage() {
         <h1 className="text-4xl md:text-5xl font-bold text-cyan-400">
           Our Happy Clients
         </h1>
-        <p className="text-gray-400 mt-4">
+        <p className="text-gray-400 mt-8 text-lg">
           Join our growing list of satisfied clients
         </p>
       </div>
