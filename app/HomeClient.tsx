@@ -32,6 +32,7 @@ import {
   SiFlutter,
   SiDotnet,
 } from "react-icons/si";
+import React from "react";
 export default function HomeClient() {
   const headlines = [
     "Transforming Ideas into Scalable SaaS & Digital Solutions",
@@ -41,10 +42,21 @@ export default function HomeClient() {
 
   const [index, setIndex] = useState(0);
 
+  type Client = {
+    id: number;
+    logo: string;
+  };
+  const [clients, setClients] = useState<Client[]>([]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % headlines.length);
     }, 3500);
+
+    fetch("https://admin.techstrota.com/api/clients")
+      .then((res) => res.json())
+      .then((data) => setClients(data))
+      .catch((err) => console.error(err));
 
     return () => clearInterval(interval);
   }, []);
@@ -185,7 +197,7 @@ export default function HomeClient() {
 
           <div className="flex gap-10 animate-marquee whitespace-nowrap py-4">
             {[...Array(2)].map((_, i) => (
-              <>
+              <React.Fragment key={i}>
                 <div className="tech-card">
                   <FaReact className="text-[#61DBFB] tech-icon" />
                   <p>React</p>
@@ -240,7 +252,7 @@ export default function HomeClient() {
                   <FaDocker className="text-[#2496ED] tech-icon" />
                   <p>Docker</p>
                 </div>
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>
@@ -337,65 +349,20 @@ export default function HomeClient() {
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-            {/* Client 1 */}
-            <div className="flex justify-center opacity-70 hover:opacity-100 transition">
-              <Image
-                src="/clients/client1.png"
-                alt="Client company using TechStrota software development services"
-                width={120}
-                height={60}
-              />
-            </div>
-
-            {/* Client 2 */}
-            <div className="flex justify-center opacity-70 hover:opacity-100 transition">
-              <Image
-                src="/clients/client2.png"
-                alt="Client SaaS platform developed by TechStrota"
-                width={120}
-                height={60}
-              />
-            </div>
-
-            {/* Client 3 */}
-            <div className="flex justify-center opacity-70 hover:opacity-100 transition">
-              <Image
-                src="/clients/client3.png"
-                alt="Business using TechStrota web development solutions"
-                width={120}
-                height={60}
-              />
-            </div>
-
-            {/* Client 4 */}
-            <div className="flex justify-center opacity-70 hover:opacity-100 transition">
-              <Image
-                src="/clients/client1.png"
-                alt="Enterprise client of TechStrota software company"
-                width={120}
-                height={60}
-              />
-            </div>
-
-            {/* Client 5 */}
-            <div className="flex justify-center opacity-70 hover:opacity-100 transition">
-              <Image
-                src="/clients/client2.png"
-                alt="Startup using TechStrota SaaS development services"
-                width={120}
-                height={60}
-              />
-            </div>
-
-            {/* Client 6 */}
-            <div className="flex justify-center opacity-70 hover:opacity-100 transition">
-              <Image
-                src="/clients/client3.png"
-                alt="Mobile app development client of TechStrota"
-                width={120}
-                height={60}
-              />
-            </div>
+            {clients.map((client) => (
+              <div
+                key={client.id}
+                className="flex justify-center opacity-70 hover:opacity-100 transition"
+              >
+                <Image
+                  src={client.logo}
+                  alt="TechStrota client logo"
+                  width={120}
+                  height={60}
+                  unoptimized
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
