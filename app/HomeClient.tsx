@@ -337,7 +337,7 @@ export default function HomeClient() {
         </div>
       </section>
       {/* OUR CLIENTS */}
-      <section className="py-20 bg-[#020617] text-white">
+      <section className="py-20 bg-[#020617] text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
             Trusted by Our Clients
@@ -347,23 +347,48 @@ export default function HomeClient() {
             TechStrota partners with startups and businesses to build reliable
             web applications, SaaS platforms and mobile apps that drive growth.
           </p>
+        </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-            {clients.map((client) => (
+        {/* Marquee Wrapper */}
+        <div className="relative w-full flex overflow-hidden group">
+          <style>{`
+      @keyframes infinite-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-infinite-scroll {
+        animation: infinite-scroll 25s linear infinite;
+        width: max-content;
+      }
+      .group:hover .animate-infinite-scroll {
+        animation-play-state: paused;
+      }
+    `}</style>
+
+          <div className="flex animate-infinite-scroll py-4">
+            {[...clients, ...clients].map((client, index) => (
               <div
-                key={client.id}
-                className="flex justify-center opacity-70 hover:opacity-100 transition"
+                key={`${client.id}-${index}`}
+                // INCREASED CARD SIZE: Changed w-48 to w-56, and h-24 to h-28. Added p-4.
+                className="mx-4 flex-shrink-0 flex items-center justify-center w-56 h-28 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 cursor-pointer"
               >
                 <Image
                   src={client.logo}
-                  alt="TechStrota client logo"
-                  width={120}
-                  height={60}
+                  alt="client logo"
+                  // INCREASED IMAGE BASE RESOLUTION
+                  width={180}
+                  height={90}
+                  // CHANGED: Let the image take up full width/height of the padded container
+                  className="object-contain w-full h-full"
                   unoptimized
                 />
               </div>
             ))}
           </div>
+
+          {/* Gradient fades */}
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#020617] to-transparent pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#020617] to-transparent pointer-events-none"></div>
         </div>
       </section>
       {/* SaaS AUTHORITY */}
