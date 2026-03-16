@@ -9,7 +9,7 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 
-const API_BASE = "https://happy.techstrota.com";
+const API_BASE = "https://admin.techstrota.com";
 
 type GalleryItem =
   | string
