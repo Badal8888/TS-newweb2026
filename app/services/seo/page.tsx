@@ -15,7 +15,7 @@ export default function HeroSection() {
             playsInline
             className="w-full h-auto object-cover"
           >
-            <source src="/services/social_media.mp4" type="video/mp4" />
+            <source src="/services/SEO.mp4" type="video/mp4" />
           </video>
 
           {/* Desktop Overlay Text */}

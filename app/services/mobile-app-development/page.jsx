@@ -15,7 +15,7 @@ export default function HeroSection() {
             playsInline
             className="w-full h-auto object-cover"
           >
-            <source src="/services/social_media.mp4" type="video/mp4" />
+            <source src="/services/mobileapp.mp4" type="video/mp4" />
           </video>
 
           {/* Desktop Overlay Text */}
@@ -27,7 +27,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8 }}
                 className="text-5xl font-bold text-white mb-4"
               >
-                Social Media Marketing Services
+                Mobile-app Development Services
               </motion.h1>
 
               <motion.p
@@ -36,8 +36,14 @@ export default function HeroSection() {
                 transition={{ duration: 1, delay: 0.3 }}
                 className="text-gray-200 text-lg"
               >
-                Grow your brand with powerful social media strategies on
-                Facebook, Instagram, LinkedIn and Twitter.
+                Mobile app development is the process of creating software
+                applications that run on mobile devices, such as smartphones and
+                tablets. It involves designing, coding, testing, and deploying
+                apps for various platforms like iOS and Android. Mobile app
+                development can be done using native languages (Swift for iOS,
+                Java/Kotlin for Android) or cross-platform frameworks (React
+                Native, Flutter) to create engaging and functional applications
+                that meet user needs.
               </motion.p>
             </div>
           </div>

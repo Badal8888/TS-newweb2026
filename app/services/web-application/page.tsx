@@ -15,7 +15,7 @@ export default function HeroSection() {
             playsInline
             className="w-full h-auto object-cover"
           >
-            <source src="/services/social_media.mp4" type="video/mp4" />
+            <source src="/services/web_application.mp4" type="video/mp4" />
           </video>
 
           {/* Desktop Overlay Text */}
@@ -27,7 +27,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8 }}
                 className="text-5xl font-bold text-white mb-4"
               >
-                Social Media Marketing Services
+                Web Application Development Services
               </motion.h1>
 
               <motion.p
@@ -36,8 +36,12 @@ export default function HeroSection() {
                 transition={{ duration: 1, delay: 0.3 }}
                 className="text-gray-200 text-lg"
               >
-                Grow your brand with powerful social media strategies on
-                Facebook, Instagram, LinkedIn and Twitter.
+                Our web application development services deliver powerful,
+                scalable, and user-friendly solutions tailored to your business
+                needs. We specialize in creating custom web applications that
+                enhance user experiences and drive business growth. From
+                responsive design to robust backend development, we ensure your
+                web application stands out in the digital landscape.
               </motion.p>
             </div>
           </div>

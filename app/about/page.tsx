@@ -60,33 +60,74 @@ export default function About() {
           applications and enterprise software solutions using technologies like
           React, Next.js, Laravel and cloud platforms.
         </p>
+        <section className="relative py-32 text-center overflow-hidden bg-gradient-to-r from-[#1e6f8c] to-[#2e3fa3]">
+          {/* background glow */}
+          <div className="absolute inset-0 opacity-20 blur-3xl bg-gradient-to-r from-cyan-400 to-blue-500"></div>
+
+          <div className="relative max-w-4xl mx-auto px-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+              Empowering Tomorrow
+              <br />
+              Through Technology
+            </h1>
+
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+              At <span className="font-semibold text-white">TechStrota</span>,
+              we transform ideas into scalable digital solutions. We're more
+              than just a tech company — we’re your innovation partner.
+            </p>
+          </div>
+        </section>
         {/* WHO WE ARE */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-8">Who We Are</h2>
+        <section className="mb-24 mt-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Title */}
+            <h2 className="text-4xl font-bold mb-6 text-center">Who We Are</h2>
 
-          <p className="text-gray-400 mb-8 leading-relaxed">
-            Founded with the passion to innovate and simplify,
-            <strong> TechStrota</strong> is a dynamic technology firm based in
-            Vadodara, Gujarat. From humble beginnings, we have evolved into a
-            trusted partner for startups, enterprises and innovators looking to
-            build scalable, secure and smart digital solutions.
-          </p>
+            {/* Description */}
+            <p className="text-gray-400 text-center max-w-3xl mx-auto leading-relaxed mb-14">
+              Founded with a vision to innovate and simplify technology,
+              <span className="text-white font-semibold"> TechStrota </span>
+              is a modern software development company based in Vadodara,
+              Gujarat. We partner with startups and businesses to build
+              scalable, secure and future-ready digital products that drive real
+              growth.
+            </p>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              🚀 Established in 2021
-            </div>
+            {/* Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="group bg-[#0F172A] p-7 rounded-2xl border border-gray-800 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl mb-4">🚀</div>
+                <h3 className="text-lg font-semibold mb-2">Established</h3>
+                <p className="text-gray-400 text-sm">
+                  Proudly building innovative digital solutions since 2021.
+                </p>
+              </div>
 
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              🎯 Founded to simplify digital challenges with smart solutions
-            </div>
+              <div className="group bg-[#0F172A] p-7 rounded-2xl border border-gray-800 hover:border-purple-500 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl mb-4">🎯</div>
+                <h3 className="text-lg font-semibold mb-2">Our Mission</h3>
+                <p className="text-gray-400 text-sm">
+                  Simplifying complex digital challenges with smart technology.
+                </p>
+              </div>
 
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              📈 Evolved from freelance roots to a full-stack digital agency
-            </div>
+              <div className="group bg-[#0F172A] p-7 rounded-2xl border border-gray-800 hover:border-green-500 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl mb-4">📈</div>
+                <h3 className="text-lg font-semibold mb-2">Growth Journey</h3>
+                <p className="text-gray-400 text-sm">
+                  From freelance beginnings to a trusted full-stack digital
+                  agency.
+                </p>
+              </div>
 
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              ❤️ Passionate about innovation, ethics and user-first design
+              <div className="group bg-[#0F172A] p-7 rounded-2xl border border-gray-800 hover:border-pink-500 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl mb-4">❤️</div>
+                <h3 className="text-lg font-semibold mb-2">Our Values</h3>
+                <p className="text-gray-400 text-sm">
+                  Innovation, transparency and user-first product design.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -101,7 +142,7 @@ export default function About() {
             improve operational efficiency.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
             {/* Web Development */}
             <div className="flex bg-[#0F172A] rounded-xl border border-gray-800 hover:border-blue-500 transition overflow-hidden">
               <div className="w-20 flex items-center justify-center bg-blue-500/10">
@@ -317,40 +358,179 @@ export default function About() {
         </section>
         <TechStackCards />
 
-        <section className="mb-24">
-          <h2 className="text-3xl font-bold mb-10">Industries We Serve</h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              Logistics & Transportation
+        <section className="mb-28">
+          <div className="max-w-7xl mx-auto">
+            {/* Heading */}
+            <div className="text-center mb-14 mt-10">
+              <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                We deliver innovative digital solutions across multiple
+                industries, helping businesses modernize, scale and stay
+                competitive.
+              </p>
             </div>
 
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              SaaS & Technology Startups
-            </div>
+            {/* Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Logistics */}
+              <div className="group bg-[#0F172A] rounded-xl border border-gray-800 overflow-hidden hover:border-blue-500 transition-all">
+                <img
+                  src="/industries/logistics.jpg"
+                  alt="Logistics"
+                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    Logistics & Transportation
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Fleet management systems, transport bidding platforms and
+                    logistics automation.
+                  </p>
+                </div>
+              </div>
 
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              E-Commerce Platforms
-            </div>
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              Clothing & Fashion Brands
-            </div>
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              construction & Real Estate
-            </div>
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              insurance & Fintech Companies
-            </div>
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              Education & E-Learning
-            </div>
+              {/* SaaS */}
+              <div className="group bg-[#0F172A] rounded-xl border border-gray-800 overflow-hidden hover:border-purple-500 transition-all">
+                <img
+                  src="/industries/SaaS.jpeg"
+                  alt="SaaS"
+                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    SaaS & Technology Startups
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Scalable SaaS platforms, dashboards and cloud-based
+                    applications.
+                  </p>
+                </div>
+              </div>
 
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              Healthcare & Clinics
-            </div>
+              {/* Ecommerce */}
+              <div className="group bg-[#0F172A] rounded-xl border border-gray-800 overflow-hidden hover:border-pink-500 transition-all">
+                <img
+                  src="/industries/E-commerce.jpEg"
+                  alt="Ecommerce"
+                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    E-Commerce Platforms
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Online stores, payment integrations and scalable ecommerce
+                    systems.
+                  </p>
+                </div>
+              </div>
 
-            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
-              Business Automation Systems
+              {/* Fashion */}
+              <div className="group bg-[#0F172A] rounded-xl border border-gray-800 overflow-hidden hover:border-yellow-500 transition-all">
+                <img
+                  src="/industries/Clothing.jpeg"
+                  alt="Fashion"
+                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    Clothing & Fashion Brands
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Digital storefronts, inventory systems and brand management
+                    tools.
+                  </p>
+                </div>
+              </div>
+
+              {/* Real Estate */}
+              <div className="group bg-[#0F172A] rounded-xl border border-gray-800 overflow-hidden hover:border-green-500 transition-all">
+                <img
+                  src="/industries/realestate.jpeg"
+                  alt="Real Estate"
+                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    Construction & Real Estate
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Property management platforms and construction workflow
+                    systems.
+                  </p>
+                </div>
+              </div>
+
+              {/* Fintech */}
+              <div className="group bg-[#0F172A] rounded-xl border border-gray-800 overflow-hidden hover:border-cyan-500 transition-all">
+                <img
+                  src="/industries/InsuranceFintech.jpeg"
+                  alt="Fintech"
+                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    Insurance & Fintech
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Secure financial applications, dashboards and fintech
+                    automation.
+                  </p>
+                </div>
+              </div>
+
+              {/* Education */}
+              <div className="group bg-[#0F172A] rounded-xl border border-gray-800 overflow-hidden hover:border-indigo-500 transition-all">
+                <img
+                  src="/industries/education.jpeg"
+                  alt="Education"
+                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    Education & E-Learning
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Learning management systems and digital education platforms.
+                  </p>
+                </div>
+              </div>
+
+              {/* Healthcare */}
+              <div className="group bg-[#0F172A] rounded-xl border border-gray-800 overflow-hidden hover:border-red-500 transition-all">
+                <img
+                  src="/industries/healthcare.jpeg"
+                  alt="Healthcare"
+                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    Healthcare & Clinics
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Hospital systems, appointment platforms and healthcare
+                    dashboards.
+                  </p>
+                </div>
+              </div>
+
+              {/* Automation */}
+              <div className="group bg-[#0F172A] rounded-xl border border-gray-800 overflow-hidden hover:border-orange-500 transition-all">
+                <img
+                  src="/industries/business.jpeg"
+                  alt="Automation"
+                  className="h-60 w-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    Business Automation
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    CRM, ERP and custom automation systems for businesses.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
