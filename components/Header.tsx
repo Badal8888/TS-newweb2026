@@ -245,6 +245,8 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
             className="block text-gray-300"
           >
+            Contact
+          </Link>
           <Link href="/gallery" className="block text-gray-300">
             TS Gallery
           </Link>
