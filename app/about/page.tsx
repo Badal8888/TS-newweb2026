@@ -1,4 +1,5 @@
 import TechStackCards from "@/components/TechStackMarquee";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 import {
   FaSearch,
   FaClipboardList,
@@ -246,6 +247,166 @@ export default function About() {
             </div>
           </div>
         </section>
+        <section className="py-24 bg-[#020617] text-white">
+          <div className="max-w-7xl mx-auto px-6">
+            {/* Section Title */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Our Team</h2>
+
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                The talented professionals behind TechStrota building scalable
+                SaaS platforms, web applications and innovative digital
+                solutions.
+              </p>
+            </div>
+
+            {/* Team Grid */}
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+              {/* Member 1 */}
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Chirag Kanani</h3>
+
+                <p className="text-blue-400 text-sm mb-3">Founder & CEO</p>
+
+                <p className="text-gray-400 text-sm">
+                  🎓 B.Tech Computer Engineering
+                </p>
+
+                <p className="text-gray-400 text-sm">💼 5+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm mb-4">
+                  🚀 SaaS, Web Apps, Logistics Systems
+                </p>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-4 text-lg">
+                  <a href="https://linkedin.com" target="_blank">
+                    <FaLinkedin className="hover:text-blue-400" />
+                  </a>
+
+                  <a href="https://instagram.com" target="_blank">
+                    <FaInstagram className="hover:text-pink-400" />
+                  </a>
+
+                  <a href="https://github.com" target="_blank">
+                    <FaGithub className="hover:text-gray-300" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Badal Jamod</h3>
+
+                <p className="text-blue-400 text-sm mb-3">Founder & CTO</p>
+
+                <p className="text-gray-400 text-sm">
+                  🎓 B.Tech Computer Engineering
+                </p>
+
+                <p className="text-gray-400 text-sm">💼 5+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm mb-4">
+                  🚀 SaaS, Web Apps, Logistics Systems
+                </p>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-4 text-lg">
+                  <a href="https://linkedin.com" target="_blank">
+                    <FaLinkedin className="hover:text-blue-400" />
+                  </a>
+
+                  <a href="https://instagram.com" target="_blank">
+                    <FaInstagram className="hover:text-pink-400" />
+                  </a>
+
+                  <a href="https://github.com" target="_blank">
+                    <FaGithub className="hover:text-gray-300" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Himanshu Dangar</h3>
+
+                <p className="text-blue-400 text-sm mb-3">Manager</p>
+
+                <p className="text-gray-400 text-sm">
+                  🎓 B.Tech Computer Engineering
+                </p>
+
+                <p className="text-gray-400 text-sm">💼 5+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm mb-4">
+                  🚀 SaaS, Web Apps, Logistics Systems
+                </p>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-4 text-lg">
+                  <a href="https://linkedin.com" target="_blank">
+                    <FaLinkedin className="hover:text-blue-400" />
+                  </a>
+
+                  <a href="https://instagram.com" target="_blank">
+                    <FaInstagram className="hover:text-pink-400" />
+                  </a>
+
+                  <a href="https://github.com" target="_blank">
+                    <FaGithub className="hover:text-gray-300" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Member 2 */}
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Vidhi Patel</h3>
+
+                <p className="text-blue-400 text-sm mb-3">
+                  Senior Full Stack Developer
+                </p>
+
+                <p className="text-gray-400 text-sm">🎓 M.Sc IT</p>
+
+                <p className="text-gray-400 text-sm">💼 2+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm">
+                  ⚙️ React, Laravel, Node.js
+                </p>
+              </div>
+
+              {/* Member 3 */}
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Krishna Patel</h3>
+
+                <p className="text-blue-400 text-sm mb-3">
+                  Social Media Manager
+                </p>
+
+                <p className="text-gray-400 text-sm">🎓 BCA</p>
+
+                <p className="text-gray-400 text-sm">💼 2+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm">
+                  📱 Instagram, LinkedIn, Content Creation
+                </p>
+              </div>
+
+              {/* Member 4 */}
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Dinesh Shah</h3>
+
+                <p className="text-blue-400 text-sm mb-3">Fund Manager</p>
+
+                <p className="text-gray-400 text-sm">🎓 BCA</p>
+
+                <p className="text-gray-400 text-sm">💼 2+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm">
+                  🎨 Financial Planning, Investment Analysis
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* WHY CHOOSE US */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-8">Why Choose TechStrota</h2>
@@ -271,6 +432,28 @@ export default function About() {
                 collaboration. Our team maintains open communication, regular
                 updates, and transparent workflows, ensuring you stay informed
                 and involved throughout the development process.
+              </p>
+            </div>
+
+            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
+              <h3 className="text-xl font-semibold text-blue-400 mb-3">
+                Responsive Design
+              </h3>
+              <p className="text-gray-400">
+                We create digital experiences that look and perform great on all
+                devices, ensuring your users have a seamless experience whether
+                they’re on desktop, tablet or mobile.
+              </p>
+            </div>
+
+            <div className="bg-[#0F172A] p-6 rounded-xl border border-gray-800">
+              <h3 className="text-xl font-semibold text-blue-400 mb-3">
+                Not copy templates, custom solutions
+              </h3>
+              <p className="text-gray-400">
+                We don’t believe in one-size-fits-all solutions. Every project
+                we take on is custom-built to meet the unique needs of your
+                business, ensuring a perfect fit for your goals and challenges.
               </p>
             </div>
 
