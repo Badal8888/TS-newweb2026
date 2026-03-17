@@ -11,8 +11,8 @@ export default function HeroSection() {
           <video
             autoPlay
             loop
-            muted
             playsInline
+            controls
             className="w-full h-auto object-cover"
           >
             <source src="/services/social_media.mp4" type="video/mp4" />

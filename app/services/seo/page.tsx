@@ -11,11 +11,11 @@ export default function HeroSection() {
           <video
             autoPlay
             loop
-            muted
             playsInline
+            controls
             className="w-full h-auto object-cover"
           >
-            <source src="/services/social_media.mp4" type="video/mp4" />
+            <source src="/services/SEO.mp4" type="video/mp4" />
           </video>
 
           {/* Desktop Overlay Text */}
@@ -27,7 +27,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8 }}
                 className="text-5xl font-bold text-white mb-4"
               >
-                Social Media Marketing Services
+                SEO Services to Boost Your Online Visibility
               </motion.h1>
 
               <motion.p
@@ -36,8 +36,14 @@ export default function HeroSection() {
                 transition={{ duration: 1, delay: 0.3 }}
                 className="text-gray-200 text-lg"
               >
-                Grow your brand with powerful social media strategies on
-                Facebook, Instagram, LinkedIn and Twitter.
+                Our SEO services are designed to enhance your online presence
+                and drive organic traffic to your website. We specialize in
+                optimizing your site for search engines, improving your
+                rankings, and increasing your visibility to potential customers.
+                From keyword research to on-page optimization and link building,
+                we provide comprehensive SEO strategies that deliver measurable
+                results. Let us help you achieve higher search engine rankings
+                and grow your business online.
               </motion.p>
             </div>
           </div>

@@ -71,11 +71,11 @@ const technologies = [
     color: "from-yellow-400 to-yellow-600",
   },
   { name: "C Programming", icon: <SiC />, color: "from-gray-500 to-gray-700" },
-  {
-    name: "C++ Programming",
-    icon: <SiCplusplus />,
-    color: "from-blue-600 to-blue-900",
-  },
+  // {
+  //   name: "C++ Programming",
+  //   icon: <SiCplusplus />,
+  //   color: "from-blue-600 to-blue-900",
+  // },
   {
     name: "Flutter Mobile Apps",
     icon: <SiFlutter />,

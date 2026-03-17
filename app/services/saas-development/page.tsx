@@ -11,11 +11,11 @@ export default function HeroSection() {
           <video
             autoPlay
             loop
-            muted
             playsInline
+            controls
             className="w-full h-auto object-cover"
           >
-            <source src="/services/social_media.mp4" type="video/mp4" />
+            <source src="/services/Saas.mp4" type="video/mp4" />
           </video>
 
           {/* Desktop Overlay Text */}
@@ -27,7 +27,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8 }}
                 className="text-5xl font-bold text-white mb-4"
               >
-                Social Media Marketing Services
+                Software as a Service (SaaS) Development Services
               </motion.h1>
 
               <motion.p
@@ -36,8 +36,12 @@ export default function HeroSection() {
                 transition={{ duration: 1, delay: 0.3 }}
                 className="text-gray-200 text-lg"
               >
-                Grow your brand with powerful social media strategies on
-                Facebook, Instagram, LinkedIn and Twitter.
+                Our SaaS development services empower businesses to create
+                scalable, secure, and user-friendly software solutions. We
+                specialize in building custom SaaS applications that drive
+                growth and enhance user experiences. From concept to deployment,
+                we deliver innovative SaaS products tailored to your unique
+                business needs.
               </motion.p>
             </div>
           </div>
