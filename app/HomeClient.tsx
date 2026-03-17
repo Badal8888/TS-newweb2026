@@ -366,7 +366,7 @@ export default function HomeClient() {
     `}</style>
 
           <div className="flex animate-infinite-scroll py-4">
-            {[...clients, ...clients].map((client, index) => (
+            {clients.map((client, index) => (
               <div
                 key={`${client.id}-${index}`}
                 // INCREASED CARD SIZE: Changed w-48 to w-56, and h-24 to h-28. Added p-4.

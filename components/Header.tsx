@@ -156,11 +156,19 @@ export default function Header() {
         }`}
       >
         <div className="px-6 space-y-4">
-          <Link href="/" className="block text-gray-300">
+          <Link
+            href="/"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-300"
+          >
             Home
           </Link>
 
-          <Link href="/about" className="block text-gray-300">
+          <Link
+            href="/about"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-300"
+          >
             About
           </Link>
 
@@ -174,37 +182,69 @@ export default function Header() {
 
           {mobileServices && (
             <div className="pl-4 space-y-2 text-gray-400">
-              <Link href="/services/web-development" className="block">
+              <Link
+                href="/services/web-development"
+                onClick={() => setMenuOpen(false)}
+                className="block"
+              >
                 Web Development
               </Link>
 
-              <Link href="/services/Ecommerece-development" className="block">
+              <Link
+                href="/services/Ecommerece-development"
+                onClick={() => setMenuOpen(false)}
+                className="block"
+              >
                 Ecommerce Development
               </Link>
 
-              <Link href="/services/web-application" className="block">
+              <Link
+                href="/services/web-application"
+                onClick={() => setMenuOpen(false)}
+                className="block"
+              >
                 Web Applications
               </Link>
 
-              <Link href="/services/mobile-app-development" className="block">
+              <Link
+                href="/services/mobile-app-development"
+                onClick={() => setMenuOpen(false)}
+                className="block"
+              >
                 Mobile Apps
               </Link>
 
-              <Link href="/services/seo" className="block">
+              <Link
+                href="/services/seo"
+                onClick={() => setMenuOpen(false)}
+                className="block"
+              >
                 SEO
               </Link>
 
-              <Link href="/services/saas-development" className="block">
+              <Link
+                href="/services/saas-development"
+                onClick={() => setMenuOpen(false)}
+                className="block"
+              >
                 SaaS Development
               </Link>
             </div>
           )}
 
-          <Link href="/blog" className="block text-gray-300">
+          <Link
+            href="/blog"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-300"
+          >
             Blog
           </Link>
 
-          <Link href="/contact" className="block text-gray-300">
+          <Link
+            href="/contact"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-300"
+          >
             Contact
           </Link>
         </div>
