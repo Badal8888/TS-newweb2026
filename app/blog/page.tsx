@@ -49,11 +49,10 @@ export default async function BlogPage() {
               href={`/blog/${post.slug}`}
               key={post.id}
               // Changed: Increased border opacity to white/20, added a blue border on hover, and added a subtle blue shadow on hover
-              className="group flex flex-col bg-white/10 border border-white/20 rounded-2xl overflow-hidden hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 hover:shadow-2xl hover:-translate-y-1"
+              className="group flex flex-col bg-white/5 border-2 border-white/50 rounded-2xl overflow-hidden hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 hover:shadow-2xl hover:-translate-y-1"
             >
               {post.image && (
                 <div className="relative w-full h-56 overflow-hidden">
-                  {/* FIX 2: Removed the dark overlay div. Now just the image remains! */}
                   <Image
                     src={post.image}
                     alt={post.title}
