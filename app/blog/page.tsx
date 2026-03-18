@@ -8,6 +8,7 @@ type BlogPost = {
   id: number;
   title: string;
   slug: string;
+  paragraph: string;
   content: string;
   image: string | null;
 };
@@ -47,7 +48,8 @@ export default async function BlogPage() {
             <Link
               href={`/blog/${post.slug}`}
               key={post.id}
-              className="group flex flex-col bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1"
+              // Changed: Increased border opacity to white/20, added a blue border on hover, and added a subtle blue shadow on hover
+              className="group flex flex-col bg-white/10 border border-white/20 rounded-2xl overflow-hidden hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 hover:shadow-2xl hover:-translate-y-1"
             >
               {post.image && (
                 <div className="relative w-full h-56 overflow-hidden">
@@ -67,10 +69,9 @@ export default async function BlogPage() {
                   {post.title}
                 </h2>
 
-                <div
-                  className="text-slate-400 text-sm md:text-base leading-relaxed line-clamp-3 mb-6 flex-grow [&>*]:inline [&_p]:inline"
-                  dangerouslySetInnerHTML={{ __html: post.content }}
-                />
+                <p className="text-slate-400 text-sm md:text-base leading-relaxed line-clamp-3 mb-6 flex-grow">
+                  {post.paragraph || "No description available"}
+                </p>
 
                 <div className="mt-auto flex items-center text-blue-500 font-semibold text-sm tracking-wide uppercase">
                   Read Article
