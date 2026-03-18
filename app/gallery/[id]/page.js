@@ -44,7 +44,7 @@ export default function GalleryDetails() {
     <section className="py-24 bg-[#020617] text-white min-h-screen overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Cartoony Title */}
-        <h1 className="text-5xl md:text-7xl font-black mb-12 text-center uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-blue-500 drop-shadow-[4px_4px_0px_rgba(255,255,255,0.9)] hover:scale-105 transition-transform duration-300 cursor-default">
+        <h1 className="text-5xl md:text-7xl font-black mb-12 text-center uppercase tracking-widest text-transparent text-white hover:scale-105 transition-transform duration-300 cursor-default">
           {gallery.title}
         </h1>
 

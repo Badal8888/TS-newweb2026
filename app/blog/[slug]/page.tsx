@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-export const dynamic = "force-static";
 export const dynamicParams = true;
 
 type BlogPost = {
@@ -32,7 +31,7 @@ export async function generateStaticParams() {
 
 async function getPost(slug: string) {
   const res = await fetch(`https://admin.techstrota.com/api/blogs/${slug}`, {
-    cache: "force-cache",
+    cache: "no-store",
   });
 
   if (!res.ok) return null;
@@ -70,7 +69,7 @@ export default async function BlogDetailPage({
 
         <header className="mb-16 flex flex-col items-center text-center">
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 pb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-extrabold tracking-tight mb-6 pb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 leading-tight">
             {post.title}
           </h1>
 
