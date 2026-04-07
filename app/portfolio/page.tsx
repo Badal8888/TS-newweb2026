@@ -1,13 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import {
-  FaExternalLinkAlt,
-  FaImages,
-  FaTimes,
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa";
+import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const API_BASE = "https://admin.techstrota.com";
 
@@ -19,6 +13,7 @@ type GalleryItem =
     };
 
 type Project = {
+  url: string | undefined;
   title: string;
   description: string;
   image: string;

@@ -1,5 +1,6 @@
 import TechStackCards from "@/components/TechStackMarquee";
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
+import GoogleReviews from "@/components/GoogleReviews";
 import {
   FaSearch,
   FaClipboardList,
@@ -79,6 +80,7 @@ export default function About() {
             </p>
           </div>
         </section>
+        <GoogleReviews />
         {/* WHO WE ARE */}
         <section className="mb-24 mt-10">
           <div className="max-w-6xl mx-auto">
@@ -132,6 +134,7 @@ export default function About() {
             </div>
           </div>
         </section>
+        <GoogleReviews />
         {/* WHAT WE DO */}
 
         <section className="mb-24">
@@ -268,14 +271,12 @@ export default function About() {
 
                 <p className="text-blue-400 text-sm mb-3">Founder & CEO</p>
 
-                <p className="text-gray-400 text-sm">
-                  🎓 B.Tech Computer Engineering
-                </p>
+                <p className="text-gray-400 text-sm">🎓 B.A</p>
 
-                <p className="text-gray-400 text-sm">💼 5+ Years Experience</p>
+                <p className="text-gray-400 text-sm">💼 19+ Years Experience</p>
 
                 <p className="text-gray-400 text-sm mb-4">
-                  🚀 SaaS, Web Apps, Logistics Systems
+                  Logistic Supply chain
                 </p>
 
                 {/* Social Links */}
@@ -300,13 +301,13 @@ export default function About() {
                 <p className="text-blue-400 text-sm mb-3">Founder & CTO</p>
 
                 <p className="text-gray-400 text-sm">
-                  🎓 B.Tech Computer Engineering
+                  🎓 M.sc IT sofware engineer
                 </p>
 
-                <p className="text-gray-400 text-sm">💼 5+ Years Experience</p>
+                <p className="text-gray-400 text-sm">💼 3+ Years Experience</p>
 
                 <p className="text-gray-400 text-sm mb-4">
-                  🚀 SaaS, Web Apps, Logistics Systems
+                  SaaS, Web Apps, Logistics Systems
                 </p>
 
                 {/* Social Links */}
@@ -331,13 +332,13 @@ export default function About() {
                 <p className="text-blue-400 text-sm mb-3">Manager</p>
 
                 <p className="text-gray-400 text-sm">
-                  🎓 B.Tech Computer Engineering
+                  🎓 Mechanical Engineering
                 </p>
 
                 <p className="text-gray-400 text-sm">💼 5+ Years Experience</p>
 
                 <p className="text-gray-400 text-sm mb-4">
-                  🚀 SaaS, Web Apps, Logistics Systems
+                  Senior Store exicutive
                 </p>
 
                 {/* Social Links */}
@@ -364,7 +365,9 @@ export default function About() {
                   Senior Full Stack Developer
                 </p>
 
-                <p className="text-gray-400 text-sm">🎓 M.Sc IT</p>
+                <p className="text-gray-400 text-sm">
+                  🎓 M.Sc IT sofware developer
+                </p>
 
                 <p className="text-gray-400 text-sm">💼 2+ Years Experience</p>
 

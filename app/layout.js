@@ -12,13 +12,16 @@ export default function RootLayout({ children }) {
     url: "https://www.techstrota.com",
     logo: "https://www.techstrota.com/logo.png",
     sameAs: [
-      "https://www.linkedin.com/",
-      "https://www.instagram.com/",
-      "https://twitter.com/",
+      "https://www.linkedin.com/company/107613221/admin/dashboard/",
+      "https://www.instagram.com/techstrota/",
+      "https://twitter.com/techstrota",
+      "https://www.facebook.com/people/Tech-Strota/61550062532070/",
+      "https://www.youtube.com/@techstrota",
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "156, 1st Floor, C Tower, K10 Atlantis, Near Genda Circle",
+      streetAddress:
+        "503, Sterling Centre, R C Dutt Road,near fairfield Hotel Alkapuri, Vadodara - 390007",
       addressLocality: "Vadodara",
       addressRegion: "Gujarat",
       postalCode: "390007",
