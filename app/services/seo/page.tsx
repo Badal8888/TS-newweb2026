@@ -1,75 +1,99 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HeroSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <section className="py-5 px-6 bg-[#020b1f] flex justify-center">
-      <div className="w-full max-w-6xl">
-        {/* Video Container */}
-        <div className="relative rounded-2xl overflow-hidden border border-blue-600/60 shadow-2xl">
-          <video
-            autoPlay
-            loop
-            playsInline
-            controls
-            className="w-full h-auto object-cover"
-          >
-            <source src="/services/SEO.mp4" type="video/mp4" />
-          </video>
+    <section className="min-h-[100dvh] lg:h-screen w-full pt-6 pb-12 px-4 sm:px-6 bg-[#040A15] flex items-start justify-center">
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-4">
+        {/* LEFT CONTENT */}
+        <motion.div
+          className="flex-1 text-center lg:text-left"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Badge */}
+          <motion.div variants={itemVariants} className="mb-4">
+            <span className="inline-flex px-4 py-1.5 rounded-full border border-[#1374BB]/30 bg-[#1374BB]/5 text-[#1374BB] text-xs font-bold uppercase">
+              Rank Higher on Google
+            </span>
+          </motion.div>
 
-          {/* Desktop Overlay Text */}
-          <div className="hidden md:flex absolute inset-0 bg-black/40 items-center justify-center text-center px-6">
-            <div className="max-w-3xl">
-              <motion.h1
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-5xl font-bold text-white mb-4"
-              >
-                SEO Services to Boost Your Online Visibility
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="text-gray-200 text-lg"
-              >
-                Our SEO services are designed to enhance your online presence
-                and drive organic traffic to your website. We specialize in
-                optimizing your site for search engines, improving your
-                rankings, and increasing your visibility to potential customers.
-                From keyword research to on-page optimization and link building,
-                we provide comprehensive SEO strategies that deliver measurable
-                results. Let us help you achieve higher search engine rankings
-                and grow your business online.
-              </motion.p>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Text Below Video */}
-        <div className="md:hidden text-center mt-6 px-4">
+          {/* Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-2xl font-bold text-white mb-3"
+            variants={itemVariants}
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-5 leading-[1.1]"
           >
-            Social Media Marketing Services
+            <span className="text-[#1374BB]">SEO Services</span>
+            <br />
+            to Boost Your
+            <br />
+            Online Visibility
           </motion.h1>
 
+          {/* Description */}
           <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-gray-300 text-sm"
+            variants={itemVariants}
+            className="text-[#8B95A5] text-base lg:text-lg max-w-xl mb-8"
           >
-            Grow your brand with powerful social media strategies on Facebook,
-            Instagram, LinkedIn and Twitter.
+            Our SEO services are designed to enhance your online presence and
+            drive organic traffic to your website. We optimize your site for
+            search engines, improve rankings, and increase visibility to
+            potential customers through proven strategies.
           </motion.p>
-        </div>
+
+          {/* Buttons */}
+          <motion.div
+            variants={itemVariants}
+            className="flex gap-4 flex-col sm:flex-row"
+          >
+            <Link href="/contact">
+              <button className="bg-[#1374BB] text-white font-bold py-3 px-8 rounded-xl">
+                Inquire Now
+              </button>
+            </Link>
+
+            <Link href="/portfolio">
+              <button className="border-2 border-[#1374BB]/20 text-[#1374BB] font-bold py-3 px-8 rounded-xl">
+                View Portfolio
+              </button>
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* RIGHT VIDEO */}
+        <motion.div
+          className="flex-1 w-full mt-8 lg:mt-0"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+        >
+          <div className="rounded-2xl overflow-hidden border border-gray-800/60 bg-[#091122] aspect-video">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/services/SEO.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
