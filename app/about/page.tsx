@@ -1,5 +1,6 @@
 import TechStackCards from "@/components/TechStackMarquee";
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
+import GoogleReviews from "@/components/GoogleReviews";
 import {
   FaSearch,
   FaClipboardList,
@@ -116,6 +117,90 @@ export default function About() {
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-blue-500/10 blur-2xl rounded-full"></div>
             <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-fuchsia-500/10 blur-2xl rounded-full"></div>
           </div>
+
+    </section>
+        <GoogleReviews />
+        {/* WHO WE ARE */}
+        <section className="mb-24 mt-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Title */}
+            <h2 className="text-4xl font-bold mb-6 text-center">Who We Are</h2>
+
+            {/* Description */}
+            <p className="text-gray-400 text-center max-w-3xl mx-auto leading-relaxed mb-14">
+              Founded with a vision to innovate and simplify technology,
+              <span className="text-white font-semibold"> TechStrota </span>
+              is a modern software development company based in Vadodara,
+              Gujarat. We partner with startups and businesses to build
+              scalable, secure and future-ready digital products that drive real
+              growth.
+            </p>
+
+            {/* Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="group bg-[#0F172A] p-7 rounded-2xl border border-gray-800 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl mb-4">🚀</div>
+                <h3 className="text-lg font-semibold mb-2">Established</h3>
+                <p className="text-gray-400 text-sm">
+                  Proudly building innovative digital solutions since 2021.
+                </p>
+              </div>
+
+              <div className="group bg-[#0F172A] p-7 rounded-2xl border border-gray-800 hover:border-purple-500 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl mb-4">🎯</div>
+                <h3 className="text-lg font-semibold mb-2">Our Mission</h3>
+                <p className="text-gray-400 text-sm">
+                  Simplifying complex digital challenges with smart technology.
+                </p>
+              </div>
+
+              <div className="group bg-[#0F172A] p-7 rounded-2xl border border-gray-800 hover:border-green-500 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl mb-4">📈</div>
+                <h3 className="text-lg font-semibold mb-2">Growth Journey</h3>
+                <p className="text-gray-400 text-sm">
+                  From freelance beginnings to a trusted full-stack digital
+                  agency.
+                </p>
+              </div>
+
+              <div className="group bg-[#0F172A] p-7 rounded-2xl border border-gray-800 hover:border-pink-500 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl mb-4">❤️</div>
+                <h3 className="text-lg font-semibold mb-2">Our Values</h3>
+                <p className="text-gray-400 text-sm">
+                  Innovation, transparency and user-first product design.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <GoogleReviews />
+        {/* WHAT WE DO */}
+
+        <section className="mb-24">
+          <h2 className="text-3xl font-bold mb-8">What We Do</h2>
+
+          <p className="text-gray-400 mb-12 max-w-3xl">
+            TechStrota provides modern technology services that help businesses
+            build scalable digital platforms, increase online presence and
+            improve operational efficiency.
+          
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tight mb-8">
+            Empowering <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500">
+              Tomorrow
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-2xl text-gray-300 leading-relaxed font-light mb-6">
+            Through Technology. We transform ideas into scalable digital solutions. We're more than just a tech company — we’re your innovation partner.
+
+          </p>
+          
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-3xl mx-auto">
+            <strong>TechStrota</strong> is a modern
+            <strong className="text-gray-300"> software development company in Vadodara, India </strong> 
+            helping startups and enterprises build scalable digital systems. Our expertise includes SaaS development, web development, mobile applications and enterprise software solutions using technologies like React, Next.js, Laravel and cloud platforms.
+          </p>
         </div>
       </section>
 
@@ -193,6 +278,118 @@ export default function About() {
               presence and improve operational efficiency.
             </p>
           </div>
+
+
+            {/* Team Grid */}
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+              {/* Member 1 */}
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Chirag Kanani</h3>
+
+                <p className="text-blue-400 text-sm mb-3">Founder & CEO</p>
+
+                <p className="text-gray-400 text-sm">🎓 B.A</p>
+
+                <p className="text-gray-400 text-sm">💼 19+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm mb-4">
+                  Logistic Supply chain
+                </p>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-4 text-lg">
+                  <a href="https://linkedin.com" target="_blank">
+                    <FaLinkedin className="hover:text-blue-400" />
+                  </a>
+
+                  <a href="https://instagram.com" target="_blank">
+                    <FaInstagram className="hover:text-pink-400" />
+                  </a>
+
+                  <a href="https://github.com" target="_blank">
+                    <FaGithub className="hover:text-gray-300" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Badal Jamod</h3>
+
+                <p className="text-blue-400 text-sm mb-3">Founder & CTO</p>
+
+                <p className="text-gray-400 text-sm">
+                  🎓 M.sc IT sofware engineer
+                </p>
+
+                <p className="text-gray-400 text-sm">💼 3+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm mb-4">
+                  SaaS, Web Apps, Logistics Systems
+                </p>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-4 text-lg">
+                  <a href="https://linkedin.com" target="_blank">
+                    <FaLinkedin className="hover:text-blue-400" />
+                  </a>
+
+                  <a href="https://instagram.com" target="_blank">
+                    <FaInstagram className="hover:text-pink-400" />
+                  </a>
+
+                  <a href="https://github.com" target="_blank">
+                    <FaGithub className="hover:text-gray-300" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Himanshu Dangar</h3>
+
+                <p className="text-blue-400 text-sm mb-3">Manager</p>
+
+                <p className="text-gray-400 text-sm">
+                  🎓 Mechanical Engineering
+                </p>
+
+                <p className="text-gray-400 text-sm">💼 5+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm mb-4">
+                  Senior Store exicutive
+                </p>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-4 text-lg">
+                  <a href="https://linkedin.com" target="_blank">
+                    <FaLinkedin className="hover:text-blue-400" />
+                  </a>
+
+                  <a href="https://instagram.com" target="_blank">
+                    <FaInstagram className="hover:text-pink-400" />
+                  </a>
+
+                  <a href="https://github.com" target="_blank">
+                    <FaGithub className="hover:text-gray-300" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Member 2 */}
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition text-center">
+                <h3 className="text-lg font-semibold">Vidhi Patel</h3>
+
+                <p className="text-blue-400 text-sm mb-3">
+                  Senior Full Stack Developer
+                </p>
+
+                <p className="text-gray-400 text-sm">
+                  🎓 M.Sc IT sofware developer
+                </p>
+
+                <p className="text-gray-400 text-sm">💼 2+ Years Experience</p>
+
+                <p className="text-gray-400 text-sm">
+                  ⚙️ React, Laravel, Node.js
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[

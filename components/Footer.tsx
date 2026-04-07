@@ -30,23 +30,38 @@ export default function Footer() {
 
           {/* Social */}
           <div className="flex gap-4 text-lg">
-            <a href="#" className="hover:text-blue-400 transition">
+            <a
+              href="https://www.facebook.com/people/Tech-Strota/61550062532070/"
+              className="hover:text-blue-400 transition"
+            >
               <FaFacebookF />
             </a>
 
-            <a href="#" className="hover:text-blue-400 transition">
+            <a
+              href="https://www.instagram.com/techstrota/"
+              className="hover:text-blue-400 transition"
+            >
               <FaInstagram />
             </a>
 
-            <a href="#" className="hover:text-blue-400 transition">
+            <a
+              href="https://www.linkedin.com/company/107613221/admin/dashboard/"
+              className="hover:text-blue-400 transition"
+            >
               <FaLinkedinIn />
             </a>
 
-            <a href="#" className="hover:text-blue-400 transition">
+            <a
+              href="https://twitter.com/techstrota"
+              className="hover:text-blue-400 transition"
+            >
               <FaXTwitter />
             </a>
 
-            <a href="#" className="hover:text-blue-400 transition">
+            <a
+              href="https://www.youtube.com/@techstrota"
+              className="hover:text-blue-400 transition"
+            >
               <FaYoutube />
             </a>
           </div>
@@ -93,8 +108,8 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link href="/career" className="hover:text-blue-400 transition">
-                Career
+              <Link href="/gallery" className="hover:text-blue-400 transition">
+                TS Gallery
               </Link>
             </li>
           </ul>
@@ -107,9 +122,8 @@ export default function Footer() {
           </h3>
 
           <p className="text-gray-400 mb-4 leading-relaxed">
-            156, 1st Floor, C Tower, K10 Atlantis <br />
-            Near Genda Circle, Opp. Honest Restaurant <br />
-            Vadodara, Gujarat 390007
+            503, Sterling Centre, R C Dutt Road,near fairfield Hotel Alkapuri,
+            Vadodara - 390007
           </p>
 
           {/* Google Map */}
