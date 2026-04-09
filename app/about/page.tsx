@@ -50,43 +50,62 @@ export default function About() {
   return (
     <main className="bg-[#030712] text-white overflow-hidden selection:bg-cyan-500/30 font-sans">
       {/* --- HERO SECTION (High-Tech Mesh Glow) --- */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 sm:px-6 flex flex-col items-center text-center border-b border-white/10">
-        {/* Background Dynamic Glows */}
-        <div className="absolute top-0 left-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-fuchsia-600/20 blur-[100px] md:blur-[150px] rounded-full pointer-events-none"></div>
-        <div className="absolute bottom-0 right-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-cyan-600/20 blur-[100px] md:blur-[150px] rounded-full pointer-events-none"></div>
+  <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 sm:px-6 flex flex-col items-center justify-center text-center border-b border-white/10 min-h-[80vh] overflow-hidden">
+  
+  {/* --- Video Background Section --- */}
+  <div className="absolute inset-0 w-full h-full z-0">
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      // Video ki opacity 40 se 60 kar di hai taaki video zyada clear dikhe
+      className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen"
+    >
+      {/* Exact correct path based on your folder structure */}
+      <source src="/videos/about-us.mp4" type="video/mp4" />
+    </video>
+    {/* Dark Gradient Overlay ko halka (light) kar diya hai */}
+    <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/30 via-[#030712]/50 to-[#030712] z-10"></div>
+  </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-xs md:text-sm font-semibold uppercase tracking-widest mb-8 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            About TechStrota
-          </div>
+  {/* Background Dynamic Glows (Light effects ko /20 se /10 kar diya hai taaki video par zyada asar na ho) */}
+  <div className="absolute top-0 left-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-fuchsia-600/10 blur-[100px] md:blur-[150px] rounded-full pointer-events-none z-10"></div>
+  <div className="absolute bottom-0 right-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-cyan-600/10 blur-[100px] md:blur-[150px] rounded-full pointer-events-none z-10"></div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tight mb-8">
-            Empowering <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500">
-              Tomorrow
-            </span>
-          </h1>
+  {/* Main Content (z-20 rakha hai taaki video ke upar rahe) */}
+  <div className="relative z-20 max-w-4xl mx-auto">
+    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-xs md:text-sm font-semibold uppercase tracking-widest mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(34,211,238,0.1)]">
+      <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+      About TechStrota
+    </div>
 
-          <p className="text-lg md:text-2xl text-gray-300 leading-relaxed font-light mb-6">
-            Through Technology. We transform ideas into scalable digital
-            solutions. We&apos;re more than just a tech company — we’re your
-            innovation partner.
-          </p>
+    <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tight mb-8">
+      Empowering <br className="hidden sm:block" />
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 filter drop-shadow-lg">
+        Tomorrow
+      </span>
+    </h1>
 
-          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-3xl mx-auto">
-            <strong>TechStrota</strong> is a modern
-            <strong className="text-gray-300">
-              {" "}
-              software development company in Vadodara, India{" "}
-            </strong>
-            helping startups and enterprises build scalable digital systems. Our
-            expertise includes SaaS development, web development, mobile
-            applications and enterprise software solutions using technologies
-            like React, Next.js, Laravel and cloud platforms.
-          </p>
-        </div>
-      </section>
+    <p className="text-lg md:text-2xl text-gray-200 leading-relaxed font-light mb-6">
+      Through Technology. We transform ideas into scalable digital
+      solutions. We&apos;re more than just a tech company — we’re your
+      innovation partner.
+    </p>
+
+    <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto bg-white/5 p-6 rounded-3xl border border-white/5 backdrop-blur-sm">
+      <strong className="text-white">TechStrota</strong> is a modern
+      <strong className="text-cyan-300">
+        {" "}
+        software development company in Vadodara, India{" "}
+      </strong>
+      helping startups and enterprises build scalable digital systems. Our
+      expertise includes SaaS development, web development, mobile
+      applications and enterprise software solutions using technologies
+      like React, Next.js, Laravel and cloud platforms.
+    </p>
+  </div>
+</section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* --- WHO WE ARE (Modern Staggered Grid) --- */}
@@ -153,80 +172,81 @@ export default function About() {
         </section>
 
         {/* --- WHAT WE DO (Neon Border Cards) --- */}
-        <section className="py-20 md:py-32 border-t border-white/10">
-          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">What We Do</h2>
-            <p className="text-gray-400 text-base md:text-lg">
-              TechStrota provides modern technology services that help
-              businesses build scalable digital platforms, increase online
-              presence and improve operational efficiency.
-            </p>
-          </div>
+       <section className="py-20 md:py-32 border-t border-white/10">
+  <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+    <h2 className="text-3xl md:text-5xl font-bold mb-6">What We Do</h2>
+    <p className="text-gray-400 text-base md:text-lg">
+      TechStrota provides modern technology services that help businesses build
+      scalable digital platforms, increase online presence and improve operational
+      efficiency.
+    </p>
+  </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: FaLaptopCode,
-                color: "text-blue-400",
-                title: "Web Development",
-                desc: "From simple websites to powerful digital platforms built with modern frameworks like React and Next.js.",
-              },
-              {
-                icon: FaCode,
-                color: "text-fuchsia-400",
-                title: "Software Development",
-                desc: "Custom software solutions designed to automate workflows and improve business efficiency.",
-              },
-              {
-                icon: FaSearch,
-                color: "text-cyan-400",
-                title: "SEO Optimization",
-                desc: "Improve search rankings, drive organic traffic and increase online visibility.",
-              },
-              {
-                icon: FaMobileAlt,
-                color: "text-orange-400",
-                title: "Android Development",
-                desc: "Scalable and high-performance mobile applications built for modern Android devices.",
-              },
-              {
-                icon: FaBullhorn,
-                color: "text-pink-400",
-                title: "Social Media Marketing",
-                desc: "Grow your brand and reach new audiences across social media platforms.",
-              },
-              {
-                icon: FaServer,
-                color: "text-emerald-400",
-                title: "Web Hosting",
-                desc: "Fast, secure and reliable hosting solutions for modern websites and applications.",
-              },
-            ].map((service, idx) => (
-              <div
-                key={idx}
-                className="relative group bg-[#09090b] rounded-3xl p-8 border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-300"
-              >
-                {/* Top Glowing Line Effect */}
-                <div
-                  className={`absolute top-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-transparent via-current to-transparent group-hover:w-full transition-all duration-500 ${service.color}`}
-                ></div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {[
+      {
+        icon: FaLaptopCode,
+        color: "text-blue-400",
+        borderColor: "border-blue-400/50",
+        title: "Web Development",
+        desc: "From simple websites to powerful digital platforms built with modern frameworks like React and Next.js.",
+      },
+      {
+        icon: FaCode,
+        color: "text-fuchsia-400",
+        borderColor: "border-fuchsia-400/50",
+        title: "Software Development",
+        desc: "Custom software solutions designed to automate workflows and improve business efficiency.",
+      },
+      {
+        icon: FaSearch,
+        color: "text-cyan-400",
+        borderColor: "border-cyan-400/50",
+        title: "SEO Optimization",
+        desc: "Improve search rankings, drive organic traffic and increase online visibility.",
+      },
+      {
+        icon: FaMobileAlt,
+        color: "text-orange-400",
+        borderColor: "border-orange-400/50",
+        title: "Android Development",
+        desc: "Scalable and high-performance mobile applications built for modern Android devices.",
+      },
+      {
+        icon: FaBullhorn,
+        color: "text-pink-400",
+        borderColor: "border-pink-400/50",
+        title: "Social Media Marketing",
+        desc: "Grow your brand and reach new audiences across social media platforms.",
+      },
+      {
+        icon: FaServer,
+        color: "text-emerald-400",
+        borderColor: "border-emerald-400/50",
+        title: "Web Hosting",
+        desc: "Fast, secure and reliable hosting solutions for modern websites and applications.",
+      },
+    ].map((service, idx) => (
+      <div
+        key={idx}
+        // Yaha humne purana border hata kar service.borderColor laga diya hai
+        className={`relative group bg-[#09090b] rounded-3xl p-8 border ${service.borderColor} overflow-hidden transition-all duration-300 shadow-lg`}
+      >
+        {/* Top hover line effect yaha se hata diya gaya hai */}
 
-                <div
-                  className={`w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <service.icon className={`${service.color} text-3xl`} />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {service.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
+        <div
+          className={`w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+        >
+          <service.icon className={`${service.color} text-3xl`} />
+        </div>
+        <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+        <p className="text-gray-400 text-sm leading-relaxed">
+          {service.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
         {/* --- OUR TEAM (Frosted Glass ID Cards) --- */}
         <section className="py-20 md:py-32 border-t border-white/10">
           <div className="text-center mb-16 md:mb-20">
@@ -345,114 +365,182 @@ export default function About() {
         </section>
 
         {/* --- WHY CHOOSE US (Masonry/Bento Variation) --- */}
-        <section className="py-20 md:py-32 border-t border-white/10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 md:mb-16 text-center">
-            Why Choose TechStrota
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {[
-              {
-                title: "Expert Developers",
-                desc: "Our experienced team specializes in modern technologies like React, Next.js and Laravel to build scalable and secure digital platforms.",
-              },
-              {
-                title: "Transparent Communication",
-                desc: "We believe that great products are built through clear collaboration. Our team maintains open communication, regular updates, and transparent workflows, ensuring you stay informed and involved throughout the development process.",
-                colSpan: "lg:col-span-2",
-              },
-              {
-                title: "Responsive Design",
-                desc: "We create digital experiences that look and perform great on all devices, ensuring your users have a seamless experience whether they’re on desktop, tablet or mobile.",
-              },
-              {
-                title: "Custom Solutions",
-                desc: "We don’t believe in one-size-fits-all solutions. Every project we take on is custom-built to meet the unique needs of your business, ensuring a perfect fit for your goals and challenges.",
-              },
-              {
-                title: "Client-Centric Approach",
-                desc: "Every business is unique, and so are its challenges. We carefully understand your goals and deliver custom software solutions designed around your business objectives, ensuring maximum value and long-term success.",
-              },
-              {
-                title: "On-Time Delivery",
-                desc: "We respect your time and business deadlines. Our structured development process and agile methodology help us deliver projects efficiently and on schedule without compromising quality.",
-                colSpan: "md:col-span-2 lg:col-span-2",
-              },
-              {
-                title: "Post-Launch Support",
-                desc: "Our partnership doesn’t end after deployment. We provide continuous support, updates, and optimization to ensure your software remains secure, reliable, and ready to scale as your business grows.",
-              },
-            ].map((feature, idx) => (
-              <div
-                key={idx}
-                className={`bg-[#0f172a] p-6 md:p-8 rounded-3xl border border-white/5 hover:bg-white/[0.04] transition-colors ${feature.colSpan || ""}`}
-              >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center mb-5 text-white font-bold shadow-lg">
-                  {idx + 1}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {feature.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+  {/* --- WHY CHOOSE US (Masonry/Bento Variation) --- */}
+
+       <section className="py-20 md:py-32 border-t border-white/10">
+
+  <h2 className="text-3xl md:text-5xl font-bold mb-12 md:mb-16 text-center">
+
+    Why Choose TechStrota
+
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+
+    {[
+
+      {
+
+        title: "Expert Developers",
+
+        desc: "Our experienced team specializes in modern technologies like React, Next.js and Laravel to build scalable and secure digital platforms.",
+
+      },
+
+      {
+
+        title: "Transparent Communication",
+
+        desc: "We believe that great products are built through clear collaboration. Our team maintains open communication, regular updates, and transparent workflows, ensuring you stay informed and involved throughout the development process.",
+
+        colSpan: "lg:col-span-2",
+
+      },
+
+      {
+
+        title: "Responsive Design",
+
+        desc: "We create digital experiences that look and perform great on all devices, ensuring your users have a seamless experience whether they’re on desktop, tablet or mobile.",
+
+      },
+
+      {
+
+        title: "Custom Solutions",
+
+        desc: "We don’t believe in one-size-fits-all solutions. Every project we take on is custom-built to meet the unique needs of your business, ensuring a perfect fit for your goals and challenges.",
+
+      },
+
+      {
+
+        title: "Client-Centric Approach",
+
+        desc: "Every business is unique, and so are its challenges. We carefully understand your goals and deliver custom software solutions designed around your business objectives, ensuring maximum value and long-term success.",
+
+      },
+
+      {
+
+        title: "On-Time Delivery",
+
+        desc: "We respect your time and business deadlines. Our structured development process and agile methodology help us deliver projects efficiently and on schedule without compromising quality.",
+
+        colSpan: "md:col-span-2 lg:col-span-2",
+
+      },
+
+      {
+
+        title: "Post-Launch Support",
+
+        desc: "Our partnership doesn’t end after deployment. We provide continuous support, updates, and optimization to ensure your software remains secure, reliable, and ready to scale as your business grows.",
+
+      },
+
+    ].map((feature, idx) => (
+
+      <div
+
+        key={idx}
+
+        // Yaha par yellow border aur yellow glow shadow apply kiya gaya hai
+
+        className={`bg-[#0f172a] p-6 md:p-8 rounded-3xl border border-yellow-500/30 shadow-[0_0_15px_3px_rgba(234,179,8,0.15)] hover:bg-white/[0.04] hover:border-yellow-400/70 hover:shadow-[0_0_20px_5px_rgba(234,179,8,0.3)] transition-all duration-300 ${feature.colSpan || ""}`}
+
+      >
+
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center mb-5 text-white font-bold shadow-lg">
+
+          {idx + 1}
+
+        </div>
+
+        <h3 className="text-xl font-bold text-white mb-3">
+
+          {feature.title}
+
+        </h3>
+
+        <p className="text-gray-400 text-sm leading-relaxed">
+
+          {feature.desc}
+
+        </p>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section> 
+
+
 
         {/* --- DEVELOPMENT PROCESS (Connected Path) --- */}
-        <section className="py-20 md:py-32 border-t border-white/10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
-            Our Development Process
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-4 relative">
-            {/* Background Line for large screens */}
-            <div className="hidden lg:block absolute top-10 left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent -z-10"></div>
+        <section className="py-20 md:py-32 border-t border-white/10 relative overflow-hidden">
+  <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
+    Our Development Process
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-4 relative px-4 z-10">
+    {/* Background Line for large screens - updated with subtle cyan gradient */}
+    <div className="hidden lg:block absolute top-12 left-10 right-10 h-[2px] bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent -z-10"></div>
 
-            {[
-              {
-                icon: FaSearch,
-                title: "Discovery",
-                desc: "Understanding your business goals and project requirements.",
-              },
-              {
-                icon: FaClipboardList,
-                title: "Planning",
-                desc: "Designing system architecture and development roadmap.",
-              },
-              {
-                icon: FaCode,
-                title: "Development",
-                desc: "Building scalable applications using modern technologies.",
-              },
-              {
-                icon: FaBug,
-                title: "Testing",
-                desc: "Ensuring security, performance and reliability.",
-              },
-              {
-                icon: FaRocket,
-                title: "Launch",
-                desc: "Deployment with continuous support and optimization.",
-              },
-            ].map((step, idx) => (
-              <div
-                key={idx}
-                className="relative bg-black/40 p-6 md:p-8 rounded-3xl border border-white/10 backdrop-blur-sm text-center group hover:border-cyan-500/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 mx-auto bg-gray-900 border-2 border-white/10 rounded-2xl flex items-center justify-center mb-6 text-white group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all duration-300 rotate-3 group-hover:rotate-0 shadow-xl">
-                  <step.icon className="text-2xl" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+    {[
+      {
+        icon: FaSearch,
+        title: "Discovery",
+        desc: "Understanding your business goals and project requirements.",
+      },
+      {
+        icon: FaClipboardList,
+        title: "Planning",
+        desc: "Designing system architecture and development roadmap.",
+      },
+      {
+        icon: FaCode,
+        title: "Development",
+        desc: "Building scalable applications using modern technologies.",
+      },
+      {
+        icon: FaBug,
+        title: "Testing",
+        desc: "Ensuring security, performance and reliability.",
+      },
+      {
+        icon: FaRocket,
+        title: "Launch",
+        desc: "Deployment with continuous support and optimization.",
+      },
+    ].map((step, idx) => (
+      <div
+        key={idx}
+        // Updated Card Styling: Solid dark background, hover lift, and cyan shadow
+        className="relative bg-[#0d1117] p-6 md:p-8 rounded-3xl border border-white/5 text-center group hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-[0_10px_30px_-10px_rgba(34,211,238,0.3)] transition-all duration-500 overflow-hidden"
+      >
+        {/* NAYA: Background Watermark Numbers (01, 02, etc.) */}
+        <div className="absolute -bottom-4 -right-2 text-8xl font-black text-white/[0.02] group-hover:text-cyan-500/[0.05] transition-colors duration-500 pointer-events-none select-none">
+          0{idx + 1}
+        </div>
+
+        {/* Updated Icon Container: Cyan glow and 360-degree spin on hover */}
+        <div className="relative w-16 h-16 mx-auto bg-[#161b22] border border-white/10 rounded-2xl flex items-center justify-center mb-6 text-gray-400 group-hover:text-cyan-400 group-hover:bg-cyan-500/10 group-hover:border-cyan-500/40 transition-all duration-500 group-hover:scale-110 shadow-lg">
+          <step.icon className="text-2xl transition-transform duration-700 group-hover:rotate-[360deg]" />
+        </div>
+
+        {/* Text with subtle hover color change */}
+        <h3 className="relative text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">
+          {step.title}
+        </h3>
+        <p className="relative text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+          {step.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
       </div>
 
       {/* TechStackMarquee Section */}
