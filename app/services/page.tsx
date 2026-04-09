@@ -16,78 +16,6 @@ export const metadata = {
 // 9 Services ka data with real placeholder images
 const servicesList = [
   {
-    title: "Mobile App Development",
-    tag: "Mobile",
-    tagColor: "text-[#0a0f1a] bg-[#f2a93b]", // Gold bg, dark text
-    description:
-      "We build high-performance mobile apps using React Native for seamless iOS and Android experiences, backed by robust, scalable cloud backends.",
-    bullets: [
-      "Native performance with Cross-Platform efficiency",
-      "Custom UI/UX tailored for device ergonomics",
-      "Real-time backend sync & offline capabilities",
-    ],
-    link: "/services/mobile-app-development",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
-    buttonColor:
-      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
-    reverse: false, // Image left, text right
-  },
-  {
-    title: "SaaS & Cloud Solutions",
-    tag: "Enterprise",
-    tagColor: "text-white bg-[#3b82f6]", // Blue bg, white text
-    description:
-      "Accelerate your business with enterprise-grade CRM and SaaS platforms. We architect multi-tenant environments that grow with your user base.",
-    bullets: [
-      "Cloud-Native Architecture (AWS/Azure)",
-      "Secure Multi-tenant Data Separation",
-      "API-first Headless Infrastructure",
-    ],
-    link: "/services/saas-development",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-    buttonColor:
-      "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
-    reverse: true, // Image right, text left
-  },
-  {
-    title: "Web & E-commerce",
-    tag: "E-commerce",
-    tagColor: "text-[#0a0f1a] bg-[#f2a93b]",
-    description:
-      "Launch scalable online stores and web systems built for conversion and speed. From headless commerce to high-traffic web portals.",
-    bullets: [
-      "Custom Shopify & Headless Integrations",
-      "Lightning Fast Progressive Web Apps",
-      "Robust Inventory & Order Management",
-    ],
-    link: "/services/Ecommerce-development",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",
-    buttonColor:
-      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
-    reverse: false,
-  },
-  {
-    title: "Marketing & Growth",
-    tag: "Growth",
-    tagColor: "text-white bg-[#3b82f6]",
-    description:
-      "Data-driven strategies to amplify your brand. We dominate through SEO, SMM, and Performance Marketing to ensure your digital product reaches the right audience.",
-    bullets: [
-      "Technical SEO & Content Optimization",
-      "Strategic Social Media Management",
-      "Targeted Lead Generation & ROI focus",
-    ],
-    link: "/services/social-media-marketing",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    buttonColor:
-      "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
-    reverse: true,
-  },
-  {
     title: "Web Development",
     tag: "Web",
     tagColor: "text-[#0a0f1a] bg-[#f2a93b]",
@@ -106,21 +34,21 @@ const servicesList = [
     reverse: false,
   },
   {
-    title: "Website Design",
-    tag: "Design",
+    title: "E-commerce Development",
+    tag: "E-commerce",
     tagColor: "text-white bg-[#3b82f6]",
     description:
-      "Crafting stunning, user-centric website designs that not only look beautiful but are built to convert visitors into customers.",
+      "Launch scalable online stores and web systems built for conversion and speed. From headless commerce to high-traffic web portals.",
     bullets: [
-      "User-Centric UI/UX Design",
-      "Responsive & Mobile-First Approach",
-      "Brand Identity Integration",
+      "Custom Shopify & Headless Integrations",
+      "Lightning Fast Progressive Web Apps",
+      "Robust Inventory & Order Management",
     ],
-    link: "/services/website-design",
+    link: "/services/Ecommerce-development",
     image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",
     buttonColor:
-      "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
+      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: true,
   },
   {
@@ -177,6 +105,60 @@ const servicesList = [
     buttonColor:
       "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: false,
+  },
+  {
+    title: "Social Media Marketing",
+    tag: "Growth",
+    tagColor: "text-white bg-[#3b82f6]",
+    description:
+      "Data-driven strategies to amplify your brand. We dominate through SEO, SMM, and Performance Marketing to ensure your digital product reaches the right audience.",
+    bullets: [
+      "Technical SEO & Content Optimization",
+      "Strategic Social Media Management",
+      "Targeted Lead Generation & ROI focus",
+    ],
+    link: "/services/social-media-marketing",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    buttonColor:
+      "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
+    reverse: true,
+  },
+  {
+    title: "SaaS Development",
+    tag: "Enterprise",
+    tagColor: "text-[#0a0f1a] bg-[#f2a93b]", // Blue bg, white text
+    description:
+      "Accelerate your business with enterprise-grade CRM and SaaS platforms. We architect multi-tenant environments that grow with your user base.",
+    bullets: [
+      "Cloud-Native Architecture (AWS/Azure)",
+      "Secure Multi-tenant Data Separation",
+      "API-first Headless Infrastructure",
+    ],
+    link: "/services/saas-development",
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+    buttonColor:
+      "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
+    reverse: false, // Image right, text left
+  },
+  {
+    title: "Mobile App Development",
+    tag: "Mobile",
+    tagColor: "text-white bg-[#3b82f6]", // Gold bg, dark text
+    description:
+      "We build high-performance mobile apps using React Native for seamless iOS and Android experiences, backed by robust, scalable cloud backends.",
+    bullets: [
+      "Native performance with Cross-Platform efficiency",
+      "Custom UI/UX tailored for device ergonomics",
+      "Real-time backend sync & offline capabilities",
+    ],
+    link: "/services/mobile-app-development",
+    image:
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
+    buttonColor:
+      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
+    reverse: true, // Image left, text right
   },
 ];
 
