@@ -1,5 +1,4 @@
 import Link from "next/link";
-import HeroBackground from "@/components/HeroBackground";
 
 export const metadata = {
   title: "Software Development Services | TechStrota",
@@ -166,7 +165,6 @@ const servicesList = [
 export default function Services() {
   return (
     <main className="py-16 md:py-20 lg:py-24 bg-[#0a0f1a] text-white font-sans overflow-hidden">
-      <HeroBackground />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title Section */}
         <div className="text-center md:text-left mb-16 max-w-3xl">
