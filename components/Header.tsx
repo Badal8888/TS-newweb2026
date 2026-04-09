@@ -223,6 +223,14 @@ export default function Header() {
               </Link>
 
               <Link
+                href="/services/social-media-marketing"
+                onClick={() => setMenuOpen(false)}
+                className="block"
+              >
+                Social Media Marketing
+              </Link>
+
+              <Link
                 href="/services/saas-development"
                 onClick={() => setMenuOpen(false)}
                 className="block"
