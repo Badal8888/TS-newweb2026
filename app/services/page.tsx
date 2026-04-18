@@ -27,8 +27,7 @@ const servicesList = [
       "Scalable modern web technologies",
     ],
     link: "/services/web-development",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
+    image: "/services/web-development.png", // Placeholder image path, replace with actual image URL
     buttonColor:
       "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: false,
@@ -45,8 +44,7 @@ const servicesList = [
       "Robust Inventory & Order Management",
     ],
     link: "/services/Ecommerce-development",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",
+    image: "/services/e-commerce.png", // Placeholder image path, replace with actual image URL
     buttonColor:
       "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: true,
@@ -63,8 +61,7 @@ const servicesList = [
       "Seamless Third-Party API Integrations",
     ],
     link: "/services/web-application",
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+    image: "/services/web-application.png", // Placeholder image path, replace with actual image URL
     buttonColor:
       "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: false,
@@ -81,8 +78,7 @@ const servicesList = [
       "Seamless Team Integration",
     ],
     link: "/services/dedicated-developers",
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+    image: "/services/dedicated-developer.png", // Placeholder image path, replace with actual image URL
     buttonColor:
       "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
     reverse: true,
@@ -100,8 +96,7 @@ const servicesList = [
     ],
     link: "/services/seo",
     // Yahan maine image link change kar diya hai jo proper work karega
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    image: "/services/seo.png", // Placeholder image path, replace with actual image URL
     buttonColor:
       "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: false,
@@ -118,8 +113,7 @@ const servicesList = [
       "Targeted Lead Generation & ROI focus",
     ],
     link: "/services/social-media-marketing",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    image: "/services/social-media-marketing.png", // Placeholder image path, replace with actual image URL
     buttonColor:
       "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
     reverse: true,
@@ -136,8 +130,7 @@ const servicesList = [
       "API-first Headless Infrastructure",
     ],
     link: "/services/saas-development",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+    image: "/services/saas-development.png", // Placeholder image path, replace with actual image URL
     buttonColor:
       "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
     reverse: false, // Image right, text left
@@ -154,8 +147,7 @@ const servicesList = [
       "Real-time backend sync & offline capabilities",
     ],
     link: "/services/mobile-app-development",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
+    image: "/services/mobile-application.png", // Placeholder image path, replace with actual image URL
     buttonColor:
       "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: true, // Image left, text right
@@ -165,12 +157,12 @@ const servicesList = [
 export default function Services() {
   return (
     <main className="py-16 md:py-20 lg:py-24 bg-[#0a0f1a] text-white font-sans overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title Section */}
         <div className="text-center md:text-left mb-16 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
             Our Software Development{" "}
-            <span className="text-[#f2a93b]">Services</span>
+            <span className="text-[#1374BB]">Services</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl">
             TechStrota provides professional software development services

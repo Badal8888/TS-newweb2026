@@ -70,7 +70,7 @@ export default function ContactForm() {
 
   return (
     <main className="min-h-screen w-full bg-[#020714] text-white py-8 sm:py-10 mb-10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className=" relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <h1 className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center">
           Contact{" "}

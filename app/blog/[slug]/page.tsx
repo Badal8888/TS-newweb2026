@@ -49,7 +49,7 @@ export default async function BlogDetailPage({
   if (!post) notFound();
 
   return (
-    <article className="min-h-screen bg-[#020617] text-white py-16 md:py-24 relative overflow-hidden selection:bg-blue-500/30">
+    <article className="min-h-screen text-white py-16 md:py-24 relative overflow-hidden selection:bg-blue-500/30">
       {/* Background Glow (Matches main page) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100%] max-w-3xl h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 

@@ -38,7 +38,7 @@ export default function WebAppServices() {
     <main className="bg-[#040A15] min-h-screen w-full font-sans text-white overflow-hidden">
       {/* 1. HERO SECTION */}
       <section className="min-h-[100dvh] lg:h-screen w-full pt-6 pb-12 px-4 sm:px-6 bg-[#040A15] flex items-center justify-center">
-        <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-4">
+        <div className="relative z-10 w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-4">
           {/* LEFT CONTENT */}
           <motion.div
             className="flex-1 text-center lg:text-left"
@@ -120,7 +120,7 @@ export default function WebAppServices() {
       </section>
 
       {/* 2. WHY CHOOSE US (Yellow Borders & Icon Backgrounds) */}
-      <section className="w-full py-20 px-4 sm:px-6 bg-[#040A15]">
+      <section className="relative z-10 w-full py-20 px-4 sm:px-6 ">
         <motion.div
           className="max-w-7xl mx-auto"
           variants={scrollContainer}
@@ -202,7 +202,7 @@ export default function WebAppServices() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-[#8B95A5] text-sm leading-relaxed">
+                <p className="text-[#8B95A5] text-md leading-relaxed">
                   {feature.desc}
                 </p>
               </motion.div>
@@ -224,7 +224,7 @@ export default function WebAppServices() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               How We Build
             </h2>
-            <p className="text-[#8B95A5] max-w-2xl mx-auto">
+            <p className="text-[#8B95A5] text-xl max-w-2xl mx-auto">
               A structured, transparent methodology to take your web app from a
               rough idea to a deployed reality.
             </p>
@@ -232,7 +232,7 @@ export default function WebAppServices() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
             {/* Desktop connecting line - Changed color to subtle Amber */}
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-amber-400/20 -translate-y-1/2 z-0"></div>
+            <div className="hidden md:block absolute top-1/2 left-0 w-full -translate-y-1/2 z-0"></div>
 
             {[
               {
@@ -266,7 +266,7 @@ export default function WebAppServices() {
                   {process.step}
                 </div>
                 <h3 className="text-xl font-bold mb-3">{process.title}</h3>
-                <p className="text-[#8B95A5] text-sm leading-relaxed">
+                <p className="text-[#8B95A5] text-md leading-relaxed">
                   {process.desc}
                 </p>
               </motion.div>

@@ -174,7 +174,7 @@ export default function SEOServices() {
   return (
     <main className="bg-[#040A15] text-white w-full overflow-hidden">
       {/* 1. HERO SECTION */}
-      <section className="min-h-[100dvh] lg:h-screen w-full pt-6 pb-12 px-4 sm:px-6 flex items-center justify-center">
+      <section className="relative z-10 min-h-[100dvh] lg:h-screen w-full pt-6 pb-12 px-4 sm:px-6 flex items-center justify-center">
         <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-4">
           <motion.div
             className="flex-1 text-center lg:text-left"
@@ -252,7 +252,7 @@ export default function SEOServices() {
       </section>
 
       {/* 1.5 PRECISION MODULES */}
-      <section className="py-24 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5">
+      <section className="relative z-10 py-10 md:py-14 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-6">
           <motion.div
             initial="hidden"
@@ -294,7 +294,7 @@ export default function SEOServices() {
       </section>
 
       {/* 2. THE MONOLITH WORKFLOW */}
-      <section className="py-24 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5">
+      <section className="relative z-10 py-10 md:py-14 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -337,7 +337,7 @@ export default function SEOServices() {
       </section>
 
       {/* 2.5 PROVEN PERFORMANCE (From Uploaded Image) */}
-      <section className="py-24 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5">
+      <section className="relative z-10 py-10 md:py-14 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Left Side: Text Intro */}
           <motion.div
@@ -575,8 +575,8 @@ export default function SEOServices() {
         </div>
       </section>
 
-      {/* 2.8 WHY TECH STROT & GRAPH IMPACT (New Section from Images) */}
-      <section className="py-24 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5">
+      {/* 2.8 WHY TECH STROTA & GRAPH IMPACT (New Section from Images) */}
+      <section className="relative z-10 py-10 md:py-14 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
           {/* Left Side: Organic Impact Graph Card (Image 2) */}
           <motion.div
@@ -649,7 +649,7 @@ export default function SEOServices() {
             </div>
           </motion.div>
 
-          {/* Right Side: Why Tech Strot Checklist (Image 1) */}
+          {/* Right Side: Why Tech Strota Checklist (Image 1) */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}

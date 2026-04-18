@@ -106,7 +106,7 @@ const technologies = [
 
 export default function TechStackCards() {
   return (
-    <section className="py-24 bg-[#0F172A] text-white">
+    <section className="relative z-10 py-10 md:py-14 text-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* SEO Heading */}
         <h2 className="text-4xl font-bold mb-6 text-yellow-400">
@@ -114,7 +114,7 @@ export default function TechStackCards() {
         </h2>
 
         {/* SEO Description */}
-        <p className="text-gray-400 max-w-3xl mx-auto mb-16">
+        <p className="text-gray-400 text-lg font-bold max-w-3xl mx-auto mb-16">
           TechStrota uses modern technologies like React, Next.js, Node.js,
           Laravel, Python, Flutter and MySQL to build scalable web applications,
           SaaS platforms and mobile applications for startups and enterprises.

@@ -323,7 +323,7 @@ export default function SocialMediaServices() {
   return (
     <main className="bg-[#040A15] text-white w-full overflow-hidden">
       {/* 1. HERO SECTION (Untouched) */}
-      <section className="min-h-[100dvh] lg:h-screen w-full pt-20 pb-12 px-4 sm:px-6 flex items-center justify-center">
+      <section className="relative z-10 min-h-[100dvh] lg:h-screen w-full pt-20 pb-12 px-4 sm:px-6 flex items-center justify-center">
         <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4">
           <motion.div
             className="flex-1 text-center lg:text-left"
@@ -640,7 +640,7 @@ export default function SocialMediaServices() {
           variants={scrollVariants}
           className="text-center mb-16 relative z-10"
         >
-          <span className="text-[#1374BB] font-semibold tracking-wider uppercase text-sm mb-3 block">
+          <span className="text-[#FFC933] font-semibold tracking-wider uppercase text-sm mb-3 block">
             How We Turn Content Into Customers
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
@@ -739,7 +739,7 @@ export default function SocialMediaServices() {
               <h3 className="text-xl font-bold mb-3 text-white">
                 {item.title}
               </h3>
-              <p className="text-[#8B95A5] text-sm max-w-[240px] leading-relaxed">
+              <p className="text-[#8B95A5] text-md font-bold max-w-[240px] leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>
@@ -790,7 +790,7 @@ export default function SocialMediaServices() {
       </section>
 
       {/* 4. CONTENT TYPES WE CREATE (Updated to Yellow) */}
-      <section className="py-10 px-4 sm:px-6 w-full max-w-7xl mx-auto">
+      <section className="relative z-10 py-10 px-4 sm:px-6 w-full max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"

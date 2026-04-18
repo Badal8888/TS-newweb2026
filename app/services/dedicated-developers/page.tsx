@@ -118,7 +118,7 @@ export default function DedicatedDevelopers() {
   return (
     <main className="bg-[#040A15] text-white w-full overflow-hidden">
       {/* 1. HERO SECTION */}
-      <section className="min-h-[100dvh] lg:h-screen w-full pt-14 pb-12 px-4 sm:px-6 flex items-center justify-center">
+      <section className="relative z-10 min-h-[100dvh] lg:h-screen w-full pt-14 pb-12 px-4 sm:px-6 flex items-center justify-center">
         <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4">
           {/* LEFT CONTENT */}
           <motion.div
@@ -312,7 +312,7 @@ export default function DedicatedDevelopers() {
       </section>
 
       {/* 4. HOW IT WORKS */}
-      <section className="py-10 px-4 sm:px-6 w-full max-w-7xl mx-auto">
+      <section className="relative z-10 py-10 px-4 sm:px-6 w-full max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -323,7 +323,7 @@ export default function DedicatedDevelopers() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             How It <span className="text-[#1374BB]">Works</span>
           </h2>
-          <p className="text-[#8B95A5] max-w-2xl mx-auto">
+          <p className="text-[#8B95A5] text-lg font-semibold max-w-2xl mx-auto">
             A transparent, frictionless process designed to get your project
             moving from day one.
           </p>

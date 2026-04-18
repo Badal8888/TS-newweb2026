@@ -10,8 +10,8 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#020617] text-gray-300 pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="relative backdrop-blur-md border-t border-white/10 text-gray-300 pt-20 pb-10">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Company */}
         <div>
           <Image
@@ -161,7 +161,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-gray-800 mt-16 pt-6 text-center text-gray-500 text-sm">
+      <div className="border-t border-gray-800 mt-16 pt-6 text-center font-bold text-gray-500 text-md">
         © {new Date().getFullYear()} TechStrota. All Rights Reserved.
       </div>
     </footer>

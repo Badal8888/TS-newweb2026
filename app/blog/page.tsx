@@ -27,7 +27,7 @@ export default async function BlogPage() {
   const posts = await getPosts();
 
   return (
-    <div className="min-h-screen bg-[#020617] text-white py-24 relative overflow-hidden selection:bg-blue-500/30">
+    <div className="min-h-screen  text-white py-24 relative overflow-hidden selection:bg-blue-500/30">
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] max-w-4xl h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 

@@ -22,7 +22,7 @@ export default function MobileAppServices() {
   return (
     <main className="bg-[#040A15] min-h-screen w-full font-sans text-white overflow-hidden">
       {/* 1. HERO SECTION (Untouched) */}
-      <section className="min-h-[100dvh] w-full pt-16 pb-20 px-4 sm:px-6 bg-[#040A15] flex items-center justify-center font-sans overflow-hidden relative">
+      <section className="relative z-10 min-h-[100dvh] w-full pt-16 pb-20 px-4 sm:px-6 flex items-center justify-center font-sans overflow-hidden relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(19,116,187,0.1)_0%,transparent_70%)] pointer-events-none" />
         <div className="w-full max-w-4xl flex flex-col items-center text-center z-10">
           <motion.div
@@ -60,7 +60,7 @@ export default function MobileAppServices() {
             variants={itemVariants}
             initial="hidden"
             animate="visible"
-            className="text-[#8B95A5] text-md md:text-lg max-w-3xl mb-10"
+            className="text-[#9ca2aa] font-bold text-md md:text-lg max-w-5xl mb-10"
           >
             Mobile app development is the process of creating software
             applications that run on mobile devices, such as smartphones and
@@ -109,7 +109,7 @@ export default function MobileAppServices() {
       </section>
 
       {/* 2. WHY CHOOSE US (Yellow Borders & Icon Backgrounds) */}
-      <section className="w-full py-6 px-4 sm:px-6 bg-[#040A15]">
+      <section className="relative z-10 w-full py-6 px-4 sm:px-6">
         <motion.div
           className="max-w-7xl mx-auto"
           variants={scrollContainer}
@@ -121,7 +121,7 @@ export default function MobileAppServices() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Choose <span className="text-[#1374BB]">Us</span>
             </h2>
-            <p className="text-[#8B95A5] max-w-2xl mx-auto">
+            <p className="text-[#9ca2aa] text-lg max-w-2xl mx-auto">
               Industry expertise meets cutting-edge tech.
             </p>
           </motion.div>
@@ -173,7 +173,7 @@ export default function MobileAppServices() {
       </section>
 
       {/* 3. PROCESS (Yellow Glow on Steps, Blue Text) */}
-      <section className="w-full py-14 px-4 sm:px-6 bg-[#091122]/50 border-y border-gray-800/40">
+      <section className="relative z-10 w-full py-14 px-4 sm:px-6">
         <motion.div
           className="max-w-7xl mx-auto text-center"
           variants={scrollContainer}
@@ -209,7 +209,7 @@ export default function MobileAppServices() {
       </section>
 
       {/* 4. BENEFITS (Option 2: Business & Trust Focus) */}
-      <section className="w-full py-24 px-4 sm:px-6 bg-[#040A15]">
+      <section className="relative z-10 w-full py-24 px-4 sm:px-6">
         <motion.div
           className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16"
           variants={scrollContainer}

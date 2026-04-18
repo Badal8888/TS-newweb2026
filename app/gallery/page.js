@@ -18,9 +18,8 @@ export default function GalleryPage() {
   }, []);
 
   return (
-    <section className="min-h-screen bg-[#020617] text-white py-24 relative overflow-hidden selection:bg-blue-500/30">
+    <section className="min-h-screen text-white py-24 relative overflow-hidden selection:bg-blue-500/30">
       {/* Background Aurora Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] max-w-4xl h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header Section */}
