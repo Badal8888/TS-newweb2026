@@ -5,9 +5,11 @@ export default function WhatsAppButton() {
     <a
       href="https://wa.me/919033476660"
       target="_blank"
-      className="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition"
+      // Added z-[9999] to ensure it stays above the footer and backdrop blur
+      className="fixed bottom-6 right-6 z-[9999] bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition flex items-center justify-center"
     >
-      💬
+      {/* Tip: Use a real icon or a larger emoji for a better look */}
+      <span className="text-2xl">💬</span>
     </a>
   );
 }

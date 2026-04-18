@@ -16,70 +16,6 @@ export const metadata = {
 // 9 Services ka data with real placeholder images
 const servicesList = [
   {
-    title: "Mobile App Development",
-    tag: "Mobile",
-    tagColor: "text-[#0a0f1a] bg-[#f2a93b]", // Gold bg, dark text
-    description:
-      "We build high-performance mobile apps using React Native for seamless iOS and Android experiences, backed by robust, scalable cloud backends.",
-    bullets: [
-      "Native performance with Cross-Platform efficiency",
-      "Custom UI/UX tailored for device ergonomics",
-      "Real-time backend sync & offline capabilities",
-    ],
-    link: "/services/mobile-app-development",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
-    buttonColor: "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
-    reverse: false, // Image left, text right
-  },
-  {
-    title: "SaaS & Cloud Solutions",
-    tag: "Enterprise",
-    tagColor: "text-white bg-[#3b82f6]", // Blue bg, white text
-    description:
-      "Accelerate your business with enterprise-grade CRM and SaaS platforms. We architect multi-tenant environments that grow with your user base.",
-    bullets: [
-      "Cloud-Native Architecture (AWS/Azure)",
-      "Secure Multi-tenant Data Separation",
-      "API-first Headless Infrastructure",
-    ],
-    link: "/services/saas-development",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-    buttonColor: "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
-    reverse: true, // Image right, text left
-  },
-  {
-    title: "Web & E-commerce",
-    tag: "E-commerce",
-    tagColor: "text-[#0a0f1a] bg-[#f2a93b]",
-    description:
-      "Launch scalable online stores and web systems built for conversion and speed. From headless commerce to high-traffic web portals.",
-    bullets: [
-      "Custom Shopify & Headless Integrations",
-      "Lightning Fast Progressive Web Apps",
-      "Robust Inventory & Order Management",
-    ],
-    link: "/services/Ecommerce-development",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",
-    buttonColor: "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
-    reverse: false,
-  },
-  {
-    title: "Marketing & Growth",
-    tag: "Growth",
-    tagColor: "text-white bg-[#3b82f6]",
-    description:
-      "Data-driven strategies to amplify your brand. We dominate through SEO, SMM, and Performance Marketing to ensure your digital product reaches the right audience.",
-    bullets: [
-      "Technical SEO & Content Optimization",
-      "Strategic Social Media Management",
-      "Targeted Lead Generation & ROI focus",
-    ],
-    link: "/services/social-media-marketing",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    buttonColor: "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
-    reverse: true,
-  },
-  {
     title: "Web Development",
     tag: "Web",
     tagColor: "text-[#0a0f1a] bg-[#f2a93b]",
@@ -91,24 +27,26 @@ const servicesList = [
       "Scalable modern web technologies",
     ],
     link: "/services/web-development",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-    buttonColor: "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
+    image: "/services/web-development.png", // Placeholder image path, replace with actual image URL
+    buttonColor:
+      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: false,
   },
   {
-    title: "Website Design",
-    tag: "Design",
+    title: "E-commerce Development",
+    tag: "E-commerce",
     tagColor: "text-white bg-[#3b82f6]",
     description:
-      "Crafting stunning, user-centric website designs that not only look beautiful but are built to convert visitors into customers.",
+      "Launch scalable online stores and web systems built for conversion and speed. From headless commerce to high-traffic web portals.",
     bullets: [
-      "User-Centric UI/UX Design",
-      "Responsive & Mobile-First Approach",
-      "Brand Identity Integration",
+      "Custom Shopify & Headless Integrations",
+      "Lightning Fast Progressive Web Apps",
+      "Robust Inventory & Order Management",
     ],
-    link: "/services/website-design",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800",
-    buttonColor: "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
+    link: "/services/Ecommerce-development",
+    image: "/services/e-commerce.png", // Placeholder image path, replace with actual image URL
+    buttonColor:
+      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: true,
   },
   {
@@ -123,8 +61,9 @@ const servicesList = [
       "Seamless Third-Party API Integrations",
     ],
     link: "/services/web-application",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-    buttonColor: "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
+    image: "/services/web-application.png", // Placeholder image path, replace with actual image URL
+    buttonColor:
+      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: false,
   },
   {
@@ -139,8 +78,9 @@ const servicesList = [
       "Seamless Team Integration",
     ],
     link: "/services/dedicated-developers",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
-    buttonColor: "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
+    image: "/services/dedicated-developer.png", // Placeholder image path, replace with actual image URL
+    buttonColor:
+      "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
     reverse: true,
   },
   {
@@ -156,64 +96,78 @@ const servicesList = [
     ],
     link: "/services/seo",
     // Yahan maine image link change kar diya hai jo proper work karega
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    buttonColor: "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
+    image: "/services/seo.png", // Placeholder image path, replace with actual image URL
+    buttonColor:
+      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
     reverse: false,
+  },
+  {
+    title: "Social Media Marketing",
+    tag: "Growth",
+    tagColor: "text-white bg-[#3b82f6]",
+    description:
+      "Data-driven strategies to amplify your brand. We dominate through SEO, SMM, and Performance Marketing to ensure your digital product reaches the right audience.",
+    bullets: [
+      "Technical SEO & Content Optimization",
+      "Strategic Social Media Management",
+      "Targeted Lead Generation & ROI focus",
+    ],
+    link: "/services/social-media-marketing",
+    image: "/services/social-media-marketing.png", // Placeholder image path, replace with actual image URL
+    buttonColor:
+      "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
+    reverse: true,
+  },
+  {
+    title: "SaaS Development",
+    tag: "Enterprise",
+    tagColor: "text-[#0a0f1a] bg-[#f2a93b]", // Blue bg, white text
+    description:
+      "Accelerate your business with enterprise-grade CRM and SaaS platforms. We architect multi-tenant environments that grow with your user base.",
+    bullets: [
+      "Cloud-Native Architecture (AWS/Azure)",
+      "Secure Multi-tenant Data Separation",
+      "API-first Headless Infrastructure",
+    ],
+    link: "/services/saas-development",
+    image: "/services/saas-development.png", // Placeholder image path, replace with actual image URL
+    buttonColor:
+      "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
+    reverse: false, // Image right, text left
+  },
+  {
+    title: "Mobile App Development",
+    tag: "Mobile",
+    tagColor: "text-white bg-[#3b82f6]", // Gold bg, dark text
+    description:
+      "We build high-performance mobile apps using React Native for seamless iOS and Android experiences, backed by robust, scalable cloud backends.",
+    bullets: [
+      "Native performance with Cross-Platform efficiency",
+      "Custom UI/UX tailored for device ergonomics",
+      "Real-time backend sync & offline capabilities",
+    ],
+    link: "/services/mobile-app-development",
+    image: "/services/mobile-application.png", // Placeholder image path, replace with actual image URL
+    buttonColor:
+      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
+    reverse: true, // Image left, text right
   },
 ];
 
 export default function Services() {
   return (
-    <main className="py-16 md:py-20 lg:py-24 bg-[#020617] text-white">
-      <div className="mb-10 mt-0 md:mb-16 max-w-4xl mx-auto">
-        <div className="aspect-video mt-0 md:mt-4">
-          <video
-            className="w-full h-full object-cover rounded-xl md:rounded-2xl border border-gray-800"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="/services/services_hero.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight text-center">
-          Our Software Development Services
-        </h1>
-
-        <p className="text-gray-400 max-w-3xl mb-10 md:mb-14 text-sm sm:text-base text-center mx-auto leading-relaxed">
-          TechStrota provides professional software development services
-          including web development, mobile app development and SaaS platforms
-          for startups, logistics companies and enterprises.
-        </p>
-
-        {/* Video */}
-        {/* <div className="mb-10 md:mb-16 max-w-4xl mx-auto">
-          <div className="aspect-video">
-            <video
-              className="w-full h-full object-cover rounded-xl md:rounded-2xl border border-gray-800"
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source src="/services/services_hero.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div> */}
     <main className="py-16 md:py-20 lg:py-24 bg-[#0a0f1a] text-white font-sans overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title Section */}
         <div className="text-center md:text-left mb-16 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-            Our Software Development <span className="text-[#f2a93b]">Services</span>
+            Our Software Development{" "}
+            <span className="text-[#1374BB]">Services</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl">
-            TechStrota provides professional software development services including web development, mobile app development and SaaS platforms for startups, logistics companies and enterprises.
+            TechStrota provides professional software development services
+            including web development, mobile app development and SaaS platforms
+            for startups, logistics companies and enterprises.
           </p>
         </div>
 
@@ -228,14 +182,13 @@ export default function Services() {
               >
                 {/* Image Container */}
                 <div className="w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden relative border border-white/10 bg-slate-800">
-                  
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
+                  <img
+                    src={service.image}
+                    alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy" 
+                    loading="lazy"
                   />
-                  
+
                   {/* Tag Overlay on Image */}
                   <div
                     className={`absolute top-4 ${
@@ -258,123 +211,29 @@ export default function Services() {
                   {/* Bullet Points */}
                   <ul className="space-y-2">
                     {service.bullets.map((bullet, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-slate-300">
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 text-slate-300"
+                      >
                         {/* Custom SVG Checkmark Icon */}
-                        <svg className={`w-5 h-5 flex-shrink-0 ${service.reverse ? 'text-[#3b82f6]' : 'text-[#f2a93b]'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                        <svg
+                          className={`w-5 h-5 flex-shrink-0 ${service.reverse ? "text-[#3b82f6]" : "text-[#f2a93b]"}`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
                         <span className="text-sm sm:text-base">{bullet}</span>
                       </li>
                     ))}
                   </ul>
-
-              <p className="text-gray-400">
-                Android and iOS mobile applications using React Native and
-                scalable backend systems.
-              </p>
-            </div>
-          </Link>
-
-          {/* SaaS Development */}
-          <Link href="services/saas-development">
-            <div className="bg-[#0F172A] p-8 rounded-2xl border border-gray-800 hover:border-blue-500 transition cursor-pointer">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">
-                SaaS Development
-              </h3>
-
-              <p className="text-gray-400">
-                Build powerful SaaS platforms, CRM systems and cloud-based
-                business applications.
-              </p>
-            </div>
-          </Link>
-          <Link href="services/website-design">
-            <div className="bg-[#0F172A] p-8 rounded-2xl border border-gray-800 hover:border-blue-500 transition cursor-pointer">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">
-                Website Design
-              </h3>
-
-              <p className="text-gray-400">
-                Build powerful SaaS platforms, CRM systems and cloud-based
-                business applications.
-              </p>
-            </div>
-          </Link>
-
-          <Link href="services/Ecommerece-development">
-            <div className="bg-[#0F172A] p-8 rounded-2xl border border-gray-800 hover:border-blue-500 transition cursor-pointer">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">
-                E-commerce Development
-              </h3>
-
-              <p className="text-gray-400">
-                Build powerful SaaS platforms, CRM systems and cloud-based
-                business applications.
-              </p>
-            </div>
-          </Link>
-
-          <Link href="services/web-application">
-            <div className="bg-[#0F172A] p-8 rounded-2xl border border-gray-800 hover:border-blue-500 transition cursor-pointer">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">
-                Web Application Development
-              </h3>
-
-              <p className="text-gray-400">
-                Build powerful SaaS platforms, CRM systems and cloud-based
-                business applications.
-              </p>
-            </div>
-          </Link>
-
-          <Link href="services/dedicated-developers">
-            <div className="bg-[#0F172A] p-8 rounded-2xl border border-gray-800 hover:border-blue-500 transition cursor-pointer">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">
-                Dedicated Developers
-              </h3>
-
-              <p className="text-gray-400">
-                Build powerful SaaS platforms, CRM systems and cloud-based
-                business applications.
-              </p>
-            </div>
-          </Link>
-
-          <Link href="services/seo">
-            <div className="bg-[#0F172A] p-8 rounded-2xl border border-gray-800 hover:border-blue-500 transition cursor-pointer">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">
-                Search Engine Optimization (SEO)
-              </h3>
-
-              <p className="text-gray-400">
-                Build powerful SaaS platforms, CRM systems and cloud-based
-                business applications.
-              </p>
-            </div>
-          </Link>
-
-          <Link href="services/social-media-marketing">
-            <div className="bg-[#0F172A] p-8 rounded-2xl border border-gray-800 hover:border-blue-500 transition cursor-pointer">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">
-                Social Media Marketing
-              </h3>
-
-              <p className="text-gray-400">
-                Build powerful SaaS platforms, CRM systems and cloud-based
-                business applications.
-              </p>
-            </div>
-          </Link>
-
-                  {/* Button */}
-                  <div className="pt-4">
-                    <Link href={service.link}>
-                      <button
-                        className={`${service.buttonColor} px-8 py-3 rounded-xl font-bold flex items-center gap-2 w-fit transition-all duration-300 border`}
-                      >
-                        Show Details
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                      </button>
-                    </Link>
-                  </div>
                 </div>
               </div>
             </section>

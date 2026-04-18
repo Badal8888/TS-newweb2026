@@ -78,7 +78,7 @@ export default function HomeClient() {
         }}
       />
       {/* HERO SECTION */}
-      <section className="pt-10 pb-20 bg-[#020617] text-white">
+      <section className="relative z-10 pt-10 pb-20 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Brand Title */}
           <motion.h1
@@ -109,7 +109,7 @@ export default function HomeClient() {
 
           {/* Subtitle */}
           <motion.p
-            className="mt-6 text-gray-400 max-w-2xl mx-auto"
+            className="mt-6 text-gray-400 text-xl font-bold max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 1 }}
@@ -129,7 +129,7 @@ export default function HomeClient() {
               {/* Contact Page */}
               <Link
                 href="/contact"
-                className="bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-700 transition text-white text-center"
+                className="bg-blue-600 font-bold px-6 py-3 rounded-xl hover:bg-blue-700 transition text-white text-center"
               >
                 Get Free Consultation
               </Link>
@@ -139,7 +139,7 @@ export default function HomeClient() {
                 href="https://portfolio.techstrota.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-gray-400 px-6 py-3 rounded-xl hover:border-blue-400 transition text-center"
+                className="border border-gray-400 font-bold px-6 py-3 rounded-xl hover:border-blue-400 transition text-center"
               >
                 View Portfolio
               </a>
@@ -171,21 +171,21 @@ export default function HomeClient() {
       </section>
 
       {/* Tech Stack Marquee */}
-      <section className="py-20 bg-[#020617] text-white">
+      <section className="relative z-10 py-20 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Technologies We Use
           </h2>
 
-          <p className="text-gray-400 max-w-3xl mx-auto">
+          <p className="text-gray-400 text-xl max-w-4xl mx-auto">
             TechStrota uses modern technologies like React, Next.js, Node.js,
             Laravel, Python and Flutter to build scalable web applications, SaaS
             platforms and enterprise software solutions.
           </p>
         </div>
       </section>
-      <section className="mb-24 overflow-hidden">
-        <h2 className="text-4xl font-bold mb-12 text-center">
+      <section className="relative z-10 py-10 overflow-hidden">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           Our Technology Stack
         </h2>
 
@@ -257,92 +257,99 @@ export default function HomeClient() {
         </div>
       </section>
       {/* SERVICES */}
-      <section className="py-20 md:py-24">
+      <section className="relative z-10 py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
             Our Development Services
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {/* Card 1 */}
-            <div className="bg-[#0F172A] rounded-2xl border border-blue-900 hover:border-blue-500 transition overflow-hidden">
+            {/* --- Glass Card Template (Apply to all 3) --- */}
+            <div className="relative group bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden shadow-2xl">
+              {/* Subtle Inner Glow for extra glass effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+
               <div className="relative h-48 w-full">
                 <Image
                   src="/1.png"
                   alt="Web Development"
                   fill
-                  className="object-contain p-6"
+                  className="object-contain p-6 drop-shadow-2xl group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
 
-              <div className="p-6 text-center">
+              <div className="p-6 text-center relative z-10">
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">
                   Web Development
                 </h3>
-
-                <p className="text-gray-400 text-sm md:text-base">
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                   SEO optimized websites built using React, Next.js and modern
                   frameworks for fast performance and scalability.
                 </p>
               </div>
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-[#0F172A] rounded-2xl border border-blue-900 hover:border-blue-500 transition overflow-hidden">
+            <div className="relative group bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden shadow-2xl">
+              {/* Subtle Inner Glow for extra glass effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+
               <div className="relative h-48 w-full">
                 <Image
                   src="/2.png"
                   alt="Mobile App Development"
                   fill
-                  className="object-contain p-6"
+                  className="object-contain p-6 drop-shadow-2xl group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
 
-              <div className="p-6 text-center">
+              <div className="p-6 text-center relative z-10">
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">
                   Mobile App Development
                 </h3>
-
-                <p className="text-gray-400 text-sm md:text-base">
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                   Android and iOS mobile apps built using React Native with
                   powerful backend APIs and cloud infrastructure.
                 </p>
               </div>
             </div>
 
-            {/* Card 3 */}
-            <div className="bg-[#0F172A] rounded-2xl border border-blue-900 hover:border-blue-500 transition overflow-hidden">
+            <div className="relative group bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden shadow-2xl">
+              {/* Subtle Inner Glow for extra glass effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+
               <div className="relative h-48 w-full">
                 <Image
                   src="/3.png"
-                  alt="SaaS Development"
+                  alt="SaaS & Custom Software"
                   fill
-                  className="object-contain p-6"
+                  className="object-contain p-6 drop-shadow-2xl group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
 
-              <div className="p-6 text-center">
+              <div className="p-6 text-center relative z-10">
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">
                   SaaS & Custom Software
                 </h3>
-
-                <p className="text-gray-400 text-sm md:text-base">
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                   Enterprise SaaS platforms, CRM systems and automation tools
                   designed for business growth.
                 </p>
               </div>
             </div>
+
+            {/* Repeat the above structure for Mobile App and SaaS cards */}
+            {/* Just change the Image src and text content */}
           </div>
         </div>
       </section>
       {/* OUR CLIENTS */}
-      <section className="py-20 bg-[#020617] text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-10 bg-[#020617] text-white overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
             Trusted by Our Clients
           </h2>
 
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+          <p className="text-gray-400 text-center text-lg font-bold max-w-2xl mx-auto mb-12">
             TechStrota partners with startups and businesses to build reliable
             web applications, SaaS platforms and mobile apps that drive growth.
           </p>
@@ -390,39 +397,101 @@ export default function HomeClient() {
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#020617] to-transparent pointer-events-none"></div>
         </div>
       </section>
-      {/* SaaS AUTHORITY */}
-      <section className="py-20 md:py-24 bg-[#0F172A]">
-        <div className="max-w-5xl mx-auto text-center px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Trusted SaaS Development Partner
-          </h2>
+      {/* SaaS AUTHORITY - REDESIGNED */}
+      <section className="relative z-10 py-14 overflow-hidden">
+        {/* Decorative Background Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-          <p className="text-gray-400 text-base md:text-lg">
-            TechStrota built <b>ScanVault</b>, a logistics photo management SaaS
-            platform managing over <b>120,000+ operational images</b> securely
-            using Laravel, MySQL and cloud storage.
-          </p>
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative p-8 md:p-12 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden"
+          >
+            {/* Animated Border/Glow effect */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
+
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-1 text-center md:text-left">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-white">
+                  Trusted SaaS Development Partner
+                </h2>
+                <p className="text-gray-400 text-lg font-bold leading-relaxed">
+                  TechStrota built{" "}
+                  <span className="text-[#FFC933] font-bold">ScanVault</span>, a
+                  logistics photo management SaaS platform managing over{" "}
+                  <span className="text-white font-bold">
+                    120,000+ operational images
+                  </span>{" "}
+                  securely using Laravel, MySQL and cloud storage.
+                </p>
+              </div>
+
+              {/* Stats/Visual element for uniqueness */}
+              <div className="flex-shrink-0 grid grid-cols-1 gap-4">
+                <div className="bg-blue-500/10 border border-blue-500/20 p-4 rounded-2xl backdrop-blur-sm">
+                  <span className="block text-2xl font-bold text-[#FFC933]">
+                    120K+
+                  </span>
+                  <span className="text-xs text-gray-400 font-bold uppercase tracking-widest">
+                    Images Managed
+                  </span>
+                </div>
+                <div className="bg-white/5 border border-white/10 p-4 rounded-2xl backdrop-blur-sm">
+                  <span className="block text-2xl font-bold text-white">
+                    99.9%
+                  </span>
+                  <span className="text-xs text-gray-400 font-bold uppercase tracking-widest">
+                    Uptime for ScanVault
+                  </span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-24 text-center bg-gradient-to-r from-blue-600 to-blue-500">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Ready to Build Your Next Software Product?
-          </h2>
+      {/* CTA SECTION - REDESIGNED */}
+      <section className="relative z-10 py-14">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="relative rounded-[2.5rem] bg-[#020617] border border-yellow-500/30 p-12 md:p-20 overflow-hidden text-center shadow-[0_0_50px_-12px_rgba(234,179,8,0.5)]">
+            {/* Background pattern for the CTA card */}
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: `radial-gradient(#3b82f6 1px, transparent 1px)`,
+                backgroundSize: "30px 30px",
+              }}
+            ></div>
+            <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-blue-600/20 blur-[80px] rounded-full"></div>
+            <div className="absolute -top-24 -left-24 w-64 h-64 bg-blue-400/10 blur-[80px] rounded-full"></div>
 
-          <p className="mt-4 text-blue-100 text-base md:text-lg">
-            Partner with TechStrota for web applications, mobile apps and SaaS
-            platforms.
-          </p>
+            <div className="relative z-10">
+              <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+                Ready to Build Your <br />
+                <span className="text-blue-500">Next Software Product?</span>
+              </h2>
 
-          <Link
-            href="/contact"
-            className="inline-block mt-8 bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
-          >
-            Contact Us Today
-          </Link>
+              <p className="max-w-2xl mx-auto mt-6 text-gray-400 text-lg md:text-xl font-medium">
+                Partner with TechStrota for web applications, mobile apps and
+                SaaS platforms.
+              </p>
+
+              <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6">
+                <Link
+                  href="/contact"
+                  className="group relative px-8 py-4 bg-blue-600 rounded-2xl font-bold text-white transition-all hover:bg-blue-500 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(37,99,235,0.4)]"
+                >
+                  Contact Us Today
+                </Link>
+                <div className="flex items-center gap-2 text-gray-400 text-sm">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                  Available for new projects
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

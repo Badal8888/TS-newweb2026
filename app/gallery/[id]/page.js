@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
 
 // Helper function to cycle through fun, cartoony styles for the grid
 const getCartoonyStyle = (index) => {
@@ -22,6 +23,8 @@ export default function GalleryDetails() {
   const id = params.id;
 
   const [gallery, setGallery] = useState(null);
+
+  const router = useRouter();
 
   useEffect(() => {
     if (!id) return;
@@ -43,6 +46,18 @@ export default function GalleryDetails() {
   return (
     <section className="py-24 bg-[#020617] text-white min-h-screen overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="mb-12">
+          <Link
+            href="/gallery"
+            className="group inline-flex items-center gap-3 px-6 py-3 bg-white text-black font-black uppercase tracking-wider border-4 border-black rounded-xl shadow-[6px_6px_0px_#facc15] hover:shadow-[2px_2px_0px_#facc15] hover:translate-x-[4px] hover:translate-y-[4px] active:shadow-none active:translate-x-[6px] active:translate-y-[6px] transition-all duration-200 rotate-[-2deg] hover:rotate-0"
+          >
+            <span className="text-xl group-hover:-translate-x-1 transition-transform duration-300">
+              ←
+            </span>
+            Back to Gallery
+          </Link>
+        </div>
+
         {/* Cartoony Title */}
         <h1 className="text-5xl md:text-7xl font-black mb-12 text-center uppercase tracking-widest text-transparent text-white hover:scale-105 transition-transform duration-300 cursor-default">
           {gallery.title}
@@ -90,6 +105,19 @@ export default function GalleryDetails() {
               />
             </div>
           ))}
+        </div>
+
+        {/* Bottom Back Button */}
+        <div className="mt-16 flex justify-center">
+          <Link
+            href="/gallery"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-black uppercase tracking-wider text-lg border-4 border-black rounded-2xl shadow-[8px_8px_0px_#ec4899] hover:shadow-[4px_4px_0px_#ec4899] hover:translate-x-[4px] hover:translate-y-[4px] active:shadow-none active:translate-x-[8px] active:translate-y-[8px] transition-all duration-200 rotate-[2deg] hover:rotate-0"
+          >
+            <span className="text-2xl group-hover:-translate-x-2 transition-transform duration-300">
+              ←
+            </span>
+            Back to Gallery
+          </Link>
         </div>
       </div>
     </section>

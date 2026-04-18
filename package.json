@@ -9,10 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "@splinetool/react-spline": "^4.1.0",
     "@types/matter-js": "^0.20.2",
+    "@types/three": "^0.183.1",
     "autoprefixer": "^10.4.27",
+    "cobe": "^2.0.1",
     "framer-motion": "^12.36.0",
     "gray-matter": "^4.0.3",
+    "lucide-react": "^1.7.0",
     "matter-js": "^0.20.0",
     "motion": "^12.35.2",
     "next": "16.1.6",
