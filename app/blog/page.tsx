@@ -62,7 +62,6 @@ export default async function BlogPage() {
                   />
                 </div>
               )}
-
               <div className="p-6 md:p-8 flex flex-col flex-grow">
                 <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300 line-clamp-2">
                   {post.title}
