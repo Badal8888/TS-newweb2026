@@ -61,7 +61,7 @@ export default function HomeClient() {
   }, []);
 
   return (
-    <main className="bg-[#020617] text-white">
+    <main className="bg-transparent text-white">
       {/* Schema Markup for SEO */}
       <script
         type="application/ld+json"

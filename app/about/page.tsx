@@ -48,7 +48,7 @@ export const metadata = {
 
 export default function About() {
   return (
-    <main className="bg-[#030712] text-white overflow-hidden selection:bg-cyan-500/30 font-sans">
+    <main className="bg-transparent text-white overflow-hidden selection:bg-cyan-500/30 font-sans">
       {/* --- HERO SECTION (High-Tech Mesh Glow) --- */}
       <section className="relative pt-10 pb-10 md:pt-14 md:pb-14 px-4 sm:px-6 flex flex-col items-center justify-center text-center border-b border-white/10 min-h-[80vh] overflow-hidden">
         {/* Background Dynamic Glows (Light effects ko /20 se /10 kar diya hai taaki video par zyada asar na ho) */}

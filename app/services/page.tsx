@@ -156,7 +156,7 @@ const servicesList = [
 
 export default function Services() {
   return (
-    <main className="py-16 md:py-20 lg:py-24 bg-[#0a0f1a] text-white font-sans overflow-hidden">
+    <main className="py-16 md:py-20 lg:py-24 bg-transparent text-white font-sans overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title Section */}
         <div className="text-center md:text-left mb-16 max-w-3xl">
