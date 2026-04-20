@@ -1,75 +1,186 @@
 "use client";
 import { motion } from "framer-motion";
+import { JSX, useEffect, useState } from "react";
+import Image from "next/image";
+import { FaReact, FaNodeJs, FaPython, FaLaravel } from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiMysql,
+} from "react-icons/si";
 
-const languages = [
-  "React",
-  "Next.js",
-  "Laravel",
-  "Tailwind",
-  "Node.js",
-  "Python",
-  "TypeScript",
-  "SQL",
+interface Technology {
+  name: string;
+  icon: JSX.Element;
+  top?: string;
+  bottom?: string;
+  left?: string;
+  right?: string;
+  escapeX: number;
+  escapeY: number;
+}
+
+const technologies: Technology[] = [
+  {
+    name: "React",
+    icon: <FaReact className="text-[#61DAFB]" />,
+    top: "15%",
+    right: "20%",
+    escapeX: 150,
+    escapeY: -150,
+  },
+  {
+    name: "Next.js",
+    icon: <SiNextdotjs className="text-white" />,
+    bottom: "15%",
+    right: "15%",
+    escapeX: 150,
+    escapeY: 150,
+  },
+  {
+    name: "Laravel",
+    icon: <FaLaravel className="text-[#FF2D20]" />,
+    top: "35%",
+    right: "10%",
+    escapeX: 180,
+    escapeY: 0,
+  },
+  {
+    name: "Tailwind",
+    icon: <SiTailwindcss className="text-[#06B6D4]" />,
+    bottom: "35%",
+    left: "40%",
+    escapeX: 0,
+    escapeY: 180,
+  },
+  {
+    name: "Node.js",
+    icon: <FaNodeJs className="text-[#339933]" />,
+    top: "10%",
+    left: "20%",
+    escapeX: -150,
+    escapeY: -150,
+  },
+  {
+    name: "Python",
+    icon: <FaPython className="text-[#3776AB]" />,
+    bottom: "45%",
+    left: "15%",
+    escapeX: -180,
+    escapeY: 0,
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript className="text-[#3178C6]" />,
+    top: "10%",
+    left: "45%",
+    escapeX: 0,
+    escapeY: -180,
+  },
+  {
+    name: "SQL",
+    icon: <SiMysql className="text-[#4479A1]" />,
+    bottom: "10%",
+    left: "20%",
+    escapeX: -150,
+    escapeY: 150,
+  },
 ];
 
 const Loader = () => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => (prev < 100 ? prev + 1 : 100));
+    }, 30);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a0f1a] overflow-hidden">
-      {/* The "Solar System" Container */}
-      <div className="relative w-[300px] h-[300px] flex items-center justify-center">
-        {/* 1. The Center "Sun" (TS Logo) */}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#020617] overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,15,26,0)_0%,#020617_100%)]" />
+      <div className="absolute w-[600px] h-[600px] bg-yellow-500/5 blur-[120px] rounded-full animate-pulse" />
+
+      <div className="relative w-full h-full max-w-6xl flex items-center justify-center">
+        {/* LOGO */}
         <motion.div
-          animate={{
-            boxShadow: [
-              "0 0 20px #1F6FEB",
-              "0 0 40px #1F6FEB",
-              "0 0 20px #1F6FEB",
-            ],
-          }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="z-50 w-24 h-24 bg-[#1F6FEB] rounded-2xl flex items-center justify-center border border-white/20 shadow-lg"
+          initial={{ rotate: -8, scale: 0.9 }}
+          animate={{ rotate: -8, scale: 1 }}
+          className="relative z-30 w-44 h-44 bg-[#0a1222] rounded-full flex flex-col items-center justify-center border-[6px] border-[#FFC933] shadow-[0_0_50px_rgba(255,201,51,0.4)] p-8"
         >
-          <span className="text-white font-black text-4xl tracking-tighter">
-            TS
-          </span>
+          <div className="relative w-full h-full">
+            <Image
+              src="/logo2.png"
+              alt="Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-full pointer-events-none" />
         </motion.div>
 
-        {/* 2. The Orbiting Ring */}
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-          className="absolute inset-0 border border-dashed border-blue-500/20 rounded-full"
-        >
-          {languages.map((lang, index) => {
-            // Position icons around the circle
-            const angle = (index / languages.length) * 360;
-            return (
-              <div
-                key={lang}
-                className="absolute top-1/2 left-1/2 -ml-8 -mt-4 w-16 text-center"
-                style={{
-                  transform: `rotate(${angle}deg) translate(150px) rotate(-${angle}deg)`,
-                }}
-              >
-                {/* 3. The Language Label */}
-                <motion.div
-                  animate={{ rotate: -360 }} // Keeps text upright while ring rotates
-                  transition={{
-                    repeat: Infinity,
-                    duration: 15,
-                    ease: "linear",
-                  }}
-                  className="bg-[#0a0f1a]/80 backdrop-blur-md px-2 py-1 rounded-md border border-blue-500/30 text-[10px] font-bold text-blue-400 uppercase tracking-widest"
-                >
-                  {lang}
-                </motion.div>
+        {/* TECHNOLOGIES */}
+        {technologies.map((tech, index) => (
+          <motion.div
+            key={tech.name}
+            className="absolute z-10"
+            style={{
+              top: tech.top,
+              bottom: tech.bottom,
+              left: tech.left,
+              right: tech.right,
+            }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              damping: 15,
+              delay: index * 0.1,
+            }}
+          >
+            <motion.div
+              animate={{
+                y: [0, -12, 0],
+                scale: [1, 1.05, 1],
+                rotate: [0, 5, -5, 0],
+              }}
+              transition={{
+                duration: 4 + index * 0.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              whileHover={{
+                scale: 1.15,
+                y: -20,
+                boxShadow: "0 20px 40px rgba(255,201,51,0.2)",
+              }}
+              className="flex items-center justify-center w-16 h-16 bg-[#0a1220] border border-white/10 rounded-2xl shadow-2xl cursor-pointer group relative overflow-hidden"
+            >
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition" />
+
+              <div className="text-2xl transition-transform group-hover:scale-110">
+                {tech.icon}
               </div>
-            );
-          })}
-        </motion.div>
+            </motion.div>
+          </motion.div>
+        ))}
+      </div>
 
-        {/* 4. Decorative Atmosphere Rings */}
-        <div className="absolute w-[400px] h-[400px] border border-blue-500/5 rounded-full animate-pulse" />
+      {/* PROGRESS */}
+      <div className="absolute bottom-10 w-64 text-center">
+        <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden mb-2">
+          <motion.div
+            className="h-full bg-[#FFC933]"
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+          />
+        </div>
+        <p className="text-[10px] text-[#FFC933] font-black uppercase tracking-widest">
+          Loading {progress}%
+        </p>
       </div>
     </div>
   );

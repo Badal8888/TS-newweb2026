@@ -32,7 +32,7 @@ export default function ClientWrapper({
           className="w-full h-full object-cover opacity-[0.4]"
           style={{ filter: "brightness(120%) contrast(110%)" }}
         >
-          <source src="/videos/background2.mp4" type="video/mp4" />
+          <source src="/videos/background3.mp4" type="video/mp4" />
         </video>
         {/* Subtle Gradient overlay to make text readable */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_30%,_#0a0f1a_90%)]" />
