@@ -85,20 +85,6 @@ const servicesList = [
 
 export default function Services() {
   return (
-    <main className="py-16 md:py-20 lg:py-24 bg-transparent text-white font-sans overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title Section */}
-        <div className="text-center md:text-left mb-16 max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-            Our Software Development{" "}
-            <span className="text-[#1374BB]">Services</span>
-          </h1>
-          <p className="text-slate-400 text-lg md:text-xl">
-            TechStrota provides professional software development services
-            including web development, mobile app development and SaaS platforms
-            for startups, logistics companies and enterprises.
-          </p>
-=======
     <main className="bg-[#020617] text-white py-16">
       {/* HERO VIDEO */}
       <div className="max-w-5xl mx-auto px-4 mb-16">
