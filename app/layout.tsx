@@ -27,10 +27,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    // 'scroll-smooth' hata diya gaya hai taaki naye page par jane par top cut na ho
+    <html lang="en">
       {/* Remove the background color from the body here so it doesn't block the video */}
       <body className="antialiased">
-        <ClientWrapper>{children}</ClientWrapper>
+        <ClientWrapper>
+          {children}
+        </ClientWrapper>
       </body>
     </html>
   );
