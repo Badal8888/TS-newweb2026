@@ -34,7 +34,7 @@ export default async function BlogPage() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           {/* FIX 1: Added pb-2 here so the 'g' does not get clipped */}
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 pb-2 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-white to-white/70">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 pb-2 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-amber to-amber-400">
             TechStrota Blog
           </h1>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">

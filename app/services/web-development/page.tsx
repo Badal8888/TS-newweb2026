@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 /* ================= SEO Structured Data ================= */
 const StructuredData = () => (
@@ -30,6 +31,11 @@ const StructuredData = () => (
     }}
   />
 );
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
 /* ================= SCROLL REVEAL COMPONENTS ================= */
 function ScrollReveal({
@@ -95,67 +101,65 @@ const Card = ({
 /* ================= HERO ================= */
 function HeroSection() {
   return (
-    <ScrollReveal className="relative py-20 px-6 flex justify-center bg-gradient-to-br from-[#020b1f] via-[#071a3a] to-[#020b1f] overflow-hidden">
-      <div className="w-full max-w-6xl relative rounded-2xl border border-blue-400/30 shadow-[0_0_100px_rgba(59,130,246,0.25)]">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-auto object-cover rounded-2xl"
+    <div className="relative z-10 py-10 sm:py-14 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+        {/* LEFT SIDE - CONTENT */}
+        <ScrollReveal
+          delay={0.2}
+          className="w-full md:w-1/2 text-center md:text-left"
         >
-          <source src="/services/web_development.mp4" type="video/mp4" />
-        </video>
+          <div className="inline-block px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-6">
+            TechStrota – Web Development Company in Vadodara
+          </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#020b1f]/90 via-blue-900/40 to-transparent rounded-2xl" />
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
+            Build <span className="text-blue-500">Fast, Scalable Websites</span>
+          </h1>
 
-        <div className="absolute inset-0 flex items-center justify-center text-center px-6 sm:px-12">
+          <p className="text-gray-400 text-lg sm:text-xl mb-8 leading-relaxed max-w-xl">
+            We design and develop high-performance, SEO-friendly websites using
+            modern technologies to help businesses grow online.
+          </p>
+
           <motion.div
-            initial={{ opacity: 0, y: 70 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
-            className="max-w-3xl"
+            variants={itemVariants}
+            className="flex gap-4 flex-col sm:flex-row md:justify-start justify-center items-center"
           >
-            <span className="text-2xl md:text-3xl font-bold text-blue-300 mb-2 block">
-              TechStrota – Web Development Company in Vadodara
-            </span>
+            <Link href="/contact" className="w-full sm:w-auto">
+              <button className="bg-[#1374BB] hover:bg-[#0e5f99] text-white font-bold py-3 px-8 rounded-xl transition-colors w-full sm:w-auto shadow-[0_0_15px_rgba(19,116,187,0.2)]">
+                Inquire Now
+              </button>
+            </Link>
 
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4"
-              aria-label="Professional Web Development Services | TechStrota Vadodara"
-            >
-              Build{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Fast, Scalable
-              </span>{" "}
-              Websites
-            </h1>
-
-            <p className="text-gray-200 mb-8 text-lg">
-              We design and develop high‑performance, SEO‑friendly websites
-              using React, Next.js, Laravel, Node.js, and modern cloud
-              infrastructure, helping businesses in Vadodara and India grow
-              online.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-xl text-white font-semibold shadow-lg hover:scale-105 transition-transform"
-              >
-                Get Free Consultation
-              </a>
-              <a
-                href="/portfolio"
-                className="border border-white/30 px-6 py-3 rounded-xl text-white hover:bg-white/10 transition"
-              >
+            <Link href="/portfolio" className="w-full sm:w-auto">
+              <button className="border-2 border-[#1374BB]/20 hover:border-[#1374BB] text-[#1374BB] font-bold py-3 px-8 rounded-xl transition-colors w-full sm:w-auto">
                 View Portfolio
-              </a>
-            </div>
+              </button>
+            </Link>
           </motion.div>
-        </div>
+        </ScrollReveal>
+
+        {/* RIGHT SIDE - VIDEO */}
+        <motion.div
+          className="flex-1 w-full mt-8 lg:mt-0"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl bg-[#091122] aspect-video">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+            >
+              <source src="/services/web_development.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </motion.div>
       </div>
-    </ScrollReveal>
+    </div>
   );
 }
 
@@ -170,7 +174,7 @@ function ProcessSection() {
   ];
 
   return (
-    <ScrollReveal className="py-20 bg-gradient-to-b from-[#020b1f] to-[#071a3a] text-white text-center">
+    <ScrollReveal className="py-20 bg-transparent text-white text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-2 text-blue-400">
         Our Web Development Process
       </h2>
@@ -205,7 +209,7 @@ function TechSection() {
   ];
 
   return (
-    <ScrollReveal className="py-20 bg-[#071a3a] text-white text-center">
+    <ScrollReveal className="py-20 bg-transparent text-white text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-2 text-cyan-400">
         Technologies We Use
       </h2>
@@ -237,7 +241,7 @@ function WhyChooseUs() {
   ];
 
   return (
-    <ScrollReveal className="py-20 bg-gradient-to-b from-[#071a3a] to-[#0f1e3f] text-white text-center">
+    <ScrollReveal className="py-20 bg-transparent text-white text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-2 text-blue-400">
         Why Choose TechStrota?
       </h2>

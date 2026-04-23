@@ -35,9 +35,9 @@ export default function WebAppServices() {
   };
 
   return (
-    <main className="bg-[#040A15] min-h-screen w-full font-sans text-white overflow-hidden">
+    <main className="bg-transparent min-h-screen w-full font-sans text-white overflow-hidden">
       {/* 1. HERO SECTION */}
-      <section className="min-h-[100dvh] lg:h-screen w-full pt-6 pb-12 px-4 sm:px-6 bg-[#040A15] flex items-center justify-center">
+      <section className="min-h-[100dvh] lg:h-screen w-full pt-6 pb-12 px-4 sm:px-6 bg-transparent flex items-center justify-center">
         <div className="relative z-10 w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-4">
           {/* LEFT CONTENT */}
           <motion.div
@@ -120,7 +120,7 @@ export default function WebAppServices() {
       </section>
 
       {/* 2. WHY CHOOSE US (Yellow Borders & Icon Backgrounds) */}
-      <section className="relative z-10 w-full py-20 px-4 sm:px-6 ">
+      <section className="relative z-10 w-full py-20 px-4 sm:px-6">
         <motion.div
           className="max-w-7xl mx-auto"
           variants={scrollContainer}
@@ -132,7 +132,7 @@ export default function WebAppServices() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Choose Our Web Expertise
             </h2>
-            <p className="text-[#8B95A5] max-w-2xl mx-auto">
+            <p className="text-[#8B95A5] text-lg max-w-2xl mx-auto">
               We engineer web applications that don&apos;t just look great, but
               perform flawlessly under heavy loads and complex workflows.
             </p>
@@ -188,9 +188,11 @@ export default function WebAppServices() {
               <motion.div
                 key={idx}
                 variants={scrollItem}
-                className="bg-[#091122] border border-amber-400 hover:border-gray-800/60 transition-colors duration-300 p-8 rounded-2xl flex flex-col items-start"
+                // MODIFIED: bg-white/[0.03], backdrop-blur-md, and updated border for glass look
+                className="bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-amber-400/50 transition-all duration-500 p-8 rounded-2xl flex flex-col items-start group shadow-xl"
               >
-                <div className="w-12 h-12 bg-amber-400/10 rounded-xl flex items-center justify-center text-amber-400 mb-6">
+                {/* Icon Container with subtle glass effect */}
+                <div className="w-12 h-12 bg-amber-400/10 rounded-xl flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform duration-300 shadow-inner">
                   <svg
                     className="w-6 h-6"
                     fill="none"
@@ -201,8 +203,10 @@ export default function WebAppServices() {
                     {feature.icon}
                   </svg>
                 </div>
+
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-[#8B95A5] text-md leading-relaxed">
+
+                <p className="text-[#8B95A5] text-md leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                   {feature.desc}
                 </p>
               </motion.div>
@@ -276,7 +280,7 @@ export default function WebAppServices() {
       </section>
 
       {/* 4. BENEFITS / RESULTS (Abstract Visual with Yellow gradient and borders, Yellow checkmarks) */}
-      <section className="w-full py-20 px-4 sm:px-6 bg-[#040A15]">
+      <section className="relative z-10 w-full py-20 px-4 sm:px-6 bg-transparent">
         <motion.div
           className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12"
           variants={scrollContainer}
@@ -284,23 +288,26 @@ export default function WebAppServices() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {/* Left: 4-Card Staggered Layout matching the image */}
+          {/* Left: 4-Card Staggered Layout */}
           <motion.div
             variants={scrollItem}
             className="flex-1 w-full relative flex items-center justify-center"
           >
-            {/* Removed the outer bg-amber-400/5 and borders. Kept the container for sizing. */}
             <div className="relative w-full max-w-sm">
-              {/* Inner background glow (amber/yellow) kept behind the floating cards */}
+              {/* Inner background glow kept behind the floating cards */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-amber-400/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-              {/* Staggered 2-Column Layout - REMOVED GAPS */}
+              {/* Staggered 2-Column Layout */}
               <div className="relative z-10 flex w-full">
-                {/* LEFT COLUMN - REMOVED GAPS */}
+                {/* LEFT COLUMN */}
                 <div className="flex flex-col w-1/2">
                   {/* Top Left: Page Load Speed */}
-                  {/* UPDATED: Changed border to amber-400/20 and added a subtle amber shadow */}
-                  <div className="bg-[#091122] aspect-square rounded-[2rem] flex flex-col items-center justify-center p-4 text-center shadow-[0_0_20px_rgba(251,191,36,0.05)] border border-amber-400/20 hover:border-amber-400/50 transition-colors relative z-10">
+                  <div
+                    className="aspect-square rounded-[2rem] flex flex-col items-center justify-center p-4 text-center transition-all duration-500 relative z-10
+              /* GLASS EFFECT */
+              bg-white/[0.03] backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]
+              hover:bg-white/[0.08] hover:border-amber-400/40 hover:shadow-amber-400/10"
+                  >
                     <span className="text-3xl sm:text-4xl font-black text-white mb-2">
                       &lt; 1s
                     </span>
@@ -310,10 +317,14 @@ export default function WebAppServices() {
                   </div>
 
                   {/* Bottom Left: Shield Icon */}
-                  {/* UPDATED: Changed border to amber-400/20 and added a subtle amber shadow */}
-                  <div className="bg-[#091122] aspect-square rounded-[2rem] flex items-center justify-center p-4 shadow-[0_0_20px_rgba(251,191,36,0.05)] border border-amber-400/20 hover:border-amber-400/50 transition-colors relative z-10">
+                  <div
+                    className="aspect-square rounded-[2rem] flex items-center justify-center p-4 transition-all duration-500 relative z-10
+              /* GLASS EFFECT */
+              bg-white/[0.03] backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]
+              hover:bg-white/[0.08] hover:border-amber-400/40 hover:shadow-amber-400/10"
+                  >
                     <svg
-                      className="w-12 h-12 sm:w-16 sm:h-16 text-amber-400"
+                      className="w-12 h-12 sm:w-16 sm:h-16 text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.4)]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -328,13 +339,17 @@ export default function WebAppServices() {
                   </div>
                 </div>
 
-                {/* RIGHT COLUMN (Staggered down using top padding) - REMOVED GAPS */}
+                {/* RIGHT COLUMN (Staggered down) */}
                 <div className="flex flex-col w-1/2 pt-12 sm:pt-16">
                   {/* Top Right: Globe Icon */}
-                  {/* UPDATED: Changed border to amber-400/20 and added a subtle amber shadow */}
-                  <div className="bg-[#091122] aspect-square rounded-[2rem] flex items-center justify-center p-4 shadow-[0_0_20px_rgba(251,191,36,0.05)] border border-amber-400/20 hover:border-amber-400/50 transition-colors relative z-0">
+                  <div
+                    className="aspect-square rounded-[2rem] flex items-center justify-center p-4 transition-all duration-500 relative z-0
+              /* GLASS EFFECT */
+              bg-white/[0.03] backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]
+              hover:bg-white/[0.08] hover:border-amber-400/40 hover:shadow-amber-400/10"
+                  >
                     <svg
-                      className="w-12 h-12 sm:w-16 sm:h-16 text-amber-400"
+                      className="w-12 h-12 sm:w-16 sm:h-16 text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.4)]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -349,8 +364,12 @@ export default function WebAppServices() {
                   </div>
 
                   {/* Bottom Right: Data Security */}
-                  {/* UPDATED: Changed border to amber-400/20 and added a subtle amber shadow */}
-                  <div className="bg-[#091122] aspect-square rounded-[2rem] flex flex-col items-center justify-center p-4 text-center shadow-[0_0_20px_rgba(251,191,36,0.05)] border border-amber-400/20 hover:border-amber-400/50 transition-colors relative z-0">
+                  <div
+                    className="aspect-square rounded-[2rem] flex flex-col items-center justify-center p-4 text-center transition-all duration-500 relative z-0
+              /* GLASS EFFECT */
+              bg-white/[0.03] backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]
+              hover:bg-white/[0.08] hover:border-amber-400/40 hover:shadow-amber-400/10"
+                  >
                     <span className="text-3xl sm:text-4xl font-black text-white mb-2">
                       100%
                     </span>
@@ -435,31 +454,44 @@ export default function WebAppServices() {
       </section>
 
       {/* 5. FINAL CTA (Yellow Card Border & Background Glow, Yellow Button Shadow) */}
-      <section className="w-full py-10 px-4 sm:px-6">
-        {/* UPDATED: Card border changed to Amber */}
+      <section className="w-full py-12 md:py-20 px-4 sm:px-6 relative overflow-hidden">
+        {/* Optional: Extra background decorative glow for depth */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-400/5 blur-[120px] pointer-events-none"></div>
+
         <motion.div
-          className="max-w-5xl mx-auto bg-[#091122] rounded-[2rem] border border-amber-400/30 p-10 md:p-16 text-center relative overflow-hidden"
+          className="max-w-5xl mx-auto p-10 md:p-16 text-center relative overflow-hidden rounded-[2.5rem]
+      /* GLASS EFFECT START */
+      bg-white/[0.03] backdrop-blur-xl border border-white/10 
+      shadow-[0_20px_50px_rgba(0,0,0,0.3)]
+      /* GLASS EFFECT END */"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Background Glow - UPDATED to Amber */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[600px] bg-amber-400/10 rounded-full blur-[80px] pointer-events-none"></div>
+          {/* Amber Internal Glow - Softened for glass look */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[600px] bg-amber-400/[0.07] rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10">
-            {/* Heading - Text remains Blue */}
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+            {/* Heading */}
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
               Ready to build{" "}
-              <span className="text-[#1374BB]">your Web app?</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-400">
+                your Web app?
+              </span>
             </h2>
-            <p className="text-[#8B95A5] text-lg mb-10 max-w-2xl mx-auto">
-              Whether you need a SaaS platform, a custom CRM, or an interactive
+
+            <p className="text-[#8B95A5] text-base md:text-xl mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+              Whether you need a{" "}
+              <span className="text-white">SaaS platform</span>, a{" "}
+              <span className="text-white">custom CRM</span>, or an interactive
               portal, our team is ready to bring your vision to life.
             </p>
+
             <Link href="/contact">
-              {/* UPDATED: Button shadow color changed to Yellow/Amber, Text remains White */}
-              <button className="bg-[#1374BB] hover:bg-[#0e5f99] text-white font-bold text-lg py-4 px-10 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(251,191,36,0.4)]">
+              <button className="relative group overflow-hidden bg-[#1374BB] text-white font-bold text-lg py-4 px-10 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_10px_30px_-10px_rgba(19,116,187,0.5)]">
+                {/* Subtle button shine effect */}
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
                 Start Your Project
               </button>
             </Link>

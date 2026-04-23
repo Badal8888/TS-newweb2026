@@ -173,19 +173,34 @@ export default function Header() {
           </Link>
 
           {/* Mobile Services */}
-          <button
-            onClick={() => setMobileServices(!mobileServices)}
-            className="block text-gray-300 w-full text-left"
-          >
-            Services
-          </button>
+          <div className="flex items-center justify-between">
+            {/* Navigate to Services page */}
+            <Link
+              href="/services"
+              onClick={() => setMenuOpen(false)}
+              className="text-gray-300"
+            >
+              Services
+            </Link>
+
+            {/* Toggle dropdown */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setMobileServices(!mobileServices);
+              }}
+              className="text-gray-300 text-xl"
+            >
+              {mobileServices ? "−" : "+"}
+            </button>
+          </div>
 
           {mobileServices && (
-            <div className="pl-4 space-y-2 text-gray-400">
+            <div className="pl-4 mt-2 space-y-3">
               <Link
                 href="/services/web-development"
                 onClick={() => setMenuOpen(false)}
-                className="block"
+                className="block text-gray-400 hover:text-white transition"
               >
                 Web Development
               </Link>
@@ -193,7 +208,7 @@ export default function Header() {
               <Link
                 href="/services/Ecommerece-development"
                 onClick={() => setMenuOpen(false)}
-                className="block"
+                className="block text-gray-400 hover:text-white transition"
               >
                 Ecommerce Development
               </Link>
@@ -201,31 +216,31 @@ export default function Header() {
               <Link
                 href="/services/web-application"
                 onClick={() => setMenuOpen(false)}
-                className="block"
+                className="block text-gray-400 hover:text-white transition"
               >
                 Web Applications
               </Link>
 
               <Link
-                href="/services/mobile-app-development"
+                href="/services/dedicated-developers"
                 onClick={() => setMenuOpen(false)}
-                className="block"
+                className="block text-gray-400 hover:text-white transition"
               >
-                Mobile Apps
+                Dedicated Developer
               </Link>
 
               <Link
                 href="/services/seo"
                 onClick={() => setMenuOpen(false)}
-                className="block"
+                className="block text-gray-400 hover:text-white transition"
               >
-                SEO
+                SEO Optimization
               </Link>
 
               <Link
                 href="/services/social-media-marketing"
                 onClick={() => setMenuOpen(false)}
-                className="block"
+                className="block text-gray-400 hover:text-white transition"
               >
                 Social Media Marketing
               </Link>
@@ -233,9 +248,17 @@ export default function Header() {
               <Link
                 href="/services/saas-development"
                 onClick={() => setMenuOpen(false)}
-                className="block"
+                className="block text-gray-400 hover:text-white transition"
               >
                 SaaS Development
+              </Link>
+
+              <Link
+                href="/services/mobile-app-development"
+                onClick={() => setMenuOpen(false)}
+                className="block text-gray-400 hover:text-white transition"
+              >
+                Mobile Apps
               </Link>
             </div>
           )}

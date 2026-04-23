@@ -20,7 +20,7 @@ export default function MobileAppServices() {
   };
 
   return (
-    <main className="bg-[#040A15] min-h-screen w-full font-sans text-white overflow-hidden">
+    <main className="bg-transparent min-h-screen w-full font-sans text-white overflow-hidden">
       {/* 1. HERO SECTION (Untouched) */}
       <section className="relative z-10 min-h-[100dvh] w-full pt-16 pb-20 px-4 sm:px-6 flex items-center justify-center font-sans overflow-hidden relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(19,116,187,0.1)_0%,transparent_70%)] pointer-events-none" />

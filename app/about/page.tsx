@@ -136,7 +136,10 @@ export default function About() {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className={`group bg-white/[0.03] backdrop-blur-xl p-4 rounded-3xl border border-yellow-400/20 transition-all duration-500 ${item.glow} hover:-translate-y-2 ${idx % 2 !== 0 ? "sm:mt-12" : ""}`}
+                  className={`group relative overflow-hidden p-6 rounded-3xl transition-all duration-500 
+                    bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-2xl
+                    hover:bg-white/[0.07] hover:border-white/20 hover:-translate-y-2
+                    ${item.glow} ${idx % 2 !== 0 ? "sm:mt-12" : ""}`}
                 >
                   <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
                     {item.icon}
@@ -149,6 +152,41 @@ export default function About() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* --- MISSION & VISION SECTION (New Section) --- */}
+        <section className="relative z-10 py-10 md:py-14 border-t border-white/10">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            {/* Mission Card */}
+            <div className="group relative p-8 md:p-10 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
+              <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                <FaRocket className="text-6xl text-blue-400" />
+              </div>
+              <h2 className="text-blue-400 text-sm font-bold uppercase tracking-[0.2em] mb-4">
+                Our Mission
+              </h2>
+              <p className="text-2xl md:text-3xl font-bold text-white leading-tight italic">
+                “To bridge ideas and technology through innovative, ethical, and
+                user-centric solutions.”
+              </p>
+              <div className="mt-6 w-12 h-1 bg-gradient-to-r from-blue-500 to-transparent rounded-full"></div>
+            </div>
+
+            {/* Vision Card */}
+            <div className="group relative p-8 md:p-10 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
+              <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                <FaSearch className="text-6xl text-cyan-400" />
+              </div>
+              <h2 className="text-cyan-400 text-sm font-bold uppercase tracking-[0.2em] mb-4">
+                Our Vision
+              </h2>
+              <p className="text-2xl md:text-3xl font-bold text-white leading-tight italic">
+                “To become a global leader in providing smart, impactful, and
+                sustainable tech services.”
+              </p>
+              <div className="mt-6 w-12 h-1 bg-gradient-to-r from-cyan-400 to-transparent rounded-full"></div>
             </div>
           </div>
         </section>
@@ -172,6 +210,7 @@ export default function About() {
                 borderColor: "border-blue-400/50",
                 title: "Web Development",
                 desc: "From simple websites to powerful digital platforms built with modern frameworks like React and Next.js.",
+                colSpan: "",
               },
               {
                 icon: FaCode,
@@ -179,6 +218,7 @@ export default function About() {
                 borderColor: "border-fuchsia-400/50",
                 title: "Software Development",
                 desc: "Custom software solutions designed to automate workflows and improve business efficiency.",
+                colSpan: "",
               },
               {
                 icon: FaSearch,
@@ -186,6 +226,7 @@ export default function About() {
                 borderColor: "border-cyan-400/50",
                 title: "SEO Optimization",
                 desc: "Improve search rankings, drive organic traffic and increase online visibility.",
+                colSpan: "",
               },
               {
                 icon: FaMobileAlt,
@@ -193,6 +234,7 @@ export default function About() {
                 borderColor: "border-orange-400/50",
                 title: "Android Development",
                 desc: "Scalable and high-performance mobile applications built for modern Android devices.",
+                colSpan: "",
               },
               {
                 icon: FaBullhorn,
@@ -200,6 +242,7 @@ export default function About() {
                 borderColor: "border-pink-400/50",
                 title: "Social Media Marketing",
                 desc: "Grow your brand and reach new audiences across social media platforms.",
+                colSpan: "",
               },
               {
                 icon: FaServer,
@@ -207,12 +250,15 @@ export default function About() {
                 borderColor: "border-emerald-400/50",
                 title: "Web Hosting",
                 desc: "Fast, secure and reliable hosting solutions for modern websites and applications.",
+                colSpan: "",
               },
             ].map((service, idx) => (
               <div
                 key={idx}
-                // Yaha humne purana border hata kar service.borderColor laga diya hai
-                className={`relative group bg-[#1f1f25] rounded-3xl p-8 border ${service.borderColor} overflow-hidden transition-all duration-300 shadow-lg`}
+                className={`p-6 md:p-8 rounded-3xl border transition-all duration-300 backdrop-blur-md
+                bg-white/[0.02] border-yellow-500/30 shadow-[0_0_15px_3px_rgba(234,179,8,0.1)] 
+                hover:bg-white/[0.06] hover:border-yellow-400/70 hover:shadow-[0_0_25px_5px_rgba(234,179,8,0.25)]
+                ${service.colSpan || ""}`}
               >
                 {/* Top hover line effect yaha se hata diya gaya hai */}
 
@@ -405,9 +451,10 @@ export default function About() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                // Yaha par yellow border aur yellow glow shadow apply kiya gaya hai
-
-                className={`bg-[#0f172a] p-6 md:p-8 rounded-3xl border border-yellow-500/30 shadow-[0_0_15px_3px_rgba(234,179,8,0.15)] hover:bg-white/[0.04] hover:border-yellow-400/70 hover:shadow-[0_0_20px_5px_rgba(234,179,8,0.3)] transition-all duration-300 ${feature.colSpan || ""}`}
+                className={`p-6 md:p-8 rounded-3xl border transition-all duration-300 backdrop-blur-md
+                bg-white/[0.02] border-yellow-500/30 shadow-[0_0_15px_3px_rgba(234,179,8,0.1)] 
+                hover:bg-white/[0.06] hover:border-yellow-400/70 hover:shadow-[0_0_25px_5px_rgba(234,179,8,0.25)]
+                ${feature.colSpan || ""}`}
               >
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center mb-5 text-white font-bold shadow-lg">
                   {idx + 1}
@@ -431,7 +478,7 @@ export default function About() {
             Our Development Process
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-4 relative px-4 z-10">
-            {/* Background Line for large screens - updated with subtle cyan gradient */}
+            {/* Background Line */}
             <div className="hidden lg:block absolute top-12 left-10 right-10 h-[2px] bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent -z-10"></div>
 
             {[
@@ -463,20 +510,20 @@ export default function About() {
             ].map((step, idx) => (
               <div
                 key={idx}
-                // Updated Card Styling: Solid dark background, hover lift, and cyan shadow
-                className="relative bg-[#0d1117] p-6 md:p-8 rounded-3xl border border-white/5 text-center group hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-[0_10px_30px_-10px_rgba(34,211,238,0.3)] transition-all duration-500 overflow-hidden"
+                // MODIFIED: Added bg-white/[0.03], backdrop-blur-md, and updated border
+                className="relative bg-white/[0.03] backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/10 text-center group hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-[0_10px_30px_-10px_rgba(34,211,238,0.3)] transition-all duration-500 overflow-hidden"
               >
-                {/* NAYA: Background Watermark Numbers (01, 02, etc.) */}
+                {/* Background Watermark Numbers */}
                 <div className="absolute -bottom-4 -right-2 text-8xl font-black text-white/[0.02] group-hover:text-cyan-500/[0.05] transition-colors duration-500 pointer-events-none select-none">
                   0{idx + 1}
                 </div>
 
-                {/* Updated Icon Container: Cyan glow and 360-degree spin on hover */}
-                <div className="relative w-16 h-16 mx-auto bg-[#161b22] border border-white/10 rounded-2xl flex items-center justify-center mb-6 text-gray-400 group-hover:text-cyan-400 group-hover:bg-cyan-500/10 group-hover:border-cyan-500/40 transition-all duration-500 group-hover:scale-110 shadow-lg">
+                {/* Icon Container */}
+                <div className="relative w-16 h-16 mx-auto bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center mb-6 text-gray-400 group-hover:text-cyan-400 group-hover:bg-cyan-500/10 group-hover:border-cyan-500/40 transition-all duration-500 group-hover:scale-110 shadow-lg">
                   <step.icon className="text-2xl transition-transform duration-700 group-hover:rotate-[360deg]" />
                 </div>
 
-                {/* Text with subtle hover color change */}
+                {/* Text */}
                 <h3 className="relative text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">
                   {step.title}
                 </h3>

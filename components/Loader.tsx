@@ -168,20 +168,6 @@ const Loader = () => {
           </motion.div>
         ))}
       </div>
-
-      {/* PROGRESS */}
-      <div className="absolute bottom-10 w-64 text-center">
-        <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden mb-2">
-          <motion.div
-            className="h-full bg-[#FFC933]"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-          />
-        </div>
-        <p className="text-[10px] text-[#FFC933] font-black uppercase tracking-widest">
-          Loading {progress}%
-        </p>
-      </div>
     </div>
   );
 };

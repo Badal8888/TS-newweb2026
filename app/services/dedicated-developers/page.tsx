@@ -116,7 +116,7 @@ export default function DedicatedDevelopers() {
   ];
 
   return (
-    <main className="bg-[#040A15] text-white w-full overflow-hidden">
+    <main className="bg-transparent text-white w-full overflow-hidden">
       {/* 1. HERO SECTION */}
       <section className="relative z-10 min-h-[100dvh] lg:h-screen w-full pt-14 pb-12 px-4 sm:px-6 flex items-center justify-center">
         <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4">
@@ -234,23 +234,35 @@ export default function DedicatedDevelopers() {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={itemVariants}
-              // Sleek, solid dark background with a very subtle border that glows amber on hover
-              className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group relative p-6 md:p-8 rounded-[2rem] bg-[#0A1220] border hover:border-white/5 border-amber-400/40 transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(251,191,36,0.15)] hover:-translate-y-1"
+              // UPDATED: Added bg-white/[0.03], backdrop-blur-md, and softened the border
+              className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group relative p-6 md:p-8 rounded-[2rem] 
+              bg-white/[0.03] backdrop-blur-md border border-amber-400/50 
+              transition-all duration-500"
             >
-              {/* Icon Container - Scaled down to match the image, with a permanent tight amber glow */}
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#040A15] border border-amber-400/20 shadow-[0_0_15px_rgba(251,191,36,0.1)] group-hover:bg-amber-400/10 group-hover:scale-110 transition-all duration-300">
-                <div className="text-amber-400 scale-90">{service.icon}</div>
+              {/* Background Decorative Glow (Internal) */}
+              <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-24 h-24 bg-amber-400/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Icon Container - Updated to Glass-in-Glass style */}
+              <div
+                className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl 
+      bg-white/5 border border-white/10 shadow-inner 
+      group-hover:bg-amber-400/10 group-hover:border-amber-400/30 group-hover:scale-110 transition-all duration-300"
+              >
+                <div className="text-amber-400 scale-90 drop-shadow-[0_0_8px_rgba(251,191,36,0.5)]">
+                  {service.icon}
+                </div>
               </div>
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-xl font-bold mb-2 text-white tracking-tight">
+                <h3 className="text-xl font-bold mb-3 text-white tracking-tight">
                   {service.title}
                 </h3>
+
                 <div className="flex items-center gap-2.5">
-                  {/* Small bullet point matching the image */}
-                  <span className="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
-                  <p className="text-[#8B95A5] text-sm font-medium">
+                  {/* Pulsing bullet point */}
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(251,191,36,0.8)]"></span>
+                  <p className="text-[#8B95A5] group-hover:text-gray-300 text-sm font-medium transition-colors">
                     {service.tools}
                   </p>
                 </div>
@@ -263,7 +275,7 @@ export default function DedicatedDevelopers() {
       {/* 3. WHY CHOOSE US (Trust Builder) */}
       <section className="py-10 px-4 sm:px-6 w-full max-w-7xl mx-auto">
         {/* UPDATED: Lighter background color, amber border, and deep shadow to separate it from the main background */}
-        <div className="bg-[#0c1527] rounded-[2.5rem] border border-amber-400/20 shadow-[0_20px_60px_rgba(0,0,0,0.6)] p-8 md:p-16 relative overflow-hidden">
+        <div className="bg-transparent rounded-[2.5rem] border border-amber-400/50 shadow-[0_20px_60px_rgba(0,0,0,0.6)] p-8 md:p-16 relative overflow-hidden">
           {/* Abstract background glow */}
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-amber-400/10 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -361,7 +373,7 @@ export default function DedicatedDevelopers() {
       <section className="w-full py-10 px-4 sm:px-6">
         {/* UPDATED: Card border changed to Amber */}
         <motion.div
-          className="max-w-5xl mx-auto bg-[#091122] rounded-[2rem] border border-amber-400/30 p-10 md:p-16 text-center relative overflow-hidden"
+          className="max-w-5xl mx-auto bg-transparent rounded-[2rem] border border-amber-400/30 p-10 md:p-16 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}

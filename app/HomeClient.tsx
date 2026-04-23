@@ -135,14 +135,12 @@ export default function HomeClient() {
               </Link>
 
               {/* Portfolio External Link */}
-              <a
-                href="https://portfolio.techstrota.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/portfolio"
                 className="border border-gray-400 font-bold px-6 py-3 rounded-xl hover:border-blue-400 transition text-center"
               >
                 View Portfolio
-              </a>
+              </Link>
             </div>
           </motion.div>
 

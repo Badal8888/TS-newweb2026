@@ -48,7 +48,7 @@ export default function PortfolioPage() {
   return (
     <main className="min-h-screen pt-20 pb-24 px-4 sm:px-6 font-sans text-white relative">
       {/* 1. HEADER SECTION */}
-      <div className="max-w-5xl mx-auto mb-20 relative z-10 flex flex-col items-center text-center">
+      <div className="max-w-5xl mx-auto mb-10 relative z-10 flex flex-col items-center text-center">
         {/* Centered Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -91,7 +91,7 @@ export default function PortfolioPage() {
         */
               className={`relative w-full max-w-6xl h-[85vh] flex flex-col ${
                 i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-              } items-center gap-10 lg:gap-16 bg-[#040A15] border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl`}
+              } items-center gap-10 lg:gap-16 bg-[#040A15] border border-amber-400/40 rounded-[2.5rem] p-8 md:p-12 shadow-2xl`}
             >
               {/* Visual Side */}
               <div className="flex-1 w-full h-full flex items-center justify-center relative group">
@@ -102,7 +102,7 @@ export default function PortfolioPage() {
                   <img
                     src={storageUrl(project.image)}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
               </div>

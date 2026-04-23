@@ -321,7 +321,7 @@ export default function SocialMediaServices() {
   };
 
   return (
-    <main className="bg-[#040A15] text-white w-full overflow-hidden">
+    <main className="bg-transparent text-white w-full overflow-hidden">
       {/* 1. HERO SECTION (Untouched) */}
       <section className="relative z-10 min-h-[100dvh] lg:h-screen w-full pt-20 pb-12 px-4 sm:px-6 flex items-center justify-center">
         <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4">
@@ -629,8 +629,8 @@ export default function SocialMediaServices() {
       </section>
 
       {/* 2. HOW WE TURN CONTENT INTO CUSTOMERS (Updated to Yellow) */}
-      <section className="relative py-12 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5">
-        {/* UPDATED: Background blur to Amber */}
+      <section className="relative py-12 md:py-20 px-4 sm:px-6 w-full max-w-7xl mx-auto border-t border-white/5 bg-transparent overflow-hidden">
+        {/* Large background blur remains for depth */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-400/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
 
         <motion.div
@@ -640,16 +640,16 @@ export default function SocialMediaServices() {
           variants={scrollVariants}
           className="text-center mb-16 relative z-10"
         >
-          <span className="text-[#FFC933] font-semibold tracking-wider uppercase text-sm mb-3 block">
+          <span className="text-[#FFC933] font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
             How We Turn Content Into Customers
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
-            We Don’t Just Post — <br className="hidden md:block" /> We Build a{" "}
+          <h2 className="text-3xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
+            We Don’t Just Post - <br className="hidden md:block" /> We Build a{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1374BB] to-[#3ab0ff]">
               Growth System
             </span>
           </h2>
-          <p className="text-[#8B95A5] text-lg max-w-2xl mx-auto">
+          <p className="text-[#8B95A5] text-lg md:text-xl max-w-2xl mx-auto font-medium">
             Every post, reel, and campaign is designed to attract attention,
             build trust, and convert followers into leads.
           </p>
@@ -664,36 +664,45 @@ export default function SocialMediaServices() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={itemVariants}
-              className={`bg-gradient-to-br from-[#091122] to-[#040A15] border border-amber-400/20 hover:border-amber-400/60 rounded-3xl p-8 group transition-all duration-300 hover:shadow-[0_10px_40px_rgba(251,191,36,0.15)] ${
-                idx < 3 ? "lg:col-span-2" : "lg:col-span-3"
-              }`}
+              // MODIFIED: bg-white/[0.03], backdrop-blur-md, and softened edges
+              className={`relative p-8 group transition-all duration-500 overflow-hidden
+          bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-3xl
+          hover:bg-white/[0.07] hover:border-amber-400/40 hover:shadow-[0_20px_50px_rgba(251,191,36,0.1)]
+          ${idx < 3 ? "lg:col-span-2" : "lg:col-span-3"}`}
             >
-              <div className="flex items-center gap-4 mb-6">
-                {/* UPDATED: Icon background and text color to Amber */}
-                <div className="bg-amber-400/10 text-[#1374BB] p-4 rounded-2xl group-hover:bg-[#1374BB] group-hover:text-[#091122] transition-colors duration-300">
-                  {block.icon}
+              {/* Subtle internal glass glow on hover */}
+              <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-32 h-32 bg-blue-500/5 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="flex items-center gap-4 mb-6 relative z-10">
+                {/* Icon Container with Glass-in-Glass effect */}
+                <div className="bg-white/5 border border-white/10 text-[#1374BB] p-4 rounded-2xl group-hover:bg-[#1374BB] group-hover:text-white group-hover:scale-110 transition-all duration-500 shadow-inner">
+                  <div className="drop-shadow-[0_0_8px_rgba(19,116,187,0.4)]">
+                    {block.icon}
+                  </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">
+                  <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                     {block.title}
                   </h3>
-                  <p className="text-[#8B95A5] text-sm font-medium mt-1">
+                  <p className="text-[#8B95A5] text-xs font-bold uppercase tracking-wider mt-1">
                     {block.desc}
                   </p>
                 </div>
               </div>
-              <ul className="space-y-3 mt-6 pt-6 border-t border-white/5">
+
+              <ul className="space-y-4 mt-6 pt-6 border-t border-white/10 relative z-10">
                 {block.bullets.map((bullet, bIdx) => (
                   <li
                     key={bIdx}
-                    className="flex items-start gap-3 text-white/80"
+                    className="flex items-start gap-3 text-white/80 group/list"
                   >
-                    {/* UPDATED: Checkmark to Amber */}
                     <CheckCircle2
                       size={18}
-                      className="text-[#1374BB] mt-0.5 shrink-0"
+                      className="text-amber-400 mt-0.5 shrink-0 transition-transform group-hover/list:scale-125"
                     />
-                    <span className="text-sm">{bullet}</span>
+                    <span className="text-sm md:text-base font-medium group-hover/list:text-white transition-colors">
+                      {bullet}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -731,7 +740,7 @@ export default function SocialMediaServices() {
               className="relative z-10 flex-1 flex flex-col items-center text-center group"
             >
               {/* Number Box matching the image design */}
-              <div className="w-20 h-20 rounded-2xl bg-[#091122] border border-white/5 flex items-center justify-center text-xl font-bold mb-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)] group-hover:-translate-y-1 hover:border-white/10 transition-all duration-300">
+              <div className="w-20 h-20 rounded-2xl bg-[#091122] border border-amber-400/50 flex items-center justify-center text-xl font-bold mb-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)] group-hover:-translate-y-1 transition-all duration-300">
                 <span className={item.color}>{item.step}</span>
               </div>
 
@@ -790,7 +799,7 @@ export default function SocialMediaServices() {
       </section>
 
       {/* 4. CONTENT TYPES WE CREATE (Updated to Yellow) */}
-      <section className="relative z-10 py-10 px-4 sm:px-6 w-full max-w-7xl mx-auto">
+      <section className="relative z-10 py-10 md:py-20 px-4 sm:px-6 w-full max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -798,11 +807,13 @@ export default function SocialMediaServices() {
           variants={scrollVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight text-white leading-tight">
             Content That Works on{" "}
-            <span className="text-[#1374BB]">Every Platform</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1374BB] to-[#3ab0ff]">
+              Every Platform
+            </span>
           </h2>
-          <p className="text-[#8B95A5] text-lg max-w-2xl mx-auto">
+          <p className="text-[#8B95A5] text-lg md:text-xl max-w-2xl mx-auto font-medium">
             Visually stunning, highly engaging formats tailored for your
             specific goals.
           </p>
@@ -816,24 +827,32 @@ export default function SocialMediaServices() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={itemVariants}
-              className={`relative overflow-hidden bg-[#091122] border border-amber-400/20 hover:border-amber-400/60 rounded-3xl p-8 group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(251,191,36,0.1)] ${
-                idx < 3 ? "lg:col-span-2" : "lg:col-span-3"
-              }`}
+              // MODIFIED: Added bg-white/[0.03], backdrop-blur-md, and updated border logic
+              className={`relative overflow-hidden transition-all duration-500 group p-8 rounded-[2rem]
+          bg-white/[0.03] backdrop-blur-md border border-amber-400/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]
+          hover:bg-white/[0.08] hover:border-amber-400/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(251,191,36,0.1)] 
+          ${idx < 3 ? "lg:col-span-2" : "lg:col-span-3"}`}
             >
-              {/* UPDATED: Faint background icon color on hover */}
-              <div className="absolute -right-6 -bottom-6 text-white/5 group-hover:text-amber-400/10 group-hover:scale-125 transition-all duration-500 pointer-events-none">
-                {type.icon}
+              {/* Etched Watermark Icon - Glows amber behind the glass on hover */}
+              <div className="absolute -right-6 -bottom-6 text-white/[0.03] group-hover:text-amber-400/10 group-hover:scale-125 transition-all duration-700 pointer-events-none transform rotate-12">
+                <div className="scale-[2.5]">{type.icon}</div>
               </div>
 
               <div className="relative z-10">
-                {/* UPDATED: Main icon color */}
-                <div className="text-amber-400 mb-5">{type.icon}</div>
-                <h4 className="text-2xl font-bold text-white mb-2">
+                {/* Main Icon Container - Glass-in-Glass effect */}
+                <div className="inline-flex p-3 rounded-2xl bg-white/5 border border-white/10 text-amber-400 mb-6 shadow-inner group-hover:scale-110 group-hover:bg-amber-400/10 transition-all duration-300">
+                  <div className="drop-shadow-[0_0_8px_rgba(251,191,36,0.5)]">
+                    {type.icon}
+                  </div>
+                </div>
+
+                <h4 className="text-2xl font-bold text-white mb-3 tracking-tight">
                   {type.title}
                 </h4>
-                <p className="text-[#8B95A5] font-medium inline-flex items-center gap-2">
-                  {/* UPDATED: Small bullet point changed to Amber */}
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#1374BB] shadow-[0_0_8px_rgba(251,191,36,0.8)]"></span>
+
+                <p className="text-[#8B95A5] font-medium inline-flex items-center gap-2.5 transition-colors group-hover:text-gray-300">
+                  {/* Pulsing amber bullet point */}
+                  <span className="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.8)] animate-pulse"></span>
                   {type.desc}
                 </p>
               </div>
@@ -962,23 +981,36 @@ export default function SocialMediaServices() {
       </section>
 
       {/* 5. FINAL CTA (Untouched) */}
-      <section className="w-full py-10 px-4 sm:px-6">
+      <section className="w-full py-12 md:py-20 px-4 sm:px-6 relative overflow-hidden">
+        {/* Decorative background glow to enhance the frost effect */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] pointer-events-none"></div>
+
         <motion.div
-          className="max-w-5xl mx-auto bg-[#091122] rounded-[2rem] border border-amber-400/30 p-10 md:p-16 text-center relative overflow-hidden"
+          className="max-w-5xl mx-auto p-10 md:p-16 text-center relative overflow-hidden rounded-[2.5rem]
+          /* GLASS EFFECT START */
+          bg-white/[0.03] backdrop-blur-xl border border-amber-400/40 
+          shadow-[0_20px_50px_rgba(0,0,0,0.3)]
+          /* GLASS EFFECT END */"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[600px] bg-amber-400/10 rounded-full blur-[80px] pointer-events-none"></div>
+          {/* Amber Internal Glow - Frosted through the glass */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[600px] bg-amber-400/[0.08] rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-6xl font-extrabold mb-8 tracking-tight leading-tight text-white">
               Want content that{" "}
-              <span className="text-[#1374BB]">actually brings leads?</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1374BB] to-[#3ab0ff]">
+                actually brings leads?
+              </span>
             </h2>
+
             <Link href="/contact">
-              <button className="bg-[#1374BB] hover:bg-[#0e5f99] text-white font-bold text-lg py-4 px-10 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(251,191,36,0.4)]">
+              <button className="group relative bg-[#1374BB] hover:bg-[#0e5f99] text-white font-bold text-lg py-4 px-12 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_10px_30px_-10px_rgba(19,116,187,0.5)] overflow-hidden">
+                {/* Subtle button shine effect */}
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
                 Let&apos;s Build Your Strategy
               </button>
             </Link>

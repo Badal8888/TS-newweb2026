@@ -42,10 +42,10 @@ const servicesList = [
       "Lightning Fast Progressive Web Apps",
       "Robust Inventory & Order Management",
     ],
-    link: "/services/Ecommerce-development",
+    link: "/services/Ecommerece-development",
     image: "/services/e-commerce.png", // Placeholder image path, replace with actual image URL
     buttonColor:
-      "text-[#f2a93b] bg-[#f2a93b]/10 border-[#f2a93b]/20 hover:bg-[#f2a93b] hover:text-[#0a0f1a]",
+      "text-[#3b82f6] bg-[#3b82f6]/10 border-[#3b82f6]/20 hover:bg-[#3b82f6] hover:text-white",
     reverse: true,
   },
   {
@@ -189,14 +189,18 @@ export default function Services() {
             key={index}
             className={`flex flex-col ${
               service.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-            } gap-6 md:gap-8 items-center bg-[#161e2d] p-4 md:p-6 rounded-xl md:rounded-2xl border border-gray-800 hover:border-gray-600 transition`}
+            } gap-6 md:gap-8 items-center p-4 md:p-6 rounded-xl md:rounded-2xl transition-all duration-300
+      /* GLASS EFFECT START */
+      bg-white/[0.03] backdrop-blur-md border border-yellow-400
+      hover:bg-white/[0.06] hover:border-white/20 hover:shadow-2xl
+      /* GLASS EFFECT END */`}
           >
             {/* IMAGE */}
-            <div className="w-full lg:w-1/2 aspect-video overflow-hidden rounded-lg md:rounded-xl">
+            <div className="w-full lg:w-1/2 aspect-video overflow-hidden rounded-lg md:rounded-xl border border-white/5">
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-full object-cover hover:scale-105 transition"
+                className="w-full h-full object-cover hover:scale-105 transition duration-500"
               />
             </div>
 
@@ -204,14 +208,16 @@ export default function Services() {
             <div className="w-full lg:w-1/2 space-y-3 md:space-y-4 text-center lg:text-left">
               {/* TAG */}
               <span
-                className={`${service.tagColor} px-3 py-1 rounded-full text-xs inline-block`}
+                className={`${service.tagColor} px-3 py-1 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wider inline-block`}
               >
                 {service.tag}
               </span>
 
-              <h2 className="text-xl sm:text-2xl font-bold">{service.title}</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
+                {service.title}
+              </h2>
 
-              <p className="text-gray-400 text-sm sm:text-base">
+              <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
                 {service.description}
               </p>
 
@@ -219,20 +225,22 @@ export default function Services() {
                 {service.bullets.map((b, i) => (
                   <li
                     key={i}
-                    className="text-gray-300 flex gap-2 justify-center lg:justify-start"
+                    className="text-gray-300 flex gap-2 justify-center lg:justify-start items-center"
                   >
-                    ✔ {b}
+                    <span className="text-cyan-400 text-xs">✔</span> {b}
                   </li>
                 ))}
               </ul>
 
-              <Link href={service.link}>
-                <button
-                  className={`${service.buttonColor} w-full sm:w-auto px-5 py-2 rounded-lg border transition`}
-                >
-                  View Details →
-                </button>
-              </Link>
+              <div className="pt-2">
+                <Link href={service.link}>
+                  <button
+                    className={`${service.buttonColor} w-full sm:w-auto px-6 py-2.5 rounded-lg border font-semibold transition-all duration-300 active:scale-95`}
+                  >
+                    View Details →
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         ))}

@@ -23,7 +23,7 @@ export default function ClientWrapper({
       {isLoading && <Loader />}
 
       {/* 2. Global Video Background */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      {/* <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <video
           autoPlay
           muted
@@ -34,9 +34,9 @@ export default function ClientWrapper({
         >
           <source src="/videos/background3.mp4" type="video/mp4" />
         </video>
-        {/* Subtle Gradient overlay to make text readable */}
+
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_30%,_#0a0f1a_90%)]" />
-      </div>
+      </div> */}
 
       {/* 3. Content Layer */}
       <div
