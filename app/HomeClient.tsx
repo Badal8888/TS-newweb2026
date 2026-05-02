@@ -263,13 +263,22 @@ export default function HomeClient() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* --- Glass Card Template (Apply to all 3) --- */}
-            <div className="relative group bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden shadow-2xl">
+            <div
+              className="relative group rounded-2xl overflow-hidden
+              bg-white/[0.05] backdrop-blur-xl
+              border border-amber-400/50
+              shadow-[0_10px_40px_rgba(0,0,0,0.5)]
+              transition-all duration-500
+              hover:-translate-y-3 hover:scale-[1.02]
+              hover:border-amber-300/60
+              hover:shadow-[0_20px_60px_rgba(251,191,36,0.25)]"
+            >
               {/* Subtle Inner Glow for extra glass effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+              <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-amber-400 to-transparent"></div>
 
               <div className="relative h-48 w-full">
                 <Image
-                  src="/1.png"
+                  src="/services/web-development.png"
                   alt="Web Development"
                   fill
                   className="object-contain p-6 drop-shadow-2xl group-hover:scale-110 transition-transform duration-500"
@@ -287,13 +296,22 @@ export default function HomeClient() {
               </div>
             </div>
 
-            <div className="relative group bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden shadow-2xl">
+            <div
+              className="relative group rounded-2xl overflow-hidden
+              bg-white/[0.05] backdrop-blur-xl
+              border border-amber-400/50
+              shadow-[0_10px_40px_rgba(0,0,0,0.5)]
+              transition-all duration-500
+              hover:-translate-y-3 hover:scale-[1.02]
+              hover:border-amber-300/60
+              hover:shadow-[0_20px_60px_rgba(251,191,36,0.25)]"
+            >
               {/* Subtle Inner Glow for extra glass effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-70"></div>
 
               <div className="relative h-48 w-full">
                 <Image
-                  src="/2.png"
+                  src="/services/mobile-application.png"
                   alt="Mobile App Development"
                   fill
                   className="object-contain p-6 drop-shadow-2xl group-hover:scale-110 transition-transform duration-500"
@@ -311,13 +329,22 @@ export default function HomeClient() {
               </div>
             </div>
 
-            <div className="relative group bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden shadow-2xl">
+            <div
+              className="relative group rounded-2xl overflow-hidden
+              bg-white/[0.05] backdrop-blur-xl
+              border border-amber-400/50
+              shadow-[0_10px_40px_rgba(0,0,0,0.5)]
+              transition-all duration-500
+              hover:-translate-y-3 hover:scale-[1.02]
+              hover:border-amber-300/60
+              hover:shadow-[0_20px_60px_rgba(251,191,36,0.25)]"
+            >
               {/* Subtle Inner Glow for extra glass effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+              <div className="absolute right-0 top-0 h-full w-1 bg-gradient-to-b from-amber-400 to-transparent"></div>
 
               <div className="relative h-48 w-full">
                 <Image
-                  src="/3.png"
+                  src="/services/saas-development.png"
                   alt="SaaS & Custom Software"
                   fill
                   className="object-contain p-6 drop-shadow-2xl group-hover:scale-110 transition-transform duration-500"

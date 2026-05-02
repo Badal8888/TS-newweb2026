@@ -82,9 +82,11 @@ function ScrollRevealCards({
 const Card = ({
   children,
   index,
+  className,
 }: {
   children: React.ReactNode;
   index: number;
+  className?: string;
 }) => (
   <motion.div
     variants={{
@@ -92,7 +94,7 @@ const Card = ({
       visible: (i: number) => ({ opacity: 1, y: 0 }),
     }}
     custom={index}
-    className="bg-white/5 backdrop-blur-lg border border-blue-400/20 p-6 rounded-xl hover:scale-103 hover:shadow-blue-500/20 transition"
+    className={`bg-white/5 backdrop-blur-lg border border-amber-400/40 p-6 rounded-xl hover:scale-103 hover:shadow-blue-500/20 hover:border-amber-400 transition ${className || ""}`}
   >
     {children}
   </motion.div>
@@ -146,7 +148,16 @@ function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl bg-[#091122] aspect-video">
+          <div
+            className="relative group rounded-2xl overflow-hidden
+            bg-[#0b1220]
+            border border-blue-500/50
+            shadow-[0_20px_60px_rgba(0,0,0,0.6)]
+            aspect-video
+            transition-all duration-500
+            hover:shadow-[0_30px_80px_rgba(59,130,246,0.25)]
+            hover:-translate-y-2"
+          >
             <video
               autoPlay
               muted
@@ -185,7 +196,12 @@ function ProcessSection() {
 
       <ScrollRevealCards className="grid md:grid-cols-5 gap-4 max-w-7xl mx-auto px-6">
         {steps.map((step, i) => (
-          <Card key={i} index={i}>
+          <Card
+            key={i}
+            index={i}
+            className="border border-amber-400 rounded-xl backdrop-blur-md
+            hover:border-amber-400 transition-all duration-300"
+          >
             <div className="text-cyan-400 font-bold mb-2 text-xl">0{i + 1}</div>
             <h3 className="font-semibold text-white">{step}</h3>
           </Card>
@@ -275,12 +291,12 @@ function CTASection() {
         TechStrota – web development company in Vadodara – can help you launch a
         fast, scalable, and SEO‑friendly website in weeks, not months.
       </p>
-      <a
+      <Link
         href="/contact"
         className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:scale-105 transition-transform"
       >
         Contact for a Free Quote
-      </a>
+      </Link>
     </ScrollReveal>
   );
 }

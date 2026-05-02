@@ -132,16 +132,38 @@ export default function HeroSection() {
             {processSteps.map((step, i) => (
               <div
                 key={i}
-                className="group relative rounded-2xl p-6 md:p-8 transition-all duration-500 bg-white/[0.03] backdrop-blur-md border border-white/10 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-blue-500/40"
+                className="group relative rounded-2xl p-6 md:p-8 
+                bg-white/[0.04] backdrop-blur-md 
+                border border-blue-500/50
+                shadow-[0_10px_30px_rgba(0,0,0,0.4)] 
+                transition-all duration-500 
+                hover:-translate-y-3 hover:scale-[1.02]
+                hover:border-blue-400/50 
+                hover:shadow-[0_20px_60px_rgba(59,130,246,0.25)]"
               >
-                <div className="absolute inset-0 rounded-2xl bg-blue-500/5 opacity-0 group-hover:opacity-100 blur-xl transition duration-500" />
+                {/* top light */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/10 to-transparent opacity-20 pointer-events-none"></div>
+
+                {/* glow */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500">
+                  <div className="absolute inset-0 rounded-2xl bg-blue-500/10 blur-2xl"></div>
+                </div>
+
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-400 flex items-center justify-center font-bold mb-5 transition-transform group-hover:scale-110">
+                  <div
+                    className="w-12 h-12 rounded-xl 
+      bg-blue-600/20 border border-blue-500/50 
+      text-blue-400 flex items-center justify-center font-bold mb-5 
+      shadow-[0_5px_15px_rgba(59,130,246,0.3)]
+      transition-all group-hover:scale-110 group-hover:shadow-[0_8px_25px_rgba(59,130,246,0.5)]"
+                  >
                     {i + 1}
                   </div>
+
                   <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors uppercase tracking-wide">
                     {step.title}
                   </h3>
+
                   <p className="text-gray-400 text-sm md:text-base leading-relaxed">
                     {step.description}
                   </p>
@@ -156,7 +178,7 @@ export default function HeroSection() {
       <section className="px-4 sm:px-6 py-12 md:py-20 flex justify-center">
         <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-8 md:gap-12">
           {/* FEATURES */}
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.02] backdrop-blur-xl p-6 md:p-10 shadow-2xl">
+          <div className="rounded-[2rem] border border-blue-500/50 bg-white/[0.02] backdrop-blur-xl p-6 md:p-10 shadow-2xl">
             <h2 className="text-2xl md:text-4xl font-bold mb-8 flex items-center gap-3">
               <span className="w-2 h-8 bg-blue-500 rounded-full"></span>
               eCommerce Features
@@ -174,7 +196,7 @@ export default function HeroSection() {
           </div>
 
           {/* WHY TECHSTROTA */}
-          <div className="group relative rounded-[2rem] border border-white/10 bg-white/[0.02] backdrop-blur-xl p-6 md:p-10 shadow-2xl transition-all duration-500 overflow-hidden">
+          <div className="group relative rounded-[2rem] border border-blue-500/50 bg-white/[0.02] backdrop-blur-xl p-6 md:p-10 shadow-2xl transition-all duration-500 overflow-hidden">
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/10 blur-[80px] rounded-full"></div>
 
             <div className="relative z-10 text-center lg:text-left">
@@ -244,7 +266,7 @@ export default function HeroSection() {
       {/* --- FINAL CTA / FOOTER INFO --- */}
       <section className="px-4 sm:px-6 pb-20 flex justify-center">
         <div className="max-w-5xl w-full relative">
-          <div className="bg-gradient-to-b from-white/[0.05] to-transparent backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 text-center shadow-2xl">
+          <div className="bg-gradient-to-b from-white/[0.05] to-transparent backdrop-blur-2xl border border-amber-400/40 rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 text-center shadow-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-6">
               <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
               Gujarat&apos;s Leading Tech Partner

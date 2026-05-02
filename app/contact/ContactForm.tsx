@@ -81,7 +81,7 @@ export default function ContactForm() {
         </h1>
 
         {/* Card */}
-        <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden border border-amber-400/50 shadow-[0_0_50px_-12px_rgba(59,130,246,0.5)]">
           {/* Left Section */}
           <div className="p-6 sm:p-8 bg-slate-900">
             <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-blue-400">
@@ -99,7 +99,7 @@ export default function ContactForm() {
               <div>
                 <p className="font-semibold text-white">📍 Address</p>
                 <p>
-                  503, Sterling Centre, R C Dutt Road,near fairfield Hotel
+                  503, Sterling Centre, R C Dutt Road, near fairfield Hotel
                   Alkapuri, Vadodara - 390007
                 </p>
               </div>

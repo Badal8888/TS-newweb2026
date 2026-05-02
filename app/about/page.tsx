@@ -137,8 +137,8 @@ export default function About() {
                 <div
                   key={idx}
                   className={`group relative overflow-hidden p-6 rounded-3xl transition-all duration-500 
-                    bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-2xl
-                    hover:bg-white/[0.07] hover:border-white/20 hover:-translate-y-2
+                    bg-white/[0.03] backdrop-blur-xl border border-amber-500/40 shadow-2xl
+                    hover:bg-white/[0.07] hover:border-amber-500/60 hover:-translate-y-2
                     ${item.glow} ${idx % 2 !== 0 ? "sm:mt-12" : ""}`}
                 >
                   <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
@@ -160,7 +160,7 @@ export default function About() {
         <section className="relative z-10 py-10 md:py-14 border-t border-white/10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Mission Card */}
-            <div className="group relative p-8 md:p-10 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
+            <div className="group relative p-8 md:p-10 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-blue-400 hover:border-blue-500/60 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
               <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
                 <FaRocket className="text-6xl text-blue-400" />
               </div>
@@ -175,7 +175,7 @@ export default function About() {
             </div>
 
             {/* Vision Card */}
-            <div className="group relative p-8 md:p-10 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
+            <div className="group relative p-8 md:p-10 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-blue-400 hover:border-blue-500/60 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
               <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
                 <FaSearch className="text-6xl text-cyan-400" />
               </div>
@@ -339,7 +339,7 @@ export default function About() {
               },
             ].map((member, idx) => (
               <div key={idx} className="relative mt-8">
-                <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 pt-12 text-center hover:bg-white/10 transition-colors duration-300">
+                <div className="bg-white/5 backdrop-blur-lg border border-blue-400 rounded-3xl p-8 pt-12 text-center hover:bg-white/10 transition-colors duration-300">
                   {/* Floating Avatar */}
                   <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 p-1 rounded-full shadow-xl">
                     <div className="w-full h-full bg-[#030712] rounded-full flex items-center justify-center border-2 border-[#030712]">
@@ -511,7 +511,7 @@ export default function About() {
               <div
                 key={idx}
                 // MODIFIED: Added bg-white/[0.03], backdrop-blur-md, and updated border
-                className="relative bg-white/[0.03] backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/10 text-center group hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-[0_10px_30px_-10px_rgba(34,211,238,0.3)] transition-all duration-500 overflow-hidden"
+                className="relative bg-white/[0.03] backdrop-blur-md p-6 md:p-8 rounded-3xl border border-blue-400 text-center group hover:-translate-y-2 hover:border-blue-500/60 hover:shadow-[0_10px_30px_-10px_rgba(34,211,238,0.3)] transition-all duration-500 overflow-hidden"
               >
                 {/* Background Watermark Numbers */}
                 <div className="absolute -bottom-4 -right-2 text-8xl font-black text-white/[0.02] group-hover:text-cyan-500/[0.05] transition-colors duration-500 pointer-events-none select-none">
