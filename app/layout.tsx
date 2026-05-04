@@ -31,9 +31,7 @@ export default function RootLayout({
     <html lang="en">
       {/* Remove the background color from the body here so it doesn't block the video */}
       <body className="antialiased">
-        <ClientWrapper>
-          {children}
-        </ClientWrapper>
+        <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
   );

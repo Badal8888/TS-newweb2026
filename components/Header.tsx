@@ -264,6 +264,14 @@ export default function Header() {
           )}
 
           <Link
+            href="/gallery"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-300"
+          >
+            TS Gallery
+          </Link>
+
+          <Link
             href="/blog"
             onClick={() => setMenuOpen(false)}
             className="block text-gray-300"
@@ -272,24 +280,18 @@ export default function Header() {
           </Link>
 
           <Link
+            href="/portfolio"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-300"
+          >
+            Portfolio
+          </Link>
+
+          <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
             className="block text-gray-300"
           >
-            Contact
-          </Link>
-          <Link href="/gallery" className="block text-gray-300">
-            TS Gallery
-          </Link>
-          <Link href="/blog" className="block text-gray-300">
-            Blog
-          </Link>
-
-          <Link href="/portfolio" className="block text-gray-300">
-            Portfolio
-          </Link>
-
-          <Link href="/contact" className="block text-gray-300">
             Contact
           </Link>
         </div>
