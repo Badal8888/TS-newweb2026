@@ -2,8 +2,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-export const dynamicParams = true;
-
 type BlogPost = {
   id: number;
   title: string;

@@ -1,9 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-// Forces the page to be treated as a static build
-export const dynamic = "force-static";
-
 type BlogPost = {
   id: number;
   title: string;
