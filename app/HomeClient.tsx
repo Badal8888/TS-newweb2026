@@ -367,6 +367,7 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
+
       {/* OUR CLIENTS */}
       <section className="py-10 bg-[#020617] text-white overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -387,41 +388,49 @@ export default function HomeClient() {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
+
       .animate-infinite-scroll {
-        animation: infinite-scroll 25s linear infinite;
+        animation: infinite-scroll 22s linear infinite;
         width: max-content;
+        will-change: transform;
       }
+
       .group:hover .animate-infinite-scroll {
         animation-play-state: paused;
       }
     `}</style>
 
-          <div className="flex animate-infinite-scroll py-4">
-            {clients.map((client, index) => (
-              <div
-                key={`${client.id}-${index}`}
-                // INCREASED CARD SIZE: Changed w-48 to w-56, and h-24 to h-28. Added p-4.
-                className="mx-4 flex-shrink-0 flex items-center justify-center w-56 h-28 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 cursor-pointer"
-              >
-                <Image
-                  src={client.logo}
-                  alt="client logo"
-                  // INCREASED IMAGE BASE RESOLUTION
-                  width={180}
-                  height={90}
-                  // CHANGED: Let the image take up full width/height of the padded container
-                  className="object-contain w-full h-full"
-                  unoptimized
-                />
+          {/* Duplicate clients for seamless loop */}
+          {(() => {
+            const loopClients = [...clients, ...clients];
+
+            return (
+              <div className="flex animate-infinite-scroll py-4">
+                {loopClients.map((client, index) => (
+                  <div
+                    key={`${client.id}-${index}`}
+                    className="mx-4 flex-shrink-0 flex items-center justify-center w-56 h-28 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  >
+                    <Image
+                      src={client.logo}
+                      alt="client logo"
+                      width={180}
+                      height={90}
+                      className="object-contain w-full h-full"
+                      unoptimized
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            );
+          })()}
 
           {/* Gradient fades */}
           <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#020617] to-transparent pointer-events-none"></div>
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#020617] to-transparent pointer-events-none"></div>
         </div>
       </section>
+
       {/* SaaS AUTHORITY - REDESIGNED */}
       <section className="relative z-10 py-14 overflow-hidden">
         {/* Decorative Background Glow */}

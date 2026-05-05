@@ -46,6 +46,82 @@ export const metadata = {
   ],
 };
 
+const team = [
+  {
+    name: "Chirag Kanani",
+    role: "Founder & CEO",
+    edu: "B.Tech Computer Engineering",
+    exp: "5+ Years Experience",
+    skills: "SaaS, Web Apps, Logistics Systems",
+    initials: "CK",
+    linkedin:
+      "https://www.linkedin.com/in/chiragkanani/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    instagram:
+      "https://www.instagram.com/techstrota/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  },
+  {
+    name: "Badal Jamod",
+    role: "Founder & CTO",
+    edu: "B.Tech Computer Engineering",
+    exp: "5+ Years Experience",
+    skills: "SaaS, Web Apps, Logistics Systems",
+    initials: "BJ",
+    linkedin:
+      "https://www.linkedin.com/in/badaltechstrota?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    instagram:
+      "https://www.instagram.com/badal_0812/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    github: "https://github.com/devBadal08",
+  },
+  {
+    name: "Himanshu Dangar",
+    role: "Manager",
+    edu: "B.Tech Computer Engineering",
+    exp: "5+ Years Experience",
+    skills: "SaaS, Web Apps, Logistics Systems",
+    initials: "HD",
+    linkedin: "https://www.linkedin.com/in/himanshu-dangar-28b662190/",
+    instagram:
+      "https://www.instagram.com/techstrota/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  },
+  {
+    name: "Vidhi Patel",
+    role: "Senior Full Stack Developer",
+    edu: "M.Sc IT",
+    exp: "2+ Years Experience",
+    skills: "React, Laravel, Flutter",
+    initials: "VP",
+    linkedin:
+      "https://www.linkedin.com/in/vidhi-patel-b97a27213?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    instagram:
+      "https://www.instagram.com/vidhipatel_1314/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    github: "https://github.com/vidhi1413",
+  },
+  {
+    name: "Krishna Patel",
+    role: "Social Media Manager",
+    edu: "BCA",
+    exp: "2+ Years Experience",
+    skills: "Instagram, LinkedIn, Content Creation",
+    initials: "KP",
+    linkedin:
+      "https://www.linkedin.com/in/krishna-patel-80451028a/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    instagram:
+      "https://www.instagram.com/kmusic207/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  },
+  {
+    name: "Dinesh Shah",
+    role: "Fund Manager",
+    edu: "BCA",
+    exp: "2+ Years Experience",
+    skills: "Financial Planning, Investment Analysis",
+    initials: "DS",
+    linkedin:
+      "https://www.linkedin.com/in/dinesh-shah-9134a0240/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    instagram:
+      "https://www.instagram.com/dineshshah4730/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  },
+];
+
 export default function About() {
   return (
     <main className="bg-transparent text-white overflow-hidden selection:bg-cyan-500/30 font-sans">
@@ -288,59 +364,10 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {[
-              {
-                name: "Chirag Kanani",
-                role: "Founder & CEO",
-                edu: "B.Tech Computer Engineering",
-                exp: "5+ Years Experience",
-                skills: "SaaS, Web Apps, Logistics Systems",
-                initials: "CK",
-              },
-              {
-                name: "Badal Jamod",
-                role: "Founder & CTO",
-                edu: "B.Tech Computer Engineering",
-                exp: "5+ Years Experience",
-                skills: "SaaS, Web Apps, Logistics Systems",
-                initials: "BJ",
-              },
-              {
-                name: "Himanshu Dangar",
-                role: "Manager",
-                edu: "B.Tech Computer Engineering",
-                exp: "5+ Years Experience",
-                skills: "SaaS, Web Apps, Logistics Systems",
-                initials: "HD",
-              },
-              {
-                name: "Vidhi Patel",
-                role: "Senior Full Stack Developer",
-                edu: "M.Sc IT",
-                exp: "2+ Years Experience",
-                skills: "React, Laravel, Node.js",
-                initials: "VP",
-              },
-              {
-                name: "Krishna Patel",
-                role: "Social Media Manager",
-                edu: "BCA",
-                exp: "2+ Years Experience",
-                skills: "Instagram, LinkedIn, Content Creation",
-                initials: "KP",
-              },
-              {
-                name: "Dinesh Shah",
-                role: "Fund Manager",
-                edu: "BCA",
-                exp: "2+ Years Experience",
-                skills: "Financial Planning, Investment Analysis",
-                initials: "DS",
-              },
-            ].map((member, idx) => (
+            {team.map((member, idx) => (
               <div key={idx} className="relative mt-8">
                 <div className="bg-white/5 backdrop-blur-lg border border-blue-400 rounded-3xl p-8 pt-12 text-center hover:bg-white/10 transition-colors duration-300">
-                  {/* Floating Avatar */}
+                  {/* Avatar */}
                   <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 p-1 rounded-full shadow-xl">
                     <div className="w-full h-full bg-[#030712] rounded-full flex items-center justify-center border-2 border-[#030712]">
                       <span className="text-xl font-bold text-white">
@@ -352,6 +379,7 @@ export default function About() {
                   <h3 className="text-2xl font-bold text-white mb-1">
                     {member.name}
                   </h3>
+
                   <p className="text-cyan-400 text-sm font-semibold mb-6 tracking-wide uppercase">
                     {member.role}
                   </p>
@@ -359,34 +387,43 @@ export default function About() {
                   <div className="space-y-2 text-md text-gray-400 mb-8 bg-black/20 p-4 rounded-2xl">
                     <p>🎓 {member.edu}</p>
                     <p>💼 {member.exp}</p>
-                    <p className="truncate">⚙️ {member.skills}</p>
+                    <p>⚙️ {member.skills}</p>
                   </div>
 
+                  {/* Social Links */}
                   <div className="flex justify-center gap-4">
-                    <a
-                      href="https://linkedin.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="p-2 bg-white/5 rounded-full hover:bg-blue-500 hover:text-white text-gray-400 transition-all"
-                    >
-                      <FaLinkedin size={18} />
-                    </a>
-                    <a
-                      href="https://instagram.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="p-2 bg-white/5 rounded-full hover:bg-pink-500 hover:text-white text-gray-400 transition-all"
-                    >
-                      <FaInstagram size={18} />
-                    </a>
-                    <a
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="p-2 bg-white/5 rounded-full hover:bg-white hover:text-black text-gray-400 transition-all"
-                    >
-                      <FaGithub size={18} />
-                    </a>
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-2 bg-white/5 rounded-full hover:bg-blue-500 hover:text-white text-gray-400 transition-all"
+                      >
+                        <FaLinkedin size={18} />
+                      </a>
+                    )}
+
+                    {member.instagram && (
+                      <a
+                        href={member.instagram}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-2 bg-white/5 rounded-full hover:bg-pink-500 hover:text-white text-gray-400 transition-all"
+                      >
+                        <FaInstagram size={18} />
+                      </a>
+                    )}
+
+                    {member.github && (
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-2 bg-white/5 rounded-full hover:bg-white hover:text-black text-gray-400 transition-all"
+                      >
+                        <FaGithub size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -440,7 +477,7 @@ export default function About() {
 
                 desc: "We respect your time and business deadlines. Our structured development process and agile methodology help us deliver projects efficiently and on schedule without compromising quality.",
 
-                colSpan: "md:col-span-2 lg:col-span-2",
+                colSpan: "lg:col-span-2",
               },
 
               {
