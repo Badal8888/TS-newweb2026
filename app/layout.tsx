@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import ClientWrapper from "@/components/ClientWrapper";
+import PageTracker from "./PageTracker";
 
 // Metadata works here because this is now a Server Component
 export const metadata: Metadata = {
@@ -31,6 +32,8 @@ export default function RootLayout({
     <html lang="en">
       {/* Remove the background color from the body here so it doesn't block the video */}
       <body className="antialiased">
+        <PageTracker />
+
         <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>

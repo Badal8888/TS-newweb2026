@@ -123,13 +123,14 @@ export default function Footer() {
 
           <p className="text-gray-400 mb-4 leading-relaxed">
             503, Sterling Centre, R C Dutt Road,near fairfield Hotel Alkapuri,
-            Vadodara - 390007
+            Vadodara - 390007 <br />
+            CIN: GJ240114897
           </p>
 
           {/* Google Map */}
           <div className="rounded-xl overflow-hidden border border-gray-800">
             <iframe
-              src="https://maps.google.com/maps?q=K10%20Atlantis%20Vadodara&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.1452737157033!2d73.17069167384061!3d22.310344942534083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fca3bf1872097%3A0x27b8ab5e9a99528d!2sTechStrota!5e0!3m2!1sen!2sin!4v1778224393632!5m2!1sen!2sin"
               width="100%"
               height="150"
               loading="lazy"

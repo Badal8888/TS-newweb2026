@@ -397,7 +397,7 @@ export default function About() {
                         href={member.linkedin}
                         target="_blank"
                         rel="noreferrer"
-                        className="p-2 bg-white/5 rounded-full hover:bg-blue-500 hover:text-white text-gray-400 transition-all"
+                        className="p-2 hover:bg-white/5 rounded-full bg-blue-400 text-white  transition-all"
                       >
                         <FaLinkedin size={18} />
                       </a>
@@ -408,7 +408,7 @@ export default function About() {
                         href={member.instagram}
                         target="_blank"
                         rel="noreferrer"
-                        className="p-2 bg-white/5 rounded-full hover:bg-pink-500 hover:text-white text-gray-400 transition-all"
+                        className="p-2 hover:bg-white/5 rounded-full bg-pink-500 text-white  transition-all"
                       >
                         <FaInstagram size={18} />
                       </a>
@@ -419,7 +419,7 @@ export default function About() {
                         href={member.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="p-2 bg-white/5 rounded-full hover:bg-white hover:text-black text-gray-400 transition-all"
+                        className="p-2 hover:bg-white/5 rounded-full bg-gray-800 text-white  transition-all"
                       >
                         <FaGithub size={18} />
                       </a>
@@ -650,8 +650,8 @@ export default function About() {
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
                     {industry.title}
                   </h3>
-                  <div className="w-8 h-1 bg-cyan-400 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 rounded-full"></div>
-                  <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200 line-clamp-3">
+                  <div className="w-8 h-1 bg-cyan-400 mb-3 rounded-full"></div>
+                  <p className="text-gray-300 text-sm line-clamp-3">
                     {industry.desc}
                   </p>
                 </div>

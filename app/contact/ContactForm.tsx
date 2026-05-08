@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 import {
   FaFacebookF,
   FaInstagram,
@@ -95,26 +96,64 @@ export default function ContactForm() {
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-4 text-sm sm:text-base text-gray-300">
+            <div className="space-y-5 text-sm sm:text-base text-gray-300">
+              {/* Address */}
               <div>
-                <p className="font-semibold text-white">📍 Address</p>
+                <p className="font-semibold text-white flex items-center gap-2 mb-1">
+                  📍 Address
+                </p>
+
                 <p>
                   503, Sterling Centre, R C Dutt Road, near fairfield Hotel
                   Alkapuri, Vadodara - 390007
                 </p>
               </div>
 
+              {/* Call */}
               <div>
-                <p className="font-semibold text-white">📞 Phone</p>
-                <p>+91 81288 40055</p>
+                <p className="font-semibold text-white flex items-center gap-2 mb-1">
+                  📞 Call Us
+                </p>
+
+                <a
+                  href="tel:+919033476660"
+                  className="hover:text-blue-400 transition"
+                >
+                  +91 90334 76660
+                </a>
               </div>
 
+              {/* WhatsApp */}
               <div>
-                <p className="font-semibold text-white">📧 Email</p>
-                <p>techstrota@gmail.com</p>
+                <p className="font-semibold text-white flex items-center gap-2 mb-1">
+                  <FaWhatsapp className="text-green-500 text-lg" />
+                  WhatsApp
+                </p>
+
+                <a
+                  href="https://wa.me/918128840055"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-400 transition"
+                >
+                  +91 81288 40055
+                </a>
+              </div>
+
+              {/* Email */}
+              <div>
+                <p className="font-semibold text-white flex items-center gap-2 mb-1">
+                  📧 Email
+                </p>
+
+                <a
+                  href="mailto:techstrota@gmail.com"
+                  className="hover:text-blue-400 transition break-all"
+                >
+                  techstrota@gmail.com
+                </a>
               </div>
             </div>
-
             {/* Social */}
             <div className="mt-6">
               <p className="text-sm text-gray-400 mb-3">Follow us</p>
@@ -123,7 +162,7 @@ export default function ContactForm() {
                 <a
                   href="https://www.facebook.com/people/Tech-Strota/61550062532070/"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:bg-blue-500 hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white/5 border border-white/10 bg-blue-500 hover:scale-110 transition-all duration-300"
                 >
                   <FaFacebookF />
                 </a>
@@ -131,7 +170,7 @@ export default function ContactForm() {
                 <a
                   href="https://www.instagram.com/techstrota/"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:bg-pink-500 hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white/5 border border-white/10 bg-pink-500 hover:scale-110 transition-all duration-300"
                 >
                   <FaInstagram />
                 </a>
@@ -139,7 +178,7 @@ export default function ContactForm() {
                 <a
                   href="https://www.linkedin.com/company/107613221/admin/dashboard/"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:bg-blue-600 hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white/5 border border-white/10 bg-blue-500 hover:scale-110 transition-all duration-300"
                 >
                   <FaLinkedinIn />
                 </a>
@@ -147,7 +186,7 @@ export default function ContactForm() {
                 <a
                   href="https://twitter.com/techstrota"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:bg-gray-700 hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white/5 border border-white/10 bg-blue-400 hover:scale-110 transition-all duration-300"
                 >
                   <FaXTwitter />
                 </a>
@@ -155,7 +194,7 @@ export default function ContactForm() {
                 <a
                   href="https://www.youtube.com/@techstrota"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:bg-red-500 hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white/5 border border-white/10 bg-red-500 hover:scale-110 transition-all duration-300"
                 >
                   <FaYoutube />
                 </a>
