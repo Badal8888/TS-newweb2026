@@ -605,7 +605,7 @@ export default function About() {
                 desc: "Scalable SaaS platforms, dashboards and cloud-based applications.",
               },
               {
-                img: "/industries/E-commerce.jpEg",
+                img: "/industries/E-commerce.jpeg",
                 title: "E-Commerce",
                 desc: "Online stores, payment integrations and scalable ecommerce systems.",
               },
