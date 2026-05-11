@@ -9,15 +9,23 @@ type BlogPost = {
   content: string;
   image: string | null;
 };
+export const dynamic = "force-dynamic";
 
 async function getPosts(): Promise<BlogPost[]> {
-  const res = await fetch("https://admin.techstrota.com/api/blogs");
+  try {
+    const res = await fetch("https://admin.techstrota.com/api/blogs", {
+      cache: "no-store",
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch posts");
+    if (!res.ok) {
+      return [];
+    }
+
+    return await res.json();
+  } catch (error) {
+    console.error("BLOG FETCH ERROR:", error);
+    return [];
   }
-
-  return res.json();
 }
 
 export default async function BlogPage() {
