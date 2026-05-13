@@ -105,7 +105,7 @@ export default function ContactForm() {
 
                 <p>
                   503, Sterling Centre, R C Dutt Road, near fairfield Hotel
-                  Alkapuri, Vadodara - 390007
+                  Alkapuri, Vadodara, Gujarat, India - 390007
                 </p>
               </div>
 
