@@ -145,12 +145,18 @@ export default function ContactForm() {
                 <p className="font-semibold text-white flex items-center gap-2 mb-1">
                   📧 Email
                 </p>
-
                 <a
                   href="mailto:techstrota@gmail.com"
                   className="hover:text-blue-400 transition break-all"
                 >
                   techstrota@gmail.com
+                </a>
+                <br />
+                <a
+                  href="mailto:info@techstrota.com"
+                  className="hover:text-blue-400 transition break-all"
+                >
+                  info@techstrota.com
                 </a>
               </div>
             </div>

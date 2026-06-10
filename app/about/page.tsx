@@ -138,20 +138,20 @@ export default function About() {
             About TechStrota
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tight mb-8">
-            Empowering <br className="hidden sm:block" />
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-8">
+            Empowering{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-yellow-400 filter drop-shadow-lg">
               Tomorrow
             </span>
           </h1>
 
-          <p className="text-lg font-bold md:text-2xl text-gray-200 leading-relaxed mb-6">
+          <p className="text-sm font-bold md:text-lg text-gray-200 leading-relaxed mb-6">
             Through Technology. We transform ideas into scalable digital
             solutions. We&apos;re more than just a tech company — we’re your
             innovation partner.
           </p>
 
-          <p className="text-base md:text-lg text-gray-400 font-bold leading-relaxed max-w-3xl mx-auto bg-white/5 p-6 rounded-3xl border border-white/5 backdrop-blur-sm">
+          <p className="text-base md:text-sm text-gray-400 font-bold leading-relaxed max-w-3xl mx-auto bg-white/5 p-6 rounded-3xl border border-white/5 backdrop-blur-sm">
             <strong className="text-white">TechStrota</strong> is a modern
             <strong className="text-[#2AB4F4]">
               {" "}

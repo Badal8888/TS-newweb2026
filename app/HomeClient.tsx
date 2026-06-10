@@ -456,7 +456,7 @@ export default function HomeClient() {
                   <span className="text-[#FFC933] font-bold">ScanVault</span>, a
                   logistics photo management SaaS platform managing over{" "}
                   <span className="text-white font-bold">
-                    120,000+ operational images
+                    380,000+ operational images
                   </span>{" "}
                   securely using Laravel, MySQL and cloud storage.
                 </p>
@@ -466,7 +466,7 @@ export default function HomeClient() {
               <div className="flex-shrink-0 grid grid-cols-1 gap-4">
                 <div className="bg-blue-500/10 border border-blue-500/20 p-4 rounded-2xl backdrop-blur-sm">
                   <span className="block text-2xl font-bold text-[#FFC933]">
-                    120K+
+                    380K+
                   </span>
                   <span className="text-xs text-gray-400 font-bold uppercase tracking-widest">
                     Images Managed
@@ -517,12 +517,8 @@ export default function HomeClient() {
                   href="/contact"
                   className="group relative px-8 py-4 bg-blue-600 rounded-2xl font-bold text-white transition-all hover:bg-blue-500 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(37,99,235,0.4)]"
                 >
-                  Contact Us Today
-                </Link>
-                <div className="flex items-center gap-2 text-gray-400 text-sm">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                   Available for new projects
-                </div>
+                </Link>
               </div>
             </div>
           </div>

@@ -14,6 +14,9 @@ import {
   FaBullhorn,
   FaCloud,
   FaMobileAlt,
+  FaCamera,
+  FaQrcode,
+  FaGraduationCap,
 } from "react-icons/fa";
 
 export default function Header() {
@@ -22,6 +25,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [serviceOpen, setServiceOpen] = useState(false);
   const [mobileServices, setMobileServices] = useState(false);
+  const [productOpen, setProductOpen] = useState(false);
+  const [mobileProducts, setMobileProducts] = useState(false);
 
   const navLink = (path: string) =>
     pathname === path
@@ -42,7 +47,7 @@ export default function Header() {
             Home
           </Link>
 
-          <Link href="/about" className={navLink("/about")}>
+          <Link href="/about" className="text-gray-300">
             About
           </Link>
 
@@ -125,6 +130,50 @@ export default function Header() {
               </div>
             </div>
           </div>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setProductOpen(true)}
+            onMouseLeave={() => setProductOpen(false)}
+          >
+            <Link href="/our-products" className={navLink("/our-products")}>
+              Our Products
+            </Link>
+
+            <div
+              className={`absolute left-1/2 -translate-x-1/2 top-10 pt-4 w-[420px] transition-all duration-300 ${
+                productOpen
+                  ? "opacity-100 translate-y-0 visible"
+                  : "opacity-0 translate-y-4 invisible"
+              }`}
+            >
+              <div className="bg-[#0F172A] border border-gray-800 rounded-xl shadow-xl p-6">
+                <div className="grid grid-cols-1 gap-4">
+                  <ServiceLink
+                    href="/our-products/scanvault"
+                    icon={<FaCamera className="text-cyan-400" />}
+                    title="ScanVault"
+                    desc="Secure photo capture, storage & management platform"
+                  />
+
+                  <ServiceLink
+                    href="/our-products/annsathi"
+                    icon={<FaQrcode className="text-purple-400" />}
+                    title="AnnSathi"
+                    desc="Smart food ordering and restaurant management solution"
+                  />
+
+                  <ServiceLink
+                    href="/our-products/iapes"
+                    icon={<FaGraduationCap className="text-yellow-400" />}
+                    title="IAPES"
+                    desc="Institute management and educational platform"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
           <Link href="/gallery" className={navLink("/gallery")}>
             TS Gallery
           </Link>
@@ -259,6 +308,54 @@ export default function Header() {
                 className="block text-gray-400 hover:text-white transition"
               >
                 Mobile Apps
+              </Link>
+            </div>
+          )}
+
+          <div className="flex items-center justify-between">
+            <Link
+              href="/our-products"
+              onClick={() => setMenuOpen(false)}
+              className="text-gray-300"
+            >
+              Our Products
+            </Link>
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setMobileProducts(!mobileProducts);
+              }}
+              className="text-gray-300 text-xl"
+            >
+              {mobileProducts ? "−" : "+"}
+            </button>
+          </div>
+
+          {mobileProducts && (
+            <div className="pl-4 mt-2 space-y-3">
+              <Link
+                href="/our-products/scanvault"
+                onClick={() => setMenuOpen(false)}
+                className="block text-gray-400 hover:text-white"
+              >
+                ScanVault
+              </Link>
+
+              <Link
+                href="/our-products/annsathi"
+                onClick={() => setMenuOpen(false)}
+                className="block text-gray-400 hover:text-white"
+              >
+                AnnSathi
+              </Link>
+
+              <Link
+                href="/our-products/iapes"
+                onClick={() => setMenuOpen(false)}
+                className="block text-gray-400 hover:text-white"
+              >
+                IAPES
               </Link>
             </div>
           )}

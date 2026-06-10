@@ -9,21 +9,24 @@ type BlogPost = {
   content: string;
   image: string | null;
 };
-export const dynamic = "force-dynamic";
+//export const dynamic = "force-dynamic";
 
 async function getPosts(): Promise<BlogPost[]> {
+  console.time("blog-fetch");
+
   try {
     const res = await fetch("https://admin.techstrota.com/api/blogs", {
       cache: "no-store",
     });
 
-    if (!res.ok) {
-      return [];
-    }
+    console.timeEnd("blog-fetch");
+
+    if (!res.ok) return [];
 
     return await res.json();
   } catch (error) {
-    console.error("BLOG FETCH ERROR:", error);
+    console.timeEnd("blog-fetch");
+    console.error(error);
     return [];
   }
 }
@@ -39,8 +42,8 @@ export default async function BlogPage() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           {/* FIX 1: Added pb-2 here so the 'g' does not get clipped */}
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 pb-2 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-amber to-amber-400">
-            TechStrota Blog
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-yellow-300 filter drop-shadow-lg">
+            Techstrota Blog
           </h1>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
             Insights on software development, SaaS startups, React ecosystems,

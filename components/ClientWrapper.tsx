@@ -4,6 +4,7 @@ import Loader from "@/components/Loader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Loader3D from "./Loader3D";
 
 export default function ClientWrapper({
   children,
@@ -13,14 +14,17 @@ export default function ClientWrapper({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2500);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 4500); // 4.5 seconds
+
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="relative min-h-screen bg-[#0a0f1a] text-white">
       {/* 1. Loader Layer */}
-      {isLoading && <Loader />}
+      {isLoading && <Loader3D />}
 
       {/* 2. Global Video Background */}
       {/* <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
