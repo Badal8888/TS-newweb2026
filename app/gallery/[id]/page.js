@@ -3,9 +3,12 @@ import GalleryDetailsClient from "./GalleryDetailsClient";
 export async function generateMetadata({ params }) {
   const { id } = await params;
 
-  const response = await fetch(`http://127.0.0.1:8000/api/galleries/${id}`, {
-    cache: "no-store",
-  });
+  const response = await fetch(
+    `https://admin.techstrota.com/api/galleries/${id}`,
+    {
+      cache: "no-store",
+    },
+  );
 
   if (!response.ok) {
     return {
