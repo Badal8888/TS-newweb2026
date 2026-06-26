@@ -124,7 +124,8 @@ export default function Footer() {
           <p className="text-gray-400 mb-4 leading-relaxed">
             503, Sterling Centre, R C Dutt Road,near fairfield Hotel Alkapuri,
             Vadodara, Gujarat, India - 390007 <br />
-            CIN: GJ240114897
+            CIN: GJ240114897 <br />
+            GSTIN: 24AAVFT0941Q1ZF <br />
           </p>
 
           {/* Google Map */}

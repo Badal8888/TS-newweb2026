@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Loader from "@/components/Loader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
