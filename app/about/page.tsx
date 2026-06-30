@@ -188,7 +188,7 @@ export default function About() {
                 {
                   icon: "🚀",
                   title: "Established",
-                  desc: "Proudly building innovative digital solutions since 2021.",
+                  desc: "Proudly building innovative digital solutions since 12 August 2023.",
                   glow: "group-hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.4)]",
                 },
                 {
