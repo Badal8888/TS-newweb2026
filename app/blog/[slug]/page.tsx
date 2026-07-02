@@ -11,6 +11,10 @@ type BlogPost = {
   paragraph?: string;
   content: string;
   image: string | null;
+  gallery?: {
+    url: string;
+    desc?: string;
+  }[];
 };
 
 async function getPost(slug: string) {
@@ -37,7 +41,10 @@ export default async function BlogDetailPage({
   const post: BlogPost = await getPost(slug);
 
   if (!post) notFound();
-
+  const gallery = (post.gallery ?? []).filter(
+    (item) => item?.url && item.url.trim() !== "",
+  );
+  console.log("Gallery:", post.gallery);
   return (
     <article className="min-h-screen text-white py-16 md:py-24 relative overflow-hidden selection:bg-blue-500/30">
       {/* Background Glow */}
@@ -99,6 +106,34 @@ export default async function BlogDetailPage({
           [&>img]:rounded-xl [&>img]:my-8"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+        {/* Gallery Section */}
+        {gallery.length > 0 && (
+          <div className="max-w-4xl mx-auto mt-16">
+            <h2 className="text-3xl font-bold mb-8 text-center">Gallery</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {gallery.map((item, index) => (
+                <div key={index} className="space-y-3">
+                  <div className="relative aspect-video rounded-xl overflow-hidden">
+                    <Image
+                      src={`https://admin.techstrota.com/storage/${item.url}`}
+                      alt={item.desc || `Gallery ${index + 1}`}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+
+                  {item.desc && (
+                    <p className="text-sm text-slate-400 text-center">
+                      {item.desc}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </article>
   );

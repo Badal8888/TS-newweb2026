@@ -32,35 +32,45 @@ export default function Footer() {
           <div className="flex gap-4 text-lg">
             <a
               href="https://www.facebook.com/people/Tech-Strota/61550062532070/"
-              className="hover:text-blue-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1877F2] hover:scale-110 transition"
             >
               <FaFacebookF />
             </a>
 
             <a
               href="https://www.instagram.com/techstrota/"
-              className="hover:text-blue-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#E4405F] hover:scale-110 transition"
             >
               <FaInstagram />
             </a>
 
             <a
               href="https://www.linkedin.com/company/107613221/admin/dashboard/"
-              className="hover:text-blue-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0A66C2] hover:scale-110 transition"
             >
               <FaLinkedinIn />
             </a>
 
             <a
               href="https://twitter.com/techstrota"
-              className="hover:text-blue-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:scale-110 transition"
             >
               <FaXTwitter />
             </a>
 
             <a
               href="https://www.youtube.com/@techstrota"
-              className="hover:text-blue-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FF0000] hover:scale-110 transition"
             >
               <FaYoutube />
             </a>
@@ -75,40 +85,37 @@ export default function Footer() {
 
           <ul className="space-y-3">
             <li>
-              <Link href="/" className="hover:text-blue-400 transition">
+              <Link href="/" className="text-blue-400 transition">
                 Home
               </Link>
             </li>
 
             <li>
-              <Link href="/about" className="hover:text-blue-400 transition">
+              <Link href="/about" className="text-blue-400 transition">
                 About Us
               </Link>
             </li>
 
             <li>
-              <Link href="/services" className="hover:text-blue-400 transition">
+              <Link href="/services" className="text-blue-400 transition">
                 Services
               </Link>
             </li>
 
             <li>
-              <Link
-                href="/portfolio"
-                className="hover:text-blue-400 transition"
-              >
+              <Link href="/portfolio" className="text-blue-400 transition">
                 Portfolio
               </Link>
             </li>
 
             <li>
-              <Link href="/blog" className="hover:text-blue-400 transition">
+              <Link href="/blog" className="text-blue-400 transition">
                 Blog
               </Link>
             </li>
 
             <li>
-              <Link href="/gallery" className="hover:text-blue-400 transition">
+              <Link href="/gallery" className="text-blue-400 transition">
                 TS Gallery
               </Link>
             </li>
@@ -127,7 +134,10 @@ export default function Footer() {
             CIN: GJ240114897 <br />
             GSTIN: 24AAVFT0941Q1ZF <br />
           </p>
+        </div>
 
+        {/* Newsletter */}
+        <div>
           {/* Google Map */}
           <div className="rounded-xl overflow-hidden border border-gray-800">
             <iframe
@@ -136,28 +146,6 @@ export default function Footer() {
               height="150"
               loading="lazy"
             ></iframe>
-          </div>
-        </div>
-
-        {/* Newsletter */}
-        <div>
-          <h3 className="text-white text-lg font-semibold mb-6">Newsletter</h3>
-
-          <p className="text-gray-400 mb-4">
-            Subscribe to get updates about technology, startups and our latest
-            projects.
-          </p>
-
-          <div className="flex">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-[#0F172A] border border-gray-700 px-4 py-3 rounded-l-lg w-full focus:outline-none"
-            />
-
-            <button className="bg-blue-600 px-5 rounded-r-lg hover:bg-blue-700 transition">
-              Subscribe
-            </button>
           </div>
         </div>
       </div>

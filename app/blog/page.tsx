@@ -8,6 +8,7 @@ type BlogPost = {
   paragraph: string;
   content: string;
   image: string | null;
+  gallery?: string[];
 };
 //export const dynamic = "force-dynamic";
 
