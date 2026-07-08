@@ -84,7 +84,7 @@ export default async function BlogDetailPage({
                 src={post.image}
                 alt={post.title}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                 unoptimized
                 priority
               />
@@ -119,7 +119,7 @@ export default async function BlogDetailPage({
                       src={`https://admin.techstrota.com/storage/${item.url}`}
                       alt={item.desc || `Gallery ${index + 1}`}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       unoptimized
                     />
                   </div>
