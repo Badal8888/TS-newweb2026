@@ -79,7 +79,7 @@ export default function PortfolioPage() {
           <div
             key={i}
             style={{ zIndex: i + 1 }} // Ensures each new project sits on top of the last
-            className="sticky top-0 h-screen flex items-center justify-center"
+            className="sticky top-0 min-h-[70vh] lg:h-[75vh] flex items-center justify-center"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -89,16 +89,16 @@ export default function PortfolioPage() {
               /* FIX: Using a solid hex background (#040A15) instead of 80% opacity 
            to stop the 'behind' project from showing through.
         */
-              className={`relative w-full max-w-6xl h-[85vh] flex flex-col ${
+              className={`relative w-full max-w-6xl min-h-[560px] lg:h-[40vh] flex flex-col ${
                 i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-              } items-center gap-10 lg:gap-16 bg-[#040A15] border border-amber-400/40 rounded-[2.5rem] p-8 md:p-12 shadow-2xl`}
+              } items-center gap-5 md:gap-8 lg:gap-10 bg-[#040A15] border border-amber-400/40 rounded-[2.5rem] p-5 md:p-8 lg:p-8 shadow-2xl`}
             >
               {/* Visual Side */}
               <div className="flex-1 w-full h-full flex items-center justify-center relative group">
                 {/* Inner Glow */}
                 <div className="absolute -inset-2 bg-blue-500/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                <div className="relative w-full aspect-video overflow-hidden rounded-2xl border border-white/5">
+                <div className="relative w-full max-h-[320px] lg:max-h-[380px] aspect-video overflow-hidden rounded-2xl border border-white/5">
                   <img
                     src={storageUrl(project.image)}
                     alt={project.title}
