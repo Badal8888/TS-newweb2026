@@ -214,10 +214,6 @@ export default function ContactForm() {
               Send Inquiry
             </h2>
 
-            {success && (
-              <div className="text-green-400 text-sm mb-4">{success}</div>
-            )}
-
             <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -277,6 +273,10 @@ export default function ContactForm() {
               >
                 {loading ? "Submitting..." : "Submit Inquiry"}
               </button>
+
+              {success && (
+                <div className="text-green-400 text-sm mb-4">{success}</div>
+              )}
             </form>
           </div>
         </div>

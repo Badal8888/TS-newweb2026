@@ -110,7 +110,7 @@ export default function PortfolioPage() {
               {/* Content Side */}
               <div className="flex-1 space-y-4">
                 <span className="text-amber-400 font-mono text-lg font-bold tracking-widest">
-                  0{i + 1}
+                  {(i + 1).toString().padStart(2, "0")}
                 </span>
                 <h3 className="text-3xl md:text-5xl font-bold text-white">
                   {project.title}
